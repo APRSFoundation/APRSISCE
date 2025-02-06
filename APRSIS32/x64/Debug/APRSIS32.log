@@ -1,0 +1,543 @@
+﻿     0>C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.Cpp.Analysis.props(24,5): warning MSB4211: The property "MsvcAnalysisPluginPath" is being set to a value for the first time, but it was already consumed at "C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CodeAnalysis.Extensions.props (33,5)".
+Build started 2/5/2025 11:08:44 PM.
+Logging verbosity is set to: Normal.     1>Project "C:\Work\Compass64\code\aprs\APRSISCE\APRSIS32\APRSIS32.vcxproj" on node 2 (Build target(s)).
+     1>PrepareForBuild:
+         Creating directory "x64\Debug\APRSIS32.tlog\".
+       InitializeBuildStatus:
+         Creating "x64\Debug\APRSIS32.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+       PreBuildEvent:
+         Update Build Timestamp
+         maketime >timestamp.h
+         :VCEnd
+       ClCompile:
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\bin\HostX64\x64\CL.exe /c /Ic:\cvstest\code /Zi /nologo /W3 /WX- /diagnostics:column /Od /D _CRT_SECURE_NO_WARNINGS /D UNICODE /D _CRT_SECURE_NO_DEPRECATE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Debug\\" /Fd"x64\Debug\vc143.pdb" /external:W3 /Gd /TC /FC /errorReport:prompt ..\..\..\jpeg\source\jcapimin.c ..\..\..\jpeg\source\jcapistd.c ..\..\..\jpeg\source\jccoefct.c ..\..\..\jpeg\source\jccolor.c ..\..\..\jpeg\source\jcdctmgr.c ..\..\..\jpeg\source\jchuff.c ..\..\..\jpeg\source\jcinit.c ..\..\..\jpeg\source\jcmainct.c ..\..\..\jpeg\source\jcmarker.c ..\..\..\jpeg\source\jcmaster.c ..\..\..\jpeg\source\jcomapi.c ..\..\..\jpeg\source\jcparam.c ..\..\..\jpeg\source\jcphuff.c ..\..\..\jpeg\source\jcprepct.c ..\..\..\jpeg\source\jcsample.c ..\..\..\jpeg\source\jctrans.c ..\..\..\jpeg\source\jdapimin.c ..\..\..\jpeg\source\jdapistd.c ..\..\..\jpeg\source\jdatadst.c ..\..\..\jpeg\source\jdatasrc.c ..\..\..\jpeg\source\jdcoefct.c ..\..\..\jpeg\source\jdcolor.c ..\..\..\jpeg\source\jddctmgr.c ..\..\..\jpeg\source\jdhuff.c ..\..\..\jpeg\source\jdinput.c ..\..\..\jpeg\source\jdmainct.c ..\..\..\jpeg\source\jdmarker.c ..\..\..\jpeg\source\jdmaster.c ..\..\..\jpeg\source\jdmerge.c ..\..\..\jpeg\source\jdphuff.c ..\..\..\jpeg\source\jdpostct.c ..\..\..\jpeg\source\jdsample.c ..\..\..\jpeg\source\jdtrans.c ..\..\..\jpeg\source\jerror.c ..\..\..\jpeg\source\jfdctflt.c ..\..\..\jpeg\source\jfdctfst.c ..\..\..\jpeg\source\jfdctint.c ..\..\..\jpeg\source\jidctflt.c ..\..\..\jpeg\source\jidctfst.c ..\..\..\jpeg\source\jidctint.c ..\..\..\jpeg\source\jidctred.c ..\..\..\jpeg\source\jmemansi.c ..\..\..\jpeg\source\jmemmgr.c ..\..\..\jpeg\source\jquant1.c ..\..\..\jpeg\source\jquant2.c ..\..\..\jpeg\source\jutils.c ..\..\..\lpng\source\png.c ..\..\..\lpng\source\pngerror.c ..\..\..\lpng\source\pnggccrd.c ..\..\..\lpng\source\pngget.c ..\..\..\lpng\source\pngmem.c ..\..\..\lpng\source\pngpread.c ..\..\..\lpng\source\pngread.c ..\..\..\lpng\source\pngrio.c ..\..\..\lpng\source\pngrtran.c ..\..\..\lpng\source\pngrutil.c ..\..\..\lpng\source\pngset.c ..\..\..\lpng\source\pngtrans.c ..\..\..\lpng\source\pngvcrd.c ..\..\..\lpng\source\pngwio.c ..\..\..\lpng\source\pngwrite.c ..\..\..\lpng\source\pngwtran.c ..\..\..\lpng\source\pngwutil.c "..\..\..\lua\lua-5.1.5\src\lapi.c" "..\..\..\lua\lua-5.1.5\src\lauxlib.c" "..\..\..\lua\lua-5.1.5\src\lbaselib.c" "..\..\..\lua\lua-5.1.5\src\lcode.c" "..\..\..\lua\lua-5.1.5\src\ldblib.c" "..\..\..\lua\lua-5.1.5\src\ldebug.c" "..\..\..\lua\lua-5.1.5\src\ldo.c" "..\..\..\lua\lua-5.1.5\src\ldump.c" "..\..\..\lua\lua-5.1.5\src\lfunc.c" "..\..\..\lua\lua-5.1.5\src\lgc.c" "..\..\..\lua\lua-5.1.5\src\linit.c" "..\..\..\lua\lua-5.1.5\src\liolib.c" "..\..\..\lua\lua-5.1.5\src\llex.c" "..\..\..\lua\lua-5.1.5\src\lmathlib.c" "..\..\..\lua\lua-5.1.5\src\lmem.c" "..\..\..\lua\lua-5.1.5\src\loadlib.c" "..\..\..\lua\lua-5.1.5\src\lobject.c" "..\..\..\lua\lua-5.1.5\src\lopcodes.c" "..\..\..\lua\lua-5.1.5\src\loslib.c" "..\..\..\lua\lua-5.1.5\src\lparser.c" "..\..\..\lua\lua-5.1.5\src\lstate.c" "..\..\..\lua\lua-5.1.5\src\lstring.c" "..\..\..\lua\lua-5.1.5\src\lstrlib.c" "..\..\..\lua\lua-5.1.5\src\ltable.c" "..\..\..\lua\lua-5.1.5\src\ltablib.c" "..\..\..\lua\lua-5.1.5\src\ltm.c" "..\..\..\lua\lua-5.1.5\src\lundump.c" "..\..\..\lua\lua-5.1.5\src\lvm.c" "..\..\..\lua\lua-5.1.5\src\lzio.c" "..\..\..\lua\lua-5.1.5\src\print.c" ..\..\..\xp\source\hashtable.c ..\..\..\xp\source\xmlparse.c ..\..\..\xp\source\xmlrole.c ..\..\..\xp\source\xmltok.c ..\..\..\zl\source\ADLER32.C ..\..\..\zl\source\COMPRESS.C ..\..\..\zl\source\CRC32.C ..\..\..\zl\source\DEFLATE.C ..\..\..\zl\source\infback.c ..\..\..\zl\source\inffast.c ..\..\..\zl\source\inflate.c ..\..\..\zl\source\inftrees.c ..\..\..\zl\source\TREES.C ..\..\..\zl\source\UNCOMPR.C ..\..\..\zl\source\ZUTIL.C "..\..\gpredict-1.3\src\orbit-tools.c" "..\..\gpredict-1.3\src\predict-tools.c" "..\..\gpredict-1.3\src\sgpsdp\sgp4sdp4.c" "..\..\gpredict-1.3\src\sgpsdp\sgp_in.c" "..\..\gpredict-1.3\src\sgpsdp\sgp_math.c" "..\..\gpredict-1.3\src\sgpsdp\sgp_obs.c" "..\..\gpredict-1.3\src\sgpsdp\sgp_time.c" "..\..\gpredict-1.3\src\sgpsdp\solar.c" "..\..\gpredict-1.3\src\time-tools.c" "..\..\shapelib-1.3.0b2\dbfopen.c" "..\..\shapelib-1.3.0b2\safileio.c" "..\..\shapelib-1.3.0b2\shpopen.c" "..\..\shapelib-1.3.0b2\shptree.c" ..\..\source\parse.c ..\AGW.c ..\aprsis.c ..\aprs_udp.c ..\Bluetooth.c ..\cprtns.c ..\KISS.c ..\Port.c ..\Satellite.c ..\sun.c ..\tcputil.c ..\text.c
+     1>cl : command line  warning D9035: option 'Gm' has been deprecated and will be removed in a future release
+         text.c
+     1>C:\Work\Compass64\code\aprs\APRSISCE\text.c(46,22): warning C4244: '=': conversion from '__int64' to 'WORD', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\text.c(626,21): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\text.c(642,12): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\text.c(706,10): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\text.c(710,19): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\text.c(717,14): warning C4244: '-=': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\text.c(719,21): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\text.c(744,17): warning C4244: '-=': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\text.c(768,15): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\text.c(788,10): warning C4267: '=': conversion from 'size_t' to 'long', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\text.c(988,10): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\text.c(990,12): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\text.c(1053,17): warning C4244: '-=': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\text.c(1055,46): warning C4244: 'function': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\text.c(1310,20): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\text.c(1313,56): warning C4244: 'function': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\text.c(1323,61): warning C4244: 'function': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\text.c(1325,19): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\text.c(1327,40): warning C4244: 'function': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\text.c(1329,11): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\text.c(1330,17): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\text.c(1342,30): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\text.c(1378,20): warning C4244: '-=': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\text.c(1396,18): warning C4244: '-=': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\text.c(1408,43): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\text.c(1618,10): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\text.c(1620,12): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\text.c(1665,17): warning C4244: '-=': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\text.c(1667,46): warning C4244: 'function': conversion from '__int64' to 'int', possible loss of data
+         tcputil.c
+     1>C:\Work\Compass64\code\aprs\APRSISCE\tcputil.c(637,11): warning C4244: '=': conversion from 'SOCKET' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\tcputil.c(736,18): warning C4244: '=': conversion from 'SOCKET' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\tcputil.c(747,29): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+         sun.c
+         Satellite.c
+     1>C:\Work\Compass64\code\aprs\APRSISCE\parsedef.h(1,10): fatal  error C1083: Cannot open include file: 'aprs/source/parsedef.h': No such file or directory
+         Port.c
+     1>C:\Work\Compass64\code\aprs\APRSISCE\parsedef.h(1,10): fatal  error C1083: Cannot open include file: 'aprs/source/parsedef.h': No such file or directory
+         KISS.c
+     1>C:\Work\Compass64\code\aprs\APRSISCE\KISS.c(196,33): warning C4244: 'function': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\KISS.c(198,60): warning C4244: 'function': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\KISS.c(350,13): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\KISS.c(366,14): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\KISS.c(374,13): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\KISS.c(377,13): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\KISS.c(440,33): warning C4244: 'function': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\KISS.c(454,17): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\KISS.c(484,11): warning C4267: '=': conversion from 'size_t' to 'long', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\KISS.c(489,10): warning C4244: '=': conversion from '__int64' to 'long', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\KISS.c(522,11): warning C4267: '=': conversion from 'size_t' to 'long', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\KISS.c(529,10): warning C4244: '=': conversion from '__int64' to 'long', possible loss of data
+         cprtns.c
+     1>C:\Work\Compass64\code\aprs\APRSISCE\cprtns.c(90,46): warning C4312: 'type cast': conversion from 'PORT_F' to 'HANDLE' of greater size
+     1>C:\Work\Compass64\code\aprs\APRSISCE\cprtns.c(110,42): warning C4312: 'type cast': conversion from 'PORT_F' to 'HANDLE' of greater size
+     1>C:\Work\Compass64\code\aprs\APRSISCE\cprtns.c(150,42): warning C4312: 'type cast': conversion from 'PORT_F' to 'HANDLE' of greater size
+     1>C:\Work\Compass64\code\aprs\APRSISCE\cprtns.c(221,39): warning C4311: 'type cast': pointer truncation from 'HANDLE' to 'PORT_F'
+     1>C:\Work\Compass64\code\aprs\APRSISCE\cprtns.c(225,48): warning C4312: 'type cast': conversion from 'PORT_F' to 'void *' of greater size
+     1>C:\Work\Compass64\code\aprs\APRSISCE\cprtns.c(266,42): warning C4312: 'type cast': conversion from 'PORT_F' to 'HANDLE' of greater size
+     1>C:\Work\Compass64\code\aprs\APRSISCE\cprtns.c(270,42): warning C4312: 'type cast': conversion from 'PORT_F' to 'HANDLE' of greater size
+     1>C:\Work\Compass64\code\aprs\APRSISCE\cprtns.c(317,42): warning C4312: 'type cast': conversion from 'PORT_F' to 'HANDLE' of greater size
+     1>C:\Work\Compass64\code\aprs\APRSISCE\cprtns.c(322,42): warning C4312: 'type cast': conversion from 'PORT_F' to 'HANDLE' of greater size
+     1>C:\Work\Compass64\code\aprs\APRSISCE\cprtns.c(357,40): warning C4312: 'type cast': conversion from 'PORT_F' to 'HANDLE' of greater size
+     1>C:\Work\Compass64\code\aprs\APRSISCE\cprtns.c(490,45): warning C4312: 'type cast': conversion from 'PORT_F' to 'HANDLE' of greater size
+     1>C:\Work\Compass64\code\aprs\APRSISCE\cprtns.c(531,37): warning C4312: 'type cast': conversion from 'PORT_F' to 'HANDLE' of greater size
+     1>C:\Work\Compass64\code\aprs\APRSISCE\cprtns.c(579,38): warning C4312: 'type cast': conversion from 'PORT_F' to 'HANDLE' of greater size
+         Bluetooth.c
+     1>C:\Work\Compass64\code\aprs\APRSISCE\Bluetooth.c(124,44): warning C4133: 'function': incompatible types - from 'UINT *' to 'size_t *'
+     1>C:\Work\Compass64\code\aprs\APRSISCE\Bluetooth.c(291,19): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\Bluetooth.c(579,9): warning C4244: 'return': conversion from 'SOCKET' to 'int', possible loss of data
+         aprs_udp.c
+     1>C:\Work\Compass64\code\aprs\APRSISCE\aprs_udp.c(56,10): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\aprs_udp.c(60,19): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\aprs_udp.c(67,14): warning C4244: '-=': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\aprs_udp.c(69,21): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\aprs_udp.c(78,17): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\aprs_udp.c(127,10): warning C4267: '=': conversion from 'size_t' to 'long', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\aprs_udp.c(161,23): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+         aprsis.c
+     1>C:\Work\Compass64\code\aprs\APRSISCE\aprsis.c(62,10): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\aprsis.c(66,19): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\aprsis.c(73,14): warning C4244: '-=': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\aprsis.c(75,21): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\aprsis.c(88,17): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\aprsis.c(190,10): warning C4267: '=': conversion from 'size_t' to 'long', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\aprsis.c(216,23): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\aprsis.c(280,10): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\aprsis.c(284,19): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\APRSISCE\aprsis.c(294,17): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+         AGW.c
+     1>C:\Work\Compass64\code\aprs\APRSISCE\AGW.c(113,20): warning C4477: 'sprintf' : format string '%.*s' requires an argument of type 'int', but variadic argument 1 has type 'size_t'
+       C:\Work\Compass64\code\aprs\APRSISCE\AGW.c(113,20): message : this argument is used as a precision
+     1>C:\Work\Compass64\code\aprs\APRSISCE\AGW.c(113,20): warning C4477: 'sprintf' : format string '%.*s' requires an argument of type 'int', but variadic argument 3 has type 'size_t'
+       C:\Work\Compass64\code\aprs\APRSISCE\AGW.c(113,20): message : this argument is used as a precision
+     1>C:\Work\Compass64\code\aprs\APRSISCE\AGW.c(118,27): warning C4477: 'sprintf' : format string '%.*s' requires an argument of type 'int', but variadic argument 1 has type 'size_t'
+       C:\Work\Compass64\code\aprs\APRSISCE\AGW.c(118,27): message : this argument is used as a precision
+     1>C:\Work\Compass64\code\aprs\APRSISCE\AGW.c(118,27): warning C4477: 'sprintf' : format string '%.*s' requires an argument of type 'int', but variadic argument 3 has type 'size_t'
+       C:\Work\Compass64\code\aprs\APRSISCE\AGW.c(118,27): message : this argument is used as a precision
+         parse.c
+     1>C:\Work\Compass64\code\aprs\source\parse.c(142,16): warning C4244: 'return': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\source\parse.c(225,10): warning C4244: 'return': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\source\parse.c(393,25): warning C4244: '=': conversion from '__int64' to 'unsigned long', possible loss of data
+     1>C:\Work\Compass64\code\aprs\source\parse.c(595,38): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\source\parse.c(1486,10): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\source\parse.c(1486,29): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\source\parse.c(1681,20): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\source\parse.c(1832,21): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\source\parse.c(3241,20): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\source\parse.c(4392,23): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\source\parse.c(4397,16): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\source\parse.c(4502,23): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\source\parse.c(4505,16): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+         shptree.c
+         shpopen.c
+     1>C:\Work\Compass64\code\aprs\shapelib-1.3.0b2\shpopen.c(524,33): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\shapelib-1.3.0b2\shpopen.c(868,33): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+         safileio.c
+     1>C:\Work\Compass64\code\aprs\shapelib-1.3.0b2\safileio.c(218,34): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+         dbfopen.c
+     1>C:\Work\Compass64\code\aprs\shapelib-1.3.0b2\dbfopen.c(416,33): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\shapelib-1.3.0b2\dbfopen.c(678,33): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\shapelib-1.3.0b2\dbfopen.c(716,51): warning C4267: 'function': conversion from 'size_t' to 'SAOffset', possible loss of data
+     1>C:\Work\Compass64\code\aprs\shapelib-1.3.0b2\dbfopen.c(1367,10): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\shapelib-1.3.0b2\dbfopen.c(1436,13): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\aprs\shapelib-1.3.0b2\dbfopen.c(1664,11): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+         time-tools.c
+         solar.c
+         sgp_time.c
+         sgp_obs.c
+         Generating Code...
+         Compiling...
+         sgp_math.c
+         sgp_in.c
+         sgp4sdp4.c
+         predict-tools.c
+         orbit-tools.c
+         ZUTIL.C
+         UNCOMPR.C
+         TREES.C
+         inftrees.c
+         inflate.c
+         inffast.c
+         infback.c
+         DEFLATE.C
+         CRC32.C
+         COMPRESS.C
+         ADLER32.C
+         xmltok.c
+     1>C:\Work\Compass64\code\xp\source\xmltok_impl.c(1685,18): warning C4244: 'return': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\xp\source\xmltok_impl.c(1685,18): warning C4244: 'return': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\xp\source\xmltok_impl.c(1685,18): warning C4244: 'return': conversion from '__int64' to 'int', possible loss of data
+         xmlrole.c
+         xmlparse.c
+     1>C:\Work\Compass64\code\xp\source\xmlparse.c(789,25): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\xp\source\xmlparse.c(836,26): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\xp\source\xmlparse.c(844,34): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\xp\source\xmlparse.c(875,30): warning C4244: 'return': conversion from '__int64' to 'long', possible loss of data
+     1>C:\Work\Compass64\code\xp\source\xmlparse.c(882,24): warning C4244: 'return': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\xp\source\xmlparse.c(1254,41): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\xp\source\xmlparse.c(1424,54): warning C4244: 'function': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\xp\source\xmlparse.c(1429,27): warning C4244: 'function': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\xp\source\xmlparse.c(1449,56): warning C4244: 'function': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\xp\source\xmlparse.c(1458,28): warning C4244: 'function': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\xp\source\xmlparse.c(1798,56): warning C4244: 'function': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\xp\source\xmlparse.c(1807,28): warning C4244: 'function': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\xp\source\xmlparse.c(2505,34): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\xp\source\xmlparse.c(2649,51): warning C4244: 'function': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\xp\source\xmlparse.c(2654,63): warning C4244: 'function': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\xp\source\xmlparse.c(3227,46): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\xp\source\xmlparse.c(3238,31): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+         hashtable.c
+         Generating Code...
+         Compiling...
+         print.c
+     1>c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\print.c': No such file or directory
+         lzio.c
+     1>c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\lzio.c': No such file or directory
+         lvm.c
+     1>c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\lvm.c': No such file or directory
+         lundump.c
+     1>c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\lundump.c': No such file or directory
+         ltm.c
+     1>c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\ltm.c': No such file or directory
+         ltablib.c
+     1>c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\ltablib.c': No such file or directory
+         ltable.c
+     1>c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\ltable.c': No such file or directory
+         lstrlib.c
+     1>c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\lstrlib.c': No such file or directory
+         lstring.c
+     1>c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\lstring.c': No such file or directory
+         lstate.c
+     1>c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\lstate.c': No such file or directory
+         lparser.c
+     1>c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\lparser.c': No such file or directory
+         loslib.c
+     1>c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\loslib.c': No such file or directory
+         lopcodes.c
+     1>c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\lopcodes.c': No such file or directory
+         lobject.c
+     1>c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\lobject.c': No such file or directory
+         loadlib.c
+     1>c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\loadlib.c': No such file or directory
+         lmem.c
+     1>c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\lmem.c': No such file or directory
+         lmathlib.c
+     1>c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\lmathlib.c': No such file or directory
+         llex.c
+     1>c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\llex.c': No such file or directory
+         liolib.c
+     1>c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\liolib.c': No such file or directory
+         linit.c
+     1>c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\linit.c': No such file or directory
+         Generating Code...
+         Compiling...
+         lgc.c
+     1>c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\lgc.c': No such file or directory
+         lfunc.c
+     1>c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\lfunc.c': No such file or directory
+         ldump.c
+     1>c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\ldump.c': No such file or directory
+         ldo.c
+     1>c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\ldo.c': No such file or directory
+         ldebug.c
+     1>c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\ldebug.c': No such file or directory
+         ldblib.c
+     1>c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\ldblib.c': No such file or directory
+         lcode.c
+     1>c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\lcode.c': No such file or directory
+         lbaselib.c
+     1>c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\lbaselib.c': No such file or directory
+         lauxlib.c
+     1>c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\lauxlib.c': No such file or directory
+         lapi.c
+     1>c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\lapi.c': No such file or directory
+         pngwutil.c
+     1>C:\Work\Compass64\code\lpng\source\pngwutil.c(177,26): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+     1>C:\Work\Compass64\code\lpng\source\pngwutil.c(1360,74): warning C4267: 'function': conversion from 'size_t' to 'png_uint_32', possible loss of data
+     1>C:\Work\Compass64\code\lpng\source\pngwutil.c(1577,45): warning C4267: '=': conversion from 'size_t' to 'png_uint_32', possible loss of data
+         pngwtran.c
+         pngwrite.c
+         pngwio.c
+     1>C:\Work\Compass64\code\lpng\source\pngwio.c(53,12): warning C4267: '=': conversion from 'size_t' to 'png_uint_32', possible loss of data
+         pngvcrd.c
+         pngtrans.c
+         pngset.c
+     1>C:\Work\Compass64\code\lpng\source\pngset.c(398,33): warning C4267: '=': conversion from 'size_t' to 'png_uint_32', possible loss of data
+     1>C:\Work\Compass64\code\lpng\source\pngset.c(414,31): warning C4267: '=': conversion from 'size_t' to 'png_uint_32', possible loss of data
+     1>C:\Work\Compass64\code\lpng\source\pngset.c(436,38): warning C4267: '=': conversion from 'size_t' to 'png_uint_32', possible loss of data
+     1>C:\Work\Compass64\code\lpng\source\pngset.c(691,29): warning C4267: '=': conversion from 'size_t' to 'png_uint_32', possible loss of data
+     1>C:\Work\Compass64\code\lpng\source\pngset.c(994,41): warning C4267: '=': conversion from 'size_t' to 'png_uint_32', possible loss of data
+     1>C:\Work\Compass64\code\lpng\source\pngset.c(1040,55): warning C4267: 'function': conversion from 'size_t' to 'png_uint_32', possible loss of data
+     1>C:\Work\Compass64\code\lpng\source\pngset.c(1071,62): warning C4267: 'function': conversion from 'size_t' to 'png_uint_32', possible loss of data
+         pngrutil.c
+     1>C:\Work\Compass64\code\lpng\source\pngrutil.c(218,59): warning C4267: 'function': conversion from 'size_t' to 'png_uint_32', possible loss of data
+     1>C:\Work\Compass64\code\lpng\source\pngrutil.c(242,69): warning C4267: 'function': conversion from 'size_t' to 'png_uint_32', possible loss of data
+     1>C:\Work\Compass64\code\lpng\source\pngrutil.c(308,65): warning C4267: 'function': conversion from 'size_t' to 'png_uint_32', possible loss of data
+     1>C:\Work\Compass64\code\lpng\source\pngrutil.c(1067,33): warning C4267: '=': conversion from 'size_t' to 'png_uint_32', possible loss of data
+     1>C:\Work\Compass64\code\lpng\source\pngrutil.c(1160,27): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+         pngrtran.c
+         pngrio.c
+         Generating Code...
+         Compiling...
+         pngread.c
+         pngpread.c
+     1>C:\Work\Compass64\code\lpng\source\pngpread.c(529,31): warning C4267: '-=': conversion from 'size_t' to 'png_uint_32', possible loss of data
+     1>C:\Work\Compass64\code\lpng\source\pngpread.c(545,31): warning C4267: '-=': conversion from 'size_t' to 'png_uint_32', possible loss of data
+     1>C:\Work\Compass64\code\lpng\source\pngpread.c(710,29): warning C4267: '-=': conversion from 'size_t' to 'png_uint_32', possible loss of data
+     1>C:\Work\Compass64\code\lpng\source\pngpread.c(733,29): warning C4267: '-=': conversion from 'size_t' to 'png_uint_32', possible loss of data
+     1>C:\Work\Compass64\code\lpng\source\pngpread.c(1285,64): warning C4267: 'function': conversion from 'size_t' to 'png_uint_32', possible loss of data
+         pngmem.c
+         pngget.c
+         pnggccrd.c
+         pngerror.c
+         png.c
+         jutils.c
+         jquant2.c
+         jquant1.c
+         jmemmgr.c
+     1>C:\Work\Compass64\code\jpeg\source\jmemmgr.c(306,47): warning C4267: '+=': conversion from 'size_t' to 'long', possible loss of data
+     1>C:\Work\Compass64\code\jpeg\source\jmemmgr.c(366,46): warning C4267: '+=': conversion from 'size_t' to 'long', possible loss of data
+     1>C:\Work\Compass64\code\jpeg\source\jmemmgr.c(976,35): warning C4267: '-=': conversion from 'size_t' to 'long', possible loss of data
+     1>C:\Work\Compass64\code\jpeg\source\jmemmgr.c(990,35): warning C4267: '-=': conversion from 'size_t' to 'long', possible loss of data
+         jmemansi.c
+         jidctred.c
+         jidctint.c
+         jidctfst.c
+         jidctflt.c
+         jfdctint.c
+         jfdctfst.c
+         jfdctflt.c
+         jerror.c
+         Generating Code...
+         Compiling...
+         jdtrans.c
+         jdsample.c
+         jdpostct.c
+         jdphuff.c
+         jdmerge.c
+         jdmaster.c
+         jdmarker.c
+         jdmainct.c
+         jdinput.c
+         jdhuff.c
+         jddctmgr.c
+         jdcolor.c
+         jdcoefct.c
+         jdatasrc.c
+         jdatadst.c
+         jdapistd.c
+         jdapimin.c
+         jctrans.c
+         jcsample.c
+         jcprepct.c
+         Generating Code...
+         Compiling...
+         jcphuff.c
+         jcparam.c
+         jcomapi.c
+         jcmaster.c
+         jcmarker.c
+         jcmainct.c
+         jcinit.c
+         jchuff.c
+         jcdctmgr.c
+         jccolor.c
+         jccoefct.c
+         jcapistd.c
+         jcapimin.c
+         Generating Code...
+     1>Done Building Project "C:\Work\Compass64\code\aprs\APRSISCE\APRSIS32\APRSIS32.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+         C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.Cpp.Analysis.props(24,5): warning MSB4211: The property "MsvcAnalysisPluginPath" is being set to a value for the first time, but it was already consumed at "C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CodeAnalysis.Extensions.props (33,5)".
+
+
+       "C:\Work\Compass64\code\aprs\APRSISCE\APRSIS32\APRSIS32.vcxproj" (Build target) (1) ->
+       (ClCompile target) -> 
+         cl : command line  warning D9035: option 'Gm' has been deprecated and will be removed in a future release
+         C:\Work\Compass64\code\aprs\APRSISCE\text.c(46,22): warning C4244: '=': conversion from '__int64' to 'WORD', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\text.c(626,21): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\text.c(642,12): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\text.c(706,10): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\text.c(710,19): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\text.c(717,14): warning C4244: '-=': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\text.c(719,21): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\text.c(744,17): warning C4244: '-=': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\text.c(768,15): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\text.c(788,10): warning C4267: '=': conversion from 'size_t' to 'long', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\text.c(988,10): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\text.c(990,12): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\text.c(1053,17): warning C4244: '-=': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\text.c(1055,46): warning C4244: 'function': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\text.c(1310,20): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\text.c(1313,56): warning C4244: 'function': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\text.c(1323,61): warning C4244: 'function': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\text.c(1325,19): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\text.c(1327,40): warning C4244: 'function': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\text.c(1329,11): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\text.c(1330,17): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\text.c(1342,30): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\text.c(1378,20): warning C4244: '-=': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\text.c(1396,18): warning C4244: '-=': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\text.c(1408,43): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\text.c(1618,10): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\text.c(1620,12): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\text.c(1665,17): warning C4244: '-=': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\text.c(1667,46): warning C4244: 'function': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\tcputil.c(637,11): warning C4244: '=': conversion from 'SOCKET' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\tcputil.c(736,18): warning C4244: '=': conversion from 'SOCKET' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\tcputil.c(747,29): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\KISS.c(196,33): warning C4244: 'function': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\KISS.c(198,60): warning C4244: 'function': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\KISS.c(350,13): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\KISS.c(366,14): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\KISS.c(374,13): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\KISS.c(377,13): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\KISS.c(440,33): warning C4244: 'function': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\KISS.c(454,17): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\KISS.c(484,11): warning C4267: '=': conversion from 'size_t' to 'long', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\KISS.c(489,10): warning C4244: '=': conversion from '__int64' to 'long', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\KISS.c(522,11): warning C4267: '=': conversion from 'size_t' to 'long', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\KISS.c(529,10): warning C4244: '=': conversion from '__int64' to 'long', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\cprtns.c(90,46): warning C4312: 'type cast': conversion from 'PORT_F' to 'HANDLE' of greater size
+         C:\Work\Compass64\code\aprs\APRSISCE\cprtns.c(110,42): warning C4312: 'type cast': conversion from 'PORT_F' to 'HANDLE' of greater size
+         C:\Work\Compass64\code\aprs\APRSISCE\cprtns.c(150,42): warning C4312: 'type cast': conversion from 'PORT_F' to 'HANDLE' of greater size
+         C:\Work\Compass64\code\aprs\APRSISCE\cprtns.c(221,39): warning C4311: 'type cast': pointer truncation from 'HANDLE' to 'PORT_F'
+         C:\Work\Compass64\code\aprs\APRSISCE\cprtns.c(225,48): warning C4312: 'type cast': conversion from 'PORT_F' to 'void *' of greater size
+         C:\Work\Compass64\code\aprs\APRSISCE\cprtns.c(266,42): warning C4312: 'type cast': conversion from 'PORT_F' to 'HANDLE' of greater size
+         C:\Work\Compass64\code\aprs\APRSISCE\cprtns.c(270,42): warning C4312: 'type cast': conversion from 'PORT_F' to 'HANDLE' of greater size
+         C:\Work\Compass64\code\aprs\APRSISCE\cprtns.c(317,42): warning C4312: 'type cast': conversion from 'PORT_F' to 'HANDLE' of greater size
+         C:\Work\Compass64\code\aprs\APRSISCE\cprtns.c(322,42): warning C4312: 'type cast': conversion from 'PORT_F' to 'HANDLE' of greater size
+         C:\Work\Compass64\code\aprs\APRSISCE\cprtns.c(357,40): warning C4312: 'type cast': conversion from 'PORT_F' to 'HANDLE' of greater size
+         C:\Work\Compass64\code\aprs\APRSISCE\cprtns.c(490,45): warning C4312: 'type cast': conversion from 'PORT_F' to 'HANDLE' of greater size
+         C:\Work\Compass64\code\aprs\APRSISCE\cprtns.c(531,37): warning C4312: 'type cast': conversion from 'PORT_F' to 'HANDLE' of greater size
+         C:\Work\Compass64\code\aprs\APRSISCE\cprtns.c(579,38): warning C4312: 'type cast': conversion from 'PORT_F' to 'HANDLE' of greater size
+         C:\Work\Compass64\code\aprs\APRSISCE\Bluetooth.c(124,44): warning C4133: 'function': incompatible types - from 'UINT *' to 'size_t *'
+         C:\Work\Compass64\code\aprs\APRSISCE\Bluetooth.c(291,19): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\Bluetooth.c(579,9): warning C4244: 'return': conversion from 'SOCKET' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\aprs_udp.c(56,10): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\aprs_udp.c(60,19): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\aprs_udp.c(67,14): warning C4244: '-=': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\aprs_udp.c(69,21): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\aprs_udp.c(78,17): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\aprs_udp.c(127,10): warning C4267: '=': conversion from 'size_t' to 'long', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\aprs_udp.c(161,23): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\aprsis.c(62,10): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\aprsis.c(66,19): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\aprsis.c(73,14): warning C4244: '-=': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\aprsis.c(75,21): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\aprsis.c(88,17): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\aprsis.c(190,10): warning C4267: '=': conversion from 'size_t' to 'long', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\aprsis.c(216,23): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\aprsis.c(280,10): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\aprsis.c(284,19): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\aprsis.c(294,17): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\APRSISCE\AGW.c(113,20): warning C4477: 'sprintf' : format string '%.*s' requires an argument of type 'int', but variadic argument 1 has type 'size_t'
+         C:\Work\Compass64\code\aprs\APRSISCE\AGW.c(113,20): warning C4477: 'sprintf' : format string '%.*s' requires an argument of type 'int', but variadic argument 3 has type 'size_t'
+         C:\Work\Compass64\code\aprs\APRSISCE\AGW.c(118,27): warning C4477: 'sprintf' : format string '%.*s' requires an argument of type 'int', but variadic argument 1 has type 'size_t'
+         C:\Work\Compass64\code\aprs\APRSISCE\AGW.c(118,27): warning C4477: 'sprintf' : format string '%.*s' requires an argument of type 'int', but variadic argument 3 has type 'size_t'
+         C:\Work\Compass64\code\aprs\source\parse.c(142,16): warning C4244: 'return': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\source\parse.c(225,10): warning C4244: 'return': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\source\parse.c(393,25): warning C4244: '=': conversion from '__int64' to 'unsigned long', possible loss of data
+         C:\Work\Compass64\code\aprs\source\parse.c(595,38): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\source\parse.c(1486,10): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\source\parse.c(1486,29): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\source\parse.c(1681,20): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\source\parse.c(1832,21): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\source\parse.c(3241,20): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\source\parse.c(4392,23): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\source\parse.c(4397,16): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\source\parse.c(4502,23): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\source\parse.c(4505,16): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\shapelib-1.3.0b2\shpopen.c(524,33): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\shapelib-1.3.0b2\shpopen.c(868,33): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\shapelib-1.3.0b2\safileio.c(218,34): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\shapelib-1.3.0b2\dbfopen.c(416,33): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\shapelib-1.3.0b2\dbfopen.c(678,33): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\shapelib-1.3.0b2\dbfopen.c(716,51): warning C4267: 'function': conversion from 'size_t' to 'SAOffset', possible loss of data
+         C:\Work\Compass64\code\aprs\shapelib-1.3.0b2\dbfopen.c(1367,10): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\shapelib-1.3.0b2\dbfopen.c(1436,13): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+         C:\Work\Compass64\code\aprs\shapelib-1.3.0b2\dbfopen.c(1664,11): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+         C:\Work\Compass64\code\xp\source\xmltok_impl.c(1685,18): warning C4244: 'return': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\xp\source\xmltok_impl.c(1685,18): warning C4244: 'return': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\xp\source\xmltok_impl.c(1685,18): warning C4244: 'return': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\xp\source\xmlparse.c(789,25): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\xp\source\xmlparse.c(836,26): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\xp\source\xmlparse.c(844,34): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\xp\source\xmlparse.c(875,30): warning C4244: 'return': conversion from '__int64' to 'long', possible loss of data
+         C:\Work\Compass64\code\xp\source\xmlparse.c(882,24): warning C4244: 'return': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\xp\source\xmlparse.c(1254,41): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\xp\source\xmlparse.c(1424,54): warning C4244: 'function': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\xp\source\xmlparse.c(1429,27): warning C4244: 'function': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\xp\source\xmlparse.c(1449,56): warning C4244: 'function': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\xp\source\xmlparse.c(1458,28): warning C4244: 'function': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\xp\source\xmlparse.c(1798,56): warning C4244: 'function': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\xp\source\xmlparse.c(1807,28): warning C4244: 'function': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\xp\source\xmlparse.c(2505,34): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\xp\source\xmlparse.c(2649,51): warning C4244: 'function': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\xp\source\xmlparse.c(2654,63): warning C4244: 'function': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\xp\source\xmlparse.c(3227,46): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\xp\source\xmlparse.c(3238,31): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+         C:\Work\Compass64\code\lpng\source\pngwutil.c(177,26): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+         C:\Work\Compass64\code\lpng\source\pngwutil.c(1360,74): warning C4267: 'function': conversion from 'size_t' to 'png_uint_32', possible loss of data
+         C:\Work\Compass64\code\lpng\source\pngwutil.c(1577,45): warning C4267: '=': conversion from 'size_t' to 'png_uint_32', possible loss of data
+         C:\Work\Compass64\code\lpng\source\pngwio.c(53,12): warning C4267: '=': conversion from 'size_t' to 'png_uint_32', possible loss of data
+         C:\Work\Compass64\code\lpng\source\pngset.c(398,33): warning C4267: '=': conversion from 'size_t' to 'png_uint_32', possible loss of data
+         C:\Work\Compass64\code\lpng\source\pngset.c(414,31): warning C4267: '=': conversion from 'size_t' to 'png_uint_32', possible loss of data
+         C:\Work\Compass64\code\lpng\source\pngset.c(436,38): warning C4267: '=': conversion from 'size_t' to 'png_uint_32', possible loss of data
+         C:\Work\Compass64\code\lpng\source\pngset.c(691,29): warning C4267: '=': conversion from 'size_t' to 'png_uint_32', possible loss of data
+         C:\Work\Compass64\code\lpng\source\pngset.c(994,41): warning C4267: '=': conversion from 'size_t' to 'png_uint_32', possible loss of data
+         C:\Work\Compass64\code\lpng\source\pngset.c(1040,55): warning C4267: 'function': conversion from 'size_t' to 'png_uint_32', possible loss of data
+         C:\Work\Compass64\code\lpng\source\pngset.c(1071,62): warning C4267: 'function': conversion from 'size_t' to 'png_uint_32', possible loss of data
+         C:\Work\Compass64\code\lpng\source\pngrutil.c(218,59): warning C4267: 'function': conversion from 'size_t' to 'png_uint_32', possible loss of data
+         C:\Work\Compass64\code\lpng\source\pngrutil.c(242,69): warning C4267: 'function': conversion from 'size_t' to 'png_uint_32', possible loss of data
+         C:\Work\Compass64\code\lpng\source\pngrutil.c(308,65): warning C4267: 'function': conversion from 'size_t' to 'png_uint_32', possible loss of data
+         C:\Work\Compass64\code\lpng\source\pngrutil.c(1067,33): warning C4267: '=': conversion from 'size_t' to 'png_uint_32', possible loss of data
+         C:\Work\Compass64\code\lpng\source\pngrutil.c(1160,27): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+         C:\Work\Compass64\code\lpng\source\pngpread.c(529,31): warning C4267: '-=': conversion from 'size_t' to 'png_uint_32', possible loss of data
+         C:\Work\Compass64\code\lpng\source\pngpread.c(545,31): warning C4267: '-=': conversion from 'size_t' to 'png_uint_32', possible loss of data
+         C:\Work\Compass64\code\lpng\source\pngpread.c(710,29): warning C4267: '-=': conversion from 'size_t' to 'png_uint_32', possible loss of data
+         C:\Work\Compass64\code\lpng\source\pngpread.c(733,29): warning C4267: '-=': conversion from 'size_t' to 'png_uint_32', possible loss of data
+         C:\Work\Compass64\code\lpng\source\pngpread.c(1285,64): warning C4267: 'function': conversion from 'size_t' to 'png_uint_32', possible loss of data
+         C:\Work\Compass64\code\jpeg\source\jmemmgr.c(306,47): warning C4267: '+=': conversion from 'size_t' to 'long', possible loss of data
+         C:\Work\Compass64\code\jpeg\source\jmemmgr.c(366,46): warning C4267: '+=': conversion from 'size_t' to 'long', possible loss of data
+         C:\Work\Compass64\code\jpeg\source\jmemmgr.c(976,35): warning C4267: '-=': conversion from 'size_t' to 'long', possible loss of data
+         C:\Work\Compass64\code\jpeg\source\jmemmgr.c(990,35): warning C4267: '-=': conversion from 'size_t' to 'long', possible loss of data
+
+
+       "C:\Work\Compass64\code\aprs\APRSISCE\APRSIS32\APRSIS32.vcxproj" (Build target) (1) ->
+       (ClCompile target) -> 
+         C:\Work\Compass64\code\aprs\APRSISCE\parsedef.h(1,10): fatal  error C1083: Cannot open include file: 'aprs/source/parsedef.h': No such file or directory
+         C:\Work\Compass64\code\aprs\APRSISCE\parsedef.h(1,10): fatal  error C1083: Cannot open include file: 'aprs/source/parsedef.h': No such file or directory
+         c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\print.c': No such file or directory
+         c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\lzio.c': No such file or directory
+         c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\lvm.c': No such file or directory
+         c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\lundump.c': No such file or directory
+         c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\ltm.c': No such file or directory
+         c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\ltablib.c': No such file or directory
+         c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\ltable.c': No such file or directory
+         c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\lstrlib.c': No such file or directory
+         c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\lstring.c': No such file or directory
+         c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\lstate.c': No such file or directory
+         c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\lparser.c': No such file or directory
+         c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\loslib.c': No such file or directory
+         c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\lopcodes.c': No such file or directory
+         c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\lobject.c': No such file or directory
+         c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\loadlib.c': No such file or directory
+         c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\lmem.c': No such file or directory
+         c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\lmathlib.c': No such file or directory
+         c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\llex.c': No such file or directory
+         c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\liolib.c': No such file or directory
+         c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\linit.c': No such file or directory
+         c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\lgc.c': No such file or directory
+         c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\lfunc.c': No such file or directory
+         c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\ldump.c': No such file or directory
+         c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\ldo.c': No such file or directory
+         c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\ldebug.c': No such file or directory
+         c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\ldblib.c': No such file or directory
+         c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\lcode.c': No such file or directory
+         c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\lbaselib.c': No such file or directory
+         c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\lauxlib.c': No such file or directory
+         c1 : fatal  error C1083: Cannot open source file: '..\..\..\lua\lua-5.1.5\src\lapi.c': No such file or directory
+
+    150 Warning(s)
+    32 Error(s)
+
+Time Elapsed 00:00:09.49
