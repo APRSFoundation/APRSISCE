@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <ProjectGuid>{1DF3F5CB-3274-48CC-8F8E-78ED93C95002}</ProjectGuid>
+    <RootNamespace>TrakView32</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>17.0.33516.290</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <EnableManagedIncrementalBuild>False</EnableManagedIncrementalBuild>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>c:\cvstest\code;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>TRAKVIEW;WIN32;_DEBUG;_WINDOWS_DEBUG;_CRT_SECURE_NO_WARNINGS;UNICODE;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>TRAKVIEW;_UNICODE;UNICODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>Ws2_32.lib;Msimg32.lib;Comctl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\lpng\source\png.h" />
+    <ClInclude Include="..\..\..\lpng\source\pngconf.h" />
+    <ClInclude Include="..\..\..\lpng\source\pngusr.h" />
+    <ClInclude Include="..\..\..\xp\source\asciitab.h" />
+    <ClInclude Include="..\..\..\xp\source\hashtable.h" />
+    <ClInclude Include="..\..\..\xp\source\iasciitab.h" />
+    <ClInclude Include="..\..\..\xp\source\latin1tab.h" />
+    <ClInclude Include="..\..\..\xp\source\nametab.h" />
+    <ClInclude Include="..\..\..\xp\source\utf8tab.h" />
+    <ClInclude Include="..\..\..\xp\source\xmldef.h" />
+    <ClInclude Include="..\..\..\xp\source\xmlparse.h" />
+    <ClInclude Include="..\..\..\xp\source\xmlrole.h" />
+    <ClInclude Include="..\..\..\xp\source\xmltok.h" />
+    <ClInclude Include="..\..\..\xp\source\xmltok_impl.h" />
+    <ClInclude Include="..\..\..\zl\source\crc32.h" />
+    <ClInclude Include="..\..\..\zl\source\deflate.h" />
+    <ClInclude Include="..\..\..\zl\source\inffast.h" />
+    <ClInclude Include="..\..\..\zl\source\inffixed.h" />
+    <ClInclude Include="..\..\..\zl\source\inflate.h" />
+    <ClInclude Include="..\..\..\zl\source\inftrees.h" />
+    <ClInclude Include="..\..\..\zl\source\INFUTIL.H" />
+    <ClInclude Include="..\..\..\zl\source\trees.h" />
+    <ClInclude Include="..\..\..\zl\source\zconf.h" />
+    <ClInclude Include="..\..\..\zl\source\zconf.in.h" />
+    <ClInclude Include="..\..\..\zl\source\zlib.h" />
+    <ClInclude Include="..\..\..\zl\source\zutil.h" />
+    <ClInclude Include="..\..\source\parse.h" />
+    <ClInclude Include="..\..\source\parsedef.h" />
+    <ClInclude Include="..\Address.h" />
+    <ClInclude Include="..\AGW.h" />
+    <ClInclude Include="..\aprsis.h" />
+    <ClInclude Include="..\Config.h" />
+    <ClInclude Include="..\CPDEF.H" />
+    <ClInclude Include="..\CPRTNS.H" />
+    <ClInclude Include="..\Geocaches.h" />
+    <ClInclude Include="..\KISS.h" />
+    <ClInclude Include="..\LLUtil.h" />
+    <ClInclude Include="..\OSMUtil.h" />
+    <ClInclude Include="..\pngUtil.h" />
+    <ClInclude Include="..\Port.h" />
+    <ClInclude Include="..\resource.h" />
+    <ClInclude Include="..\tcputil.h" />
+    <ClInclude Include="..\text.h" />
+    <ClInclude Include="..\timestamp.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\lpng\source\png.c" />
+    <ClCompile Include="..\..\..\lpng\source\pngerror.c" />
+    <ClCompile Include="..\..\..\lpng\source\pnggccrd.c" />
+    <ClCompile Include="..\..\..\lpng\source\pngget.c" />
+    <ClCompile Include="..\..\..\lpng\source\pngmem.c" />
+    <ClCompile Include="..\..\..\lpng\source\pngpread.c" />
+    <ClCompile Include="..\..\..\lpng\source\pngread.c" />
+    <ClCompile Include="..\..\..\lpng\source\pngrio.c" />
+    <ClCompile Include="..\..\..\lpng\source\pngrtran.c" />
+    <ClCompile Include="..\..\..\lpng\source\pngrutil.c" />
+    <ClCompile Include="..\..\..\lpng\source\pngset.c" />
+    <ClCompile Include="..\..\..\lpng\source\pngtest.c" />
+    <ClCompile Include="..\..\..\lpng\source\pngtrans.c" />
+    <ClCompile Include="..\..\..\lpng\source\pngvcrd.c" />
+    <ClCompile Include="..\..\..\lpng\source\pngwio.c" />
+    <ClCompile Include="..\..\..\lpng\source\pngwrite.c" />
+    <ClCompile Include="..\..\..\lpng\source\pngwtran.c" />
+    <ClCompile Include="..\..\..\lpng\source\pngwutil.c" />
+    <ClCompile Include="..\..\..\xp\source\hashtable.c" />
+    <ClCompile Include="..\..\..\xp\source\xmlparse.c" />
+    <ClCompile Include="..\..\..\xp\source\xmlrole.c" />
+    <ClCompile Include="..\..\..\xp\source\xmltok.c" />
+    <ClCompile Include="..\..\..\zl\source\ADLER32.C" />
+    <ClCompile Include="..\..\..\zl\source\COMPRESS.C" />
+    <ClCompile Include="..\..\..\zl\source\CRC32.C" />
+    <ClCompile Include="..\..\..\zl\source\DEFLATE.C" />
+    <ClCompile Include="..\..\..\zl\source\infback.c" />
+    <ClCompile Include="..\..\..\zl\source\inffast.c" />
+    <ClCompile Include="..\..\..\zl\source\inflate.c" />
+    <ClCompile Include="..\..\..\zl\source\inftrees.c" />
+    <ClCompile Include="..\..\..\zl\source\TREES.C" />
+    <ClCompile Include="..\..\..\zl\source\UNCOMPR.C" />
+    <ClCompile Include="..\..\..\zl\source\ZUTIL.C" />
+    <ClCompile Include="..\..\source\parse.c" />
+    <ClCompile Include="..\Address.cpp" />
+    <ClCompile Include="..\AGW.c" />
+    <ClCompile Include="..\aprsis.c" />
+    <ClCompile Include="..\APRSISCE.cpp" />
+    <ClCompile Include="..\Config.cpp" />
+    <ClCompile Include="..\cprtns.c" />
+    <ClCompile Include="..\GeoCaches.cpp" />
+    <ClCompile Include="..\KISS.c" />
+    <ClCompile Include="..\LLUtil.cpp" />
+    <ClCompile Include="..\OSMUtil.cpp" />
+    <ClCompile Include="..\pngUtil.cpp" />
+    <ClCompile Include="..\Port.c" />
+    <ClCompile Include="..\tcputil.c" />
+    <ClCompile Include="..\text.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\APRSISCE.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\APRSISCE.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\G4ILO.ico" />
+    <Image Include="..\icon1.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
