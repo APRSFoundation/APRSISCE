@@ -1,0 +1,756 @@
+Here's what's new in the APRSISCE6P-101003.zip and APRSIS32-101003.zip
+
+About version is 2010/10/03 07:30
+
+MULTITRACK!  - nuff said?  Not really...
+
+	Access via Station popup menu - MultiTrack option - Only on APRSIS32, no Windows Mobile for obvious screen estate limitations
+
+	Set window's Size, Zoom (Up/Down) and Transparency (Left/Right) then hit Preferred / Percent or Size or Zoom (Screen / Preferred / MultiTrack / ... on Main Window)
+
+	Windows are initially centered and tracking the original station with a Buddy filter
+
+	To get a Friend Filter (if Range is non-zero) hit the Range option in the MultiTrack window's station popup menu (limited to 6 by APRS-IS server filters)
+
+	Right click on empty map space menu shows all MultiTrack and Main windows for direct access
+
+	There is a limited number of these windows allowed, currently 6 (including Main) with Range tracking or 8 total Windows (including Main)
+
+APRSISCE/32 now parses and displays APRS weather (the 3 most popular formats) and displays it in the station popup.  At least it's not in the comment any more!  And there's new Configure / Metric options to go with it along with View / Label / Weather to show Temp and Windspeed/Direction.
+
+APRSISCE/32 supports ANSRVR, an announcement server that can be used similar to CQSRVR, but allows lurking quietly to listen for announcements.  Check out Messages / Announcements / Active Groups to see what's available.  Or Messages / Announcment / Join Group and make your own!
+
+Status Reports (APRS dataytype >) are now supported via Configure / Status... and the Configure / Status Report cascading menu.
+
+	Enabled - Status reports won't transmit unless enabled
+
+	GridSquare - The APRS Spec (pages 81-82, 91-92 in aprs101.pdf) provides for GridSquare to be transmitted as status
+
+	Timestamp - Includes the current ddhhmmz timestamp in the status update, suppressed if GridSquare is checked.
+
+	Status report / Status - The text to transmit, also available via cascading menu
+
+	Interval - The time in minutes between transmissions.  0 will also disable.
+
+	On the cascading menu, New will let you set a new status text while None will disable transmission of status.
+
+Comment Interval (Configure / Status...) allows you to specify a time range for including the Beacon Comment on position updates.  Configure / Status... has Beacon Comment / Interval where 0 = Always (as it used to be), otherwise the value is in minutes.  The comment is included on Forced (Manual) Transmit, but will only piggy-back on a beacon that is otherwise triggered by Transmit Pressure.
+
+Chat windows on APRSIS32 (not WinMo) Hide when they are closed automatically retaining previous chat contents.  Any new message received from or sent to the same station will restore the populated chat.  To actually close a chat (to get a new one next time), clear it first.
+
+Chat windows now offer a MultiTrack menu option that brings up a MultiTrack window for any callsign that isn't yours (2 windows for eavesdropped chats)
+
+If you click on a detected link in a Chat window, the URL will open in your default browser.  Note that if the URL is split over multiple lines, you'll still have to piece it back together.
+
+You can no longer type a | ~ or { into a chat message.  These are illegal characters in the body of APRS messages per spec.
+
+If you fill the chat outbound box, it will still let you type an Enter to send the message.
+
+Multi-line wrapped messages have a + added to the end to indicate to the recipient that there's more text coming their way.  Eventually, APRSISCE might use this to merge messages together on the limited display.
+
+I've tightened up the Chat display by replacing the (redundant) date/Reply space with a < or > pointing to the side of the conversation that sent the text (this means the chat window is 6 characters narrower by default).  If a date changes in a chat, a line is inserted to tell you that.  (Who wants to stay up across midnight to test that for me?)
+
+Corrected a bug causing message-only stations to be forgotten quickly eliminating the ability for Reply-Ack to work.
+
+Also corrected a bug causing all non-SSID'd message recipients to appear as "My Messages" (thanks to SQ5NWI for reporting this one)
+
+New "Clear" menu with the old "Clear Tracks" and new "Clear Stations" that drops all but buddies and the center station.  A bunch of other Clears have moved here as well.
+
+Configure / Screen / Labels / "Not Me" and "Not Mine" allow you to suppress your stations' callsigns from the display even if Screen / Labels / Callsign is checked.  Many times, you know where your own stations are!  (sort of Fred N7FMH)
+
+Configure / Messages now contains My Messages, Eavesdrop (both moved from Messages) and the new Hide Queries, Notify New, and Notify Query so you can eliminate the popup balloons if you so desire.  
+
+When you pop up a single station menu, the most recently received packet for that station is shown at the bottom of the map.  You may have to maximize the window to make this useful.  Maybe some day it will scroll horizontally, but not soon.
+
+The station popup menu now includes the timestamp the most recent packet was heard.  This will probably change to a packet age (d hh:mm:ss Ago) in some future revision.
+
+Single station popup menus now have a cascading "Path" menu showing the path components w/symbols additional cascades if the station is known
+
+The "Me" station popup message box includes the currently connected APRS-IS server IP:Port if connected and different than what is configured (Philip KB5ASY)
+
+All station popups now contain the table and symbol in ASCII characters after Sym: <DesscriptiveName> (TS).  This will make constructing Symbol filters a bit easier.  (sort of Fred N7FMH)
+
++/- on zoom slider now have boxes around them to help stand out (not sure who suggested it, but thanks)
+
+Some of you may have noticed the square blocks around the station Icons on the task bar and system menu. I've been learning more about transparency and those blocks are now gone.  Any white (RGB(255,255,255)) in the original symbol is now made transparent just as it is when displaying the symbol at 100% intensity on the map.  Now I need to tackle making it fade away transparently (it currently gets a ghosty rectangle around it as it fades away).
+
+Brace yourself, the world really isn't a rectangle, but a continuous east/west flow.  If you drag west of Hawaaii, you find Japan.  If you drag east of Australia/New Zealand, you find South America!  If you zoom way out, you can see multiple worlds, but only once instance of each station where it would be closest to center.  There is still a N/S boundary though as OSM (and APRSISCE/32) only goes +/- 85.0511 degrees (arctan(sinh(pi)) - See http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#X_and_Y and the bottom of http://en.wikipedia.org/wiki/Mercator_projection#Uses).  If you're venturing outside that limit, please take someone else's APRS software with you!  (or take me along so I can test the behavior and make it work, all expenses paid, of course!)
+
+Improved paint performance of the background map, the scrolling station icons, and the map icons.  Please see if your CPU is running more idle and let me know.  My map painting seemed about 50% faster (20% down to 10%) as I cache bigger maps rather than continuously assembling the individual tiles.  It improved yet again when I cached the overlayed symbol images.  Previously it jittered the overlay character and drew it about 10 times for EVERY icon repaint.
+
+I've further improved the paint performance of faded maps (<95%) by doing the fade while assembling the tiles rather than while putting the large map to the screen.  This is now a 2msec operation instead of 20msec on Win32.  On WinMo, it's 2msec instead of 400-800msec!
+
+Address lookup is now asynchronous on a free-running thread.  You can continue to work until the answer comes in at which time the (modal) message box will appear.
+
+When a telemetry update is received, refrsh the timestamp of any telemetry definitions for that station to keep them around longer.  Note, the timestamp is not necessarily when the definitions were received, but when they were most recently considered "useful" as in the station is still sending telemetry.
+
+Telemetry Definitions now purge if they are not referenced after a long period of time (default 14 days).  You can also dump all of them on the floor (not recommended if you use the Telemetry popup) via Clear / Clear Telemetry.
+
+Bulletins now purge if they are not refreshed after a configurable period of time (default 48 hours).  You can clear them all via Clear / Clear Bulletins or the Clear menu option on the bulletins window itself.
+
+Buddy stations can now be configured to purge with age instead of hovering at 5%.  They still fade based on <Stations.MaxAge>, but will delete after <Stations.MaxAge.Buddy> (default 0 for unlimited as before).
+
+Track points will now purge even if the owning station remains active.  There are two parameters for this, one for Buddy tracks and the other for non-buddies.  A value of 0 retains them forever.  Buddies default to 0 (unlimited) and others are 24 hours by default.
+
+The <IGATE capabilities packet is no longer generated if APRS-IS is disabled (an RF-Only installation).  The program isn't gating then anyway.  Also, if <IGATE has been transmitted and APRS-IS is disabled, an <IGATE,DISABLED packet will be sent.  (Philip KB5ASY)
+
+That bothersome Xmit checkbox is gone from the TCP/IP and COMM port configuration dialogs.
+
+Fixed the Power Status popup to only display values that Windows doesn't flag as Unavailable (255 in the case of percentage)  (Thanks to Mike WM4B)
+
+Renovated internal window invalidates to prepare for MultiTracking windows.  Let me know if any visual artifacts result.
+
+In some strange instances (like when my phone is tethered to my laptop), noam.aprs2.net translates to some bogus IP addresses ending in .0.  I now ignore these UNLESS every translations ends in .0.  This is only done with DNS-resolved, not explicitly configured IP addresses.
+
+Some of you eavesdroppers have been getting innudated with the "Running" messages sent by KJ4ERJ to KJ4ERJ-12 and noticed that they didn't go away with Messages / Purge Eaves.  This is because these messages were considered "special".  I've fixed it so they'll go back to being eavesdrop messages for everyone but me.
+
+Mucked around with the popup menus as I noticed that they overlap to a high degree on WinMo. I liked how they came out, so all station popup menus will now show the station's call AND comment (if any) along with a separator making them appear to be a "header" on the menu.  This way, if you can see the menu, you know who it's for even if it covered the parent menu item that brought it up (like a multi-station selection or a Path menu).
+
+The "Path" menu now shows the accurate hop count for the displayed path at the end (after a new separator).  It will also include the "Best" hops if it is different than the displayed Path.  This happens when multiple digi'd packets are received, the last one's path is shown, but there may have been a better (fewer used hops) earlier.
+
+If Configure / Beacon / Comment was used to select or enter a new comment, the "ME" station popup did not reflect the change.  It does now.  (Julian G4ILO)
+
+There is also a Clear / Beacon Comments that will clear ALL remembered comments except the one that may be currently in use (Steve G6UIM)
+
+Genius Beacon settings now support "Time Only" (Default off, which completely bases beacons on Max Time) and "Start/Stop" (Default On, which can disable the start/stop beacon triggers for those that drive in traffic) (Peter Scheltema and ???)
+
+If an instance with objects and/or bulletins was down for a while, when it came up, it would burst out all overdue objects and bulletins.  This has been tempered to only allow one Object and one Bulletin over RF per 30 second window.  If an Object or Bulletin is edited and changed (or a new one is created), all pending objects and bulletins are allowed to transmit regardless of -IS or RF.
+
+Object kill flags were being parsed, but only recognized if it was a kill on the first definition of the object.  This has been fixed to recognize a kill on subsequent packets and remove the object from the screen.  (Steve AB3LT)
+
+The zoom slider and the width of the power and close stations bars is now based on the width of a standard vertical scroll bar via GetSystemMetrics().  This may be wider than before, but is not allowed to get narrower than my previous hard-coded 15 pixels.  (Robin)
+
+If you have Configure / Screen / GridSquare checked to see the screen center grid square in the lower left corner, you will now see grid square outlines at 45% and 95% opacity.  The left/right arrows adjust by 5% for each increment, but don't worry, if you see the grid square, you can't help but notice the outlines when they appear unless you're zoomed WAY up close.  Zoom levels 0 through 4 show 2 character squares (unlabelled), 5 through 9 show 4 character squares, and 10 and higher show 6 character squares.
+
+Parsing of the !xxxx! texts from http://aprs.org/aprs12/EmergencyCode.txt into the MicE status string, no notifications yet, though.
+
+?APRSS now triggers an immediate status report transmission in addition to returning the configured port status and traffic rates (Randy WF5X)
+
+APRSISCE (WinMo) now offers to save enabled trace logs "Always" for things like RF Port logs.  The only way to remove an Always is editing the XML file.
+
+APRSISCE (WinMo) now tracks phone operator and quality status in the APRS-IS OK rotating status display. This status is also reported in the ?APRST query response.  The Quality value is also reported in the Telemetry if enabled.
+
+APRSISCE (WinMo) can now enable or disable a Trace Log while viewing it.  This is good if you open APRS-IS trace log to check IP addresses.  Disable it or it will grow quickly.  APRSISCE can also clear and copy the trace log.  In a few development releases, the menu covered the horizontal scroll bar, but this is now fixed.
+
+APRSISCE (WinMo) chat windows are now titled based on the "other" (not Me) callsign.  The "FromCall <-> ToCall" title is just too wide for portrait mobile devices.
+
+APRSISCE (WinMo) now properly clears the green message waiting indicator when you click on it to open a hidden Chat.  All pending shell notifications are also cleared simply by opening the chat.
+
+APRSISCE (WinMo) now pans a bit quicker due to the caching of the assembled map.  Also, if it does need to reload the map, it will switch the transparency off as it can pan smoother in that mode.  It will automatically restore the transparency when the drag operation is complete.
+
+MAJOR CHANGE (For Trace Log Users): APRSISCE/32 no longer automatically enables a Trace Log just by viewing it.  The menu option will say "Enable" if it is disabled and "Disable" if it is enabled.  You must manually enable the log after viewing if you expect to see new stuff.  This was done to allow viewing of "Forced" trace log information without be instantly flooded by the non-forced (must be enabled) information.  Enables / View Logs / All still enables all logs.  Enables / Logging / All OFF will turn them all off.
+
+During initial installation (First Run), the following streamline changes have been made: (Bill WA7NWP)
+	1) Can now Cancel out of initial callsign configuration dialog, program exits with a message (will not run with NOCALL)
+	2) The OSMTiles directory is automatically created as a subdirectory under the current default directory (no prompting).
+	3) The "Drag and Zoom to Home" now accepts Transmit as a way out and doesn't require restarting the client
+	4) Zoom checks are done to ensure that they are at least at a reasonably detailed zoom level before accepting a location.
+
+The new fresh installation startup sequence is now:
+	1) Double-click APRSIS32.EXE
+	2) Enter callsign-SSID and press Enter or click Accept
+	3) Drag and zoom to find "Home" and click Transmit (prompt remains at bottom of screen)
+	4) Done.  Up and running and watching the APRS world.
+
+
+New XML configuration file elements:
+<TraceLogAlways> Always enabled Trace log name - Use this to set them on Win32...
+<View.Callsign.NotMe> & <View.Callsign.NotMine>
+<Aging.TelemetryDefs.Days> - Retention period for unreferenced TelemetryDefs
+<Aging.Bulletins.Hours> - Retention period for non-refreshed Bulletins
+<Stations.Tracks.Hours> - Retention period for accumulated tracks
+<Stations.Tracks.Buddy.Hours> - Retention period for "buddy" station tracks
+<Stations.MaxAge.Buddy> - Retention period for inactive "buddy" stations (they still fade to Stations.MaxAge and lurk at 5%)
+<MultiTrack.Orientation> - Preferred MultiTrack Orientation (not actually used as the screen layout doesn't change)
+<MultiTrack.Percent> - Preferred MultiTrack map transparency
+<MultiTrack.height> - Preferred MultiTrack height
+<MultiTrack.width> - Preferred MultiTrack width
+<MultiTrack.Zoom> - Preferred MultiTrack Zoom
+<MultiTrack.Scale> - Ditto (don't ask me why there's two)
+<Genius.TimeOnly> - Genius's Time Only setting
+<Genius.StartStop> - Genius's Start/Stop setting
+<CommentInterval> - In minutes
+<Status.Enabled>
+<Status.Interval> - In minutes
+<Status.GridSquare> - Trumps Timestamp
+<Status.Timestamp>
+<Status.Text>
+<Status.Choice> - Can be many
+<Status.LastSent> - Time status last sent
+<Enables.HideQueries> - Don't show Queries and/or responses in Chat windows
+<Enables.NotifyOnQuery> - Notification when Queries are received (only if not hiding queries)
+<Enables.NotifyOnNewMessage> - Notification when messages for Me arrive
+<View.Metric.Pressure> - Display pressure in mb vs in
+<View.Metric.Rainfall> - Display rainfall in mm vs in
+<View.Metric.Windspeed> - Display Windspeed in knots vs mph/kph
+<View.Weather> - Includes Temp/Wind as Label for stations that have it
+
+Performance enhancements including:
+OSM Map is now built from panes large enough for the screen.  This larger map is now blt'd onto the screen for station addition during the paint instead of drawing from the original tiles.
+OSM Tile Cache is now also multiple panes in size rather than a bitmap per pane to reduce Windows resource consumption and improve performance
+Panning is improved on APRSISCE by switching map transparency off if the map needs to be reloaded.  Transparency takes LOTS longer w/o hardware acceleration.
+Serious performance improvement in locating stations in the station list for updating when packets are received.  qsort/bsearch rather than a linear search of 2 9-character strings in a list of 10-20,000 elements.
+Instead of drawing overlay characters on each station every time it paints, I now cache pre-written symbols.  This also allows me to paint them faded without having a BOLD overlay character.
+
+
+More ToDos that were completed in this and previous releases:
+Custom MessageBox() implementation to support Enable/Sound & Station icons & more
+Ensure restored main window position is located on monitor and not off-screen somewhere
+CQSRVR custom support, auto-keepalive, queries
+Migrate internals towards multi-tracking window in a single instance
+Eliminate Station Index Use - Menus, Center Index, More? - Use FindStationCall and/or strncmp
+Eliminate MaxStationCount, use avg and grow as needed - No "Oldest" replacment
+qsort and bsearch FindStationCall
+Use FindStationCall (bsearch version) in GetOrCreate
+Eliminate SendMessageDlg - Use Chat w/Drop-Down at top - Almost, you'll know the change when you see it
+Chat display simplification using <> on CE and one date/no "Reply"
+CE message doesn't clear green if chat is hidden - Dismiss/Reply does
+Paint / Scrolling Log use cached symbol bitmaps
+
+
+Note: The following ToDos were last updated on 9/8/2010
+If you've suggested something to be done (and have actually read this far)
+and it's not listed below, please re-ask for it and I'll try to get it on
+the list this time.
+
+To Dos:  (Still Incomplete and always getting LONGER instead of SHORTER!)
+
+Top item to be done: RF-Port specific tracking and use, Multi-Port AGW Support, UI-View Maps
+
+Random notes from my whiteboard as a result of thinking while mowing last weekend:
+
+Multi-Window Support
+	Move Rectangles out of CloseStations
+	Visible is bitmask by Array of hwnds
+	rc.* => Array of HWNDs
+	Invalidate* needs to support wild window
+	LastCenterPosition -> Window-specific
+	Transparency -> Window-specific (except for main)
+	WM_SIZE - Don't map all components on non-main window
+	Window tracks Index of arrays
+
+Chat Changes
+	Add Ack + I/F drop-down to Chat Send
+	(See Satellite mode below)
+	Chat Entry -> Rich Edit to colorize lines
+	LIVE Line break - on screen
+	Prevent "ack" leading a line
+	Invalid character removal (|~{)
+	Allow space for <CR> for send
+
+Warn if non-AX.25 callsign to RF device
+
+Chat Entry - Attempt to show in target's font/window size
+
+Parse-defined Platform enum w/screen geometry / font info
+
+Chat Display - Outbounds: Yellow if blocked, Green if Acked,
+	Orange (Tangerine) if Retried Out, Lime Green if Sending
+	Click line to see Orange/Lime Green in Pending Msg popup
+
+RF Listner port ">IP:Port" binds/listens/accepts
+
+Radio Button switch between IP and COM in port configuration
+
+OSM Cache bitmap instead of tile parts
+
+RF Ports - Path specific, Individual Enables, Smarter IGate functions
+
+Paint visible Rectangle (OSM) check First - No clue what this one IS!
+
+Scrolling Log - Extra Window Limit to Vislble?  How? Window Private!
+
+CE raw packet display (bottom of map) word-truncates too early
+(not very usable on the narrow screen anyway)
+
+MsgBox -> private source file (and others)
+
+
+
+
+
+Display improvements:
+Dynamically adjust ALL screen panels for maximum size displayed
+Extend RF View filter to be by configured interface, eliminate if no RF interfaces are configured
+Remove screen elements configurably and/or enable/disable (like GPS)
+Rotate icons to show direction of travel (beaconed or calculated) (Dave N8PU)
+"Flatten" circle to be a true scale from center
+Optionally draw (accurate) PHG circles (View option)
+Find a better icon scaling algorithm based on screen size & scale
+Detect and highlight source of delayed duplications
+Simultaneously track multiple targets in separate circles (Win32 only)
+Highlight station list for stations with any of a configurable "HighlightPath" list of "bad" paths (RELAY, WIDE, WIDE3-*, ...)
+Option to display callsign instead of "Me" and/or completely suppress the "Me" station. (Rod VE1BSK)
+Display "Me" with a different symbol than is beaconed (allows for red dot) (Fred N7FMH)
+Support +/- symbol size adjustment for Me and/or Tracked station symbol (separately) (Fred N7FMH)
+Show current, last beaconed, and last "heard' locations for "Me" (Fred N7FMH) - Email him for details?
+Tab-based station selection (highlighting or expanding as you tab around) with popup-on-entry for keyboard support
+Mouse-hover popup describing screen section? (Configurably disabled/time-triggered/re-enablable)
+Check cascading popups (RF, Symbols, ...) if any submenu item is checked
+Sort stations so most recent is on top for symbols (most recent last) and reverse for labels/altitude (most recent first) for priority placement.
+Record and display speed on tracks for selected track, along with altitude.  (additionally/alternatively, display a graph of track's speed(s) and altitude?)
+Fix label avoidance region to add icons to region for any subsequenly displayed reason (currently only looks at Screen / Labels / Label).
+Include selected labels on all displayed icons, not just the center selected one (optionally!).  Currently only Label (callsign) and altitude are displayed except for centered station.
+Detect that Transparency is or is not supported and disable, especially for running under Wine - Ask G4ILO-IX to test
+Document sounds (Rick KD4DRA)
+User-specified external symbol files (Rick KD4DRA)
+Extended information about (course/speed/time/call) and clickable targets on track points (Greg  KO6TH)
+Provide raw packet in Station-List popup
+Hide when Minimized (and restore from notification Icon) (Needs to ad Message flag to notification Icon, though) (Steve DEK2TY)
+Multi-Track - add more independant settings, rectangle filters (what about zoom adjusts?)
+<View.ScrollInternals> - FALSE to suppress internally-generated messages from scrolling station list, EVEN IF ACTUALLY TRANSMITTED! - Not done yet 9/22/2010
+Change timestamp in popup menus to time since last update (d+hh:mm:ss Ago)
+Perform Mic-E alerting functions described at http://aprs.org/aprs12/EmergencyCode.txt
+Provide "ignore station" exclusion filters for main display.
+Provide filters or selectoins for what shows up in the srolling station log (particularly the abilility to suppress my generated packets).
+
+
+
+Mapping Support:
+Support checking revision of tiles when loading, via OpenStreetMap.org's /status URL.
+OSM Tile access timestamping, revision checking, intelligent purger, grid (pixel?) cache display
+Find a way to mark tiles referenced on Windows Mobile without slowing down map loading (queue references to fetcher thread?).
+UI-View/.INF map support (Julian G4ILO)
+Does anyone know if UI-View correctly scales the N/S via the Mercator projection or does it linearly map the point in the vertical?
+Ability to override OSM map tiles for specific areas/zoom levels (Ordnance Survey maps showing contours, footpaths) (Julian G4ILO) (Colin M6XSD) (2/20/2010 6:20am)
+Precision Mapping Streets & Traveller (Alan WA4SCA)
+Use HTTP/1.1 in OSM Tile Fetcher to improve throughput (multiple tile fetches on a single connection).
+Support the -180/180 latitude wrap with closest display tile
+Internal support for OSM Map updates (Julian G4ILO)
+Deeper zoom on prefetch (4x or straight zoom?) (Fred N7FMH)(kc9gqr)
+Map Magnification (and corresponding coordinate adjustment)
+Support configuration options for Osmarender and/or Cycle Map tiles from OSM (what about white?) (James VE6SRV) (Fred N7FMH)
+Display zoom level on screen and allow user to further restrict available levels (Fred N7FMH)
+
+
+Filter Features:
+Track station as Buddy (just station) or Friend (moving range circle)
+Configurable ranges for Me, Tracked, Dragged
+Filter scrolling station log to RF only and/or not include me
+
+
+User/Alternate Input:
+Numeric keypad shortcuts to some functions (2 for up, 8 down, 4 left, 6 right) (Sean Brad Inggs ZR5BBL) (Chris SQ5NWI)
+Sprint Touch Pro 2 zoom slider (http://www.htc.com/us/content/images/phones/touch-pro2-sprint-Support-124.png) (Jason K2ENG) (Noel W8TVI)
+Review keyboard access to all click/double-click features
+
+
+Cool Features:
+GPX track saving for any station (w/inserted comments?) (Julian G4ILO) (Jerome WD4CWG)
+"Age" decay the saved track over a configurable period of time (Gary WB0BZR)
+Support configurable track appearance (width / color) (Rick KD4DRA)
+Web port for remote viewing (PNG) of current screen
+Screen save in PNG format.
+Alerts on various station activity (Tim G4VXE)
+"Station Movement Alarm" (Gary WB0BZR)
+Arrival alarm (Dave N8PU)
+Add Today screen element for direct access to client (w/messages pending display?)
+Dead-reckoned "shadow" station running out ahead of the last beaconed position (for how long/how far?)(Only tracked station(s) or Buddies/Friends?)
+"Highlight Path" from a configurable list of "Interesting" paths (WIDE7-7) (Fred N7FWM)
+Alternate Net (aprs101.pdf Chap 4) via user-specified ToCall
+Make APRSIS32 work under Wine (David WE1U) (Chris KJ4HPQ) (Josh W4SGC) - Still working on Transparency
+Display and set "Destination Waypoints" (http://wa8lmf.net/bruninga/APRS-docs/MOBILE.TXT)
+Implement a compass direction/distance screen for homing in on GeoCaches or Stations / Objects
+Lightning bolts from station to station that was recently involved in an RF exchange (possibly even red->green coloring to indicate direction), Only on reasonable zooms and probably only Win32.  You'd be able to visualize the Digis and IGates and possibly their interactions in near realtime.
+Pulse a station icon when a new packet was received.  Only on reasonable zooms and probably only Win32.
+Interpret severe weather packets and shade map w/transparency (Fred N7FWM).  (Bradley KC9GQR)
+Detect a Mic-E status of Emergency and internally queue a message from that station including callsign, Mic-E status, and current beacon text (Fred N7FWM)
+New/Local/All popup display similar to D710 when packets are received
+
+
+Parser/Station Information:
+Weather parsing and graphing
+Telemetry parsing and graphing, Configure telemetry rate, include OWN telemetry graphs!
+<IGATE capabilities parsing and graphing (and now <RFID?)
+Parse and display Frequency object information (w/Station Label?)
+Add RF traffic and IGate rates to Telemetry
+Parse and display grid-square beacons appropriately (whatever that means)
+Purge bulletins (Hours) and Telemetry Definitions (Days) with configurable intervals
+
+
+Messaging Subsystem:
+Enhanced message support (Julian G4ILO)
+Support remaining message-based queries, Configurable suppression of auto-answers (or display?)
+If replying to a displayed message for another -SSID, spoof the source as that -SSID and watch for corresponding acks (Fred N7FMH) - Checkbox for spoof and add self to used path.
+Remember and provide for re-display of received messages.
+If target station's platform is known, format message sending screen accordingly.
+Support more ?APRSx queries
+Select specific RF Interfaces for message transmission
+Thumbnail map (zoomable, of course) of user's current location in QSO window
+Auto-adjust filter for MessageGroups, or suppress message-only stations from CloseStation list and Stations scroller?
+Support Messages / Recent Messages to show list of recently read messages for quick recall
+Send Message on RF to only those channels that heard the station
+Send Ack to -IS only if a message from an unknown station was received from there (EMAIL-2 responses)
+Add [n/m] to wrapped messages or possibly trailing + to allow for remote re-assembly (especially APRSISCE's Chat)
+Fix length of ?APRSS query response to avoid wrapping as a long message
+Support RF-only transmit and ack/no ack per-chat.
+Don't allow | ~ or { in message text - Invalid per spec
+Enable/Disable message group message capture and/or display
+
+
+APRS Objects:
+Support sending "Item-As-Message" to stations
+Make local objects clickable on-screen for Configure (Enabled, Kill, Delete, Config)
+Add "Display" button in Object config
+Adopt object & Station->Object and Object->Item-As-Message
+
+
+Power Management:
+Program-configurable screen dim, blank, and power control (Jeff KC8NNO)
+Figure out how to use WiFi rather than Cellular data when available (Julian G4ILO)
+Auto GPS disable if no fix within a minimum time (Julian G4ILO) (1/26/2010 8:25pm)
+
+
+Installation/First Use/Configuration:
+Installation .CAB file w/Icon as well (Kevin N1KCG-12)
+Better, explicit, Buddy configuration (reserve one for tracking)
+Preserve comments in XML configuration file (if parser even gives them to me) (Dave N8PU)
+Multiple profile capability with quick switch (beaconing, Icon, status, and such; Hiking, Biking, Mobile, QTH/Stationary)
+WinCE support (Mustafa AYDIN 1/29/2010 12:05pm) (David VE7MDT 2/1/2010 9:49am)
+XML item based advanced configuration for things not on the Configuration dialog.
+"Coordinate Picker" dialog for centering, objects, Item-As-Message
+Support input of altitude for transmission for fixed stations
+Icon selection dialog showing all (or more than one) icon (Keyboard accessible)
+Support the APRSISCE/32 command line containing a reference to an XML configuration file (Gary WB0BZR)
+About box hangs connecting to version server if IP address changes from cellular to WiFi (DNS resolution issue?) (KJ4ERJ-12)
+Validate path entry for AX.25-valid pieces/parts
+Warn on non-AX.25 -SSID in callsign
+If the program finds itself unable to write to the current directory...I can't even tell it's doing strange things, so I can't fix it (YET) (Joe N1MNU)
+
+
+Metric units (Julian G4ILO)
+Make Local Hops, Recent Minutes, and Duplicate Seconds configuration options
+Make Message Retry parameters configuration options
+
+
+RF Interfaces:
+Restrict Gating to RF to only those channels that heard the station
+Digipeater support with configured list of WIDEn-N aliases, Default to TEMP1-1, always digi own callsign-SSID
+Dumb terminal emulator (Craig KI6WLP)
+UI-View-compatible enter/exit KISS mode command file support (John Q1EUH) - MLE
+KISS TNC initialization files (adopt UI-View syntax) - MLE
+AGWPE(pro) bi-directional support w/Port spec as well (Randy WF5X) (Andy AB9FX)
+Transmit support for AGW as well as Port selection for both receive and transmit
+Warning: AGW in "Full Duplex" mode will echo back all transmitted packets which will then RFtoIS gate even if RF-Only sending messages (Steve G6UIM)
+Link-specific status text and paths (Phillip ZL2TZE) & Proportional Pathing (Fred N7FMH) - Inherit
+Warn or disallow multi-selection of a single COM port for multiple I/Fs (Colin M6XSD)
+Configuration of receive-only, staggered transmission, and/or beacons vs IGate per port
+-IS to RF gate functionality to a) gate none (as it does today), b) gate all messages to stations "recently" "heard" locally, or c) gate only Acks to stations from whom a message was recently received (and said ack not heard via RF yet after a short random delay?).  C would accomplish a PSK-63 initiated QSO without risking flooding the channel with stuff that doesn't need to be there.
+Support $NMEA strings interleaved on a TEXT port for TT4's GRELAYBITS / GRELAYRATE
+Support waypoint interpretation for TT4 GWAYMODE along with TSWPT and WYPTXT and PKTOCOM / PKTICOM (NMEA ($GPWPL & $PGRMW), Kenwood ($PKWDWPL ) or Magellan ($PMGNWPL) format)
+Support actual TEXT port support (Converse mode w/TNC-supplied headers) and rename current TEXT for APRS Messenger
+Support IGate ONLY these base callsigns (2E0XSD)
+Implement Me not 3rd in -IS to RF IGating
+Debug AGW-port Digipeat not transmitting Used (*) path flag
+Track which port heard RF
+Only gate messages to the RF port that recently heard local
+Honor various enables / overrides per RF Port (Beacons, Telemetry, Gating, DigiXform)
+View / RF - By Port
+
+
+
+GPS Support:
+Update Bluetooth Port Enumerator to show all under Windows Mobile & remove hard-coded, all-ports listed in dropdown, hack
+Support Mic-E and GridSquare beacon formats
+
+
+Network Features:
+Asynchronous TCP/IP connections & reading (solves hangs)
+Record/Recall last DNS/IP for OSM/APRS-IS (in config file, for connecting without DNS)
+Feed-through APRS-IS with local filters (for multiple instances of Win32 version with a single full feed to APRS-IS) (Win32 only)
+TCP/Port Data Source/Sink redesign/implementation - Code reduction and shared features (like asynch connect)
+Implement a unified DNS cache w/timeouts and auto-refreshes, but asynch!
+
+
+
+RFID Support:
+Configuration of "Preferred" RFID reader stations - these respond quickly to RFID reads
+Delay RFID read response if from a non-preferred reader
+Delay unassigned RFID object creation hoping for a remote RFID read answer
+Double-delay unassigned RFID object creation 
+
+
+Debug Support:
+Add a feature to send Debug logs to KJ4ERJ (post to UIS?)
+
+
+Documentation:
+Update new features in APRSISCE.txt and in the Wiki (http://aprsisce.wikidot.com)
+Provide capabilities checklist to Curt WE7U (http://www.eskimo.com/~archer/aprs_capabilities.html)
+
+
+For the Wiki:
+Overall structure before I get too many pages in there!
+Click/Double-clicks and menu/keyboard equivalents
+Debug logging capture and reporting
+Files used and default locations
+Updating the .EXE - How simple it is
+XML editing procedure (client must be CLOSED)
+Automatic filter settings performed by APRSISCE/32
+Shortcut creation using File Explorer
+What sounds means, especially background sounds
+Station text color and closeness in APRSISCE.txt
+Moving OSMTiles location
+Recommended -SSIDs (link) and caution for uniqueness
+Link to Icons and Filter details
+Power Considerations (1/26/2010 1:49pm)
+Dynamic vs Disable/Enable vs Close/Restart Configuration Changes
+Document multi-instance feature on Win32 (caution about APRS-IS connection count)
+http://www.jeepreviews.com/wireless-gps-coordinates/
+http://www.geocaching.com/wpt/default.aspx
+"Slide To Unlock 2" (S2U2) automatic screen locking app http://www.ac-s2.com/ (Jerome WD4CWG)
+FINALLY, an up to date APRS Beginner Guide - 2009  http://k9dci.home.comcast.net/APRS Beginner Guide - K9DCI Ver 5-1.pdf 
+http://K9DCI.home.comcast.net - Click the APRS Beginner INFO link under Contact
+ScreenOff & LvmTopBat (wake up from battery save mode - 10/23/2009 10:02 AM)
+http://wa8lmf.net/aprs/JAVaprsFilters.htm
+http://www.aprs-is.net/javAPRSFilter.aspx
+http://s2u2.ac-s2.com/ = Slide to Unlock...
+
+
+Capturing a debug log:
+1) Bring up the client
+2) Turn on Enables / Debug Logging
+3) Close the client
+4) Bring up the client
+5) Wait for a while, then do a screen capture (if you know how) or at 
+least note what it says in the APRS Status window (Top center 
+(View/Map/Wide) or 2'nd down on the left (View/Map/Narrow))
+6) Close the client
+7) "Me" popup APRS-IS server info
+
+
+Requested UI-View AddOn Features:
+UI-HeightTrack (Ron K0QVF)
+UI-NWS (Ron K0QVF) Shape files (http://www.aprs-is.net/wx/)
+UI-Traffic (Ron K0QVF)
+UI-WEBServer (Ron K0QVF)
+PmapServer (Ron K0QVF)
+
+Sat-Mode chat notes
+12:05:51 New Chat Between G6UIM and KJ4ERJ-AP on 09-14
+12:05:04>had a bit of a re think on sat mode, have emailed you
+12:05:56<I'll check for it. Thanks. (*2-12:05:56)
+12:06:40<I'm leaning towards Julian's "config and run 2 copies" approach,+ (*2-12:06:40)
+        <though.  I still need to support a few new config options like the+ (*2-12:06:40)
+        <implied ack on digipeat and manual retry non-ack'd message. (*2-12:06:41)
+12:09:49>just thought I would throw some more thoughts in, all thats needed+
+        >at a minimum is force via RF and not IS. I like Julians manual+
+12:09:50>retry non acked message idea myself
+12:12:07>running 2 copies would avoid setting port config etc. I run two at+
+        >the moment on RF only and the other IS only. but that stops gating+
+12:12:08>RF to IS happening
+12:14:10>a copy for normal and a copy for sat would be good. just run one+
+12:14:11>at a time
+12:34:05>Off to Plymouth, if can I will do Demo of aprsis, IS only
+12:54:15<I read your e-mail and it sounds good.  The ability to disable IS+ (*2-12:54:15)
+        <to RF IGating is coming anyway, as is the ability to send Ack-less+ (*2-12:54:15)
+        <messages and to specify an outgoing port (or "Best").  The only+ (*2-12:54:16)
+        <new thing is to keep the ack-less message in the window for manual+ (*2-12:54:16)
+        <retry. (*2-12:54:17)
+12:55:49<And I might remove the ack-less message automatically if a+ (*2-12:55:49)
+        <digipeat (at least one path component used) of it is received+ (*2-12:55:50)
+        <either from RF or IS (as in gated by some remote station AFTER the+ (*2-12:55:50)
+        <satellite).  By looking for a Used path, I avoid a local Igate+ (*2-12:55:51)
+        <from removing the pending message. (*2-12:55:51)
+
+G6UIM - 9/13/2010 5:56pm
+Hi all
+
+Have been chatting with our glorious leader (that’s Lynn) about a satellite mode. I will see if I can remember all that was said in email and over APRS and put down here for thoughts and comments.
+
+ 
+
+I have been trying to get a contact via the ISS using APRSIS32 and at the moment I have to shut off the IS feed to get a message to go via RF. Not ideal as I would like to gate received messages over IS for others.
+
+So with this in mind I came up with the following thoughts
+
+ 
+
+Sat Mode
+
+ 
+
+Only thought about using one RF port so thoughts on having a Sat specific port in a multiport setup would be good.
+
+ 
+
+Force the message over an RF port and not via IS. So the station you are trying to contact will receive the message hopefully via Satellite and not via IS from you.
+
+Gate received messages from the RF port to IS so you are a help to others as an RX SGATE. But not your own messages
+
+Do not gate messages received on IS to RF as flooding the Sat with messages is not helpful. Possible option to allow a buddy to use your station to attempt a Sat contact.
+
+A reasonable retry rate as getting into the Sat can be hard, it will hear lots of stations that you won’t so TX collisions are inevitable, and you have a limited time. use hearing your own message back from the Sat as an ack or possibly also via the sat over IS. So you don’t tie up the Sat and give others a chance.
+
+Also either ignore messages over IS or highlight they came from either IS or RF so you can see you made a contact over the Sat.
+
+ 
+
+Am sure I have forgotten to add a few things above. And have stated the obvious a bit in places.
+
+ 
+
+Thoughts on the above would be good.
+
+ 
+
+Steve
+
+G6UIM
+
+Who is sure Lynn is going to hard code a ban on his callsign sometime soon
+
+9/14/2010 6:13am
+
+ You could take that further why use radio at all, I have the internet on my phone, and a phone on my err phone. And people do ask why I bother with “CB”
+
+Well maybe not a special port.
+
+I agree on the manual send and abort, the ability to keep clicking send until you get a reply then kill the message would be good (with ack turned off).
+
+Although the auto retry and except digi as an ack would be good in some instances, or at least a warning a digi was received.
+
+At the moment I use 2 instances of aprsis one with IS turned off that I use to transmit and the other with IS turned on to see if anyone has received me.
+
+I could do it with one, with what I was suggesting and also be able to gate received stations to IS.
+
+ 
+
+Steve
+
+G6UIM 
+
+
+G4ILO - 9/14/2010 4:16am
+It's another example of the absurdity of our hobby. Why would you want to send a message to someone by bouncing it off a satellite when you are both connected to the internet anyway?  :)  Just to see if it is possible. Which is why I would agree with Steve that it would be useful to have an option to prevent beacons and messages originated by you from being sent to -IS whilst still allowing messages received over RF to be gated.
+
+I'm not sure what the purpose of a special satellite port would be. When I operate through the ISS I'm using my normal 2m setup tuned to the satellite frequency. I run a separate copy of APRSISCE/32 with its own XML file containing the satellite beacon text, path with RS0ISS-4, increased beacon frequency etc.
+
+There were a couple of features I would like to see in a "satellite mode" which I kept quiet about because I figured they were not really a top priority. Now I'm not sure if I could remember them all.
+
+I would prefer messaging in satellite mode to default to "no ack". You don't always remember to untick the ack box and you don't really want people trying to ack back through the space station.
+
+Rather than have a message resent automatically at frequent intervals as Steve suggested I would prefer to control the sending manually so I can try to pick the right moment to send it. So what I would like is for the text of the message not to disappear when it is sent so I can try again without having to retype it.
+
+None of these suggestions make any sense in the context of "normal" APRS so I would understand if it was felt that it was not appropriate for APRSISCE to support them.
+
+Julian, G4ILO
+
+G6UIM - 9/14/2010 12:00pm
+
+Hi Lynn,
+
+Had a re think.
+
+I like the idea of the manual send rather than auto. So basically an ack less message box, you type the message in and it gets sent when you click send, but the the message still displays on screen and gets sent again when you click send. You need to manually remove the box.
+
+Obviously send the message only via RF.
+
+Keep the IS fully functional apart from not gating IS to RF.
+
+My original thought was not receive messages from IS but that’s bad as blocks messages that might get sent from others.
+
+So 3 message receive modes.
+
+Receive all messages however they arrive, for when you don’t mind if the message comes direct from the sat or is gated onto IS by another station. Or direct from the other station.
+
+Don’t display messages on IS from the station/s you are trying to send to via the sat. for when you want an RF only QSO with the station but still want to receive from others.
+
+Don’t display any message that comes in on IS. (perhaps they could be stored and displayed when out of sat mode)
+
+Have this configurable on a port basis as some people might want to have a radio on the normal APRS freq and another running for Satellites. Would need path and beacon on a port by port basis.
+
+ 
+
+Steve
+
+G6UIM
+
+ 
+07:16:44 New Chat Between KJ4ERJ-AP and G4ILO on 09-18
+
+07:29:28> I've duplicated it here and am looking for it.  It looks like it's+ (*2-07:29:28)
+        > a bust in how I'm putting data into the Rich Edit Control.  I see+ (*2-07:29:29)
+        > the whole length right up until it goes into the control for+ (*2-07:29:29)
+        > display. (*2-07:29:29)
+07:29:53> I'm considering just chopping it up myself and changing the colors+ (*2-07:29:53)
+        > to highlight the spec non-adherance. (*2-07:29:54)
+07:30:36> As you can imagine, sending longer messages would be a whole lot+ (*4-07:31:01)
+        > easier than chopping and ensuring sequenced delivery, it just+ (*2-07:31:01)
+        > won't work to radios and possibly other spec-limited APRS-IS+ (*2-07:31:01)
+        > clients! (*2-07:31:02)
+07:30:47> Hence my line-splitting effort. (*2-07:31:02)
+07:30:54< The popup even shows the ack characters at the end.
+07:30:55< Yes that would be a good idea. It's not very easy to read a long+
+        < line by scrolling.
+07:31:40> Agreed, but in my naivity (sp?) I assumed that message limits+ (*2-07:31:40)
+        > would be real. (*2-07:31:40)
+07:31:48< I doubt if any radios would be able to display all of it.
+07:32:09> Highly unlikely, given their limited displays. (*5-07:33:06)
+07:32:52< Yes it's surprising APRS-IS allowed it. Potential for a+
+07:32:53< buffer-overrun exploit?
+07:33:46> Not really, APRS-IS backbone runs Java which is quite forgiving+ (*5-07:34:44)
+        > about such things.  As long as there's a newline in there+ (*2-07:34:44)
+        > somewhere, APRS-IS will transport it. (*2-07:34:45)
+
+
+
+07:33:15> BTW, I'm just going to let the "data leakage" thread die.  The+ (*2-07:33:15)
+        > only outcome will be a message box somewhere during startup that+ (*2-07:33:15)
+        > says that the program is only free for Amateur Radio use on+ (*2-07:33:16)
+        > licensed Amateur frequencies and to contact the author if other+ (*2-07:33:16)
+        > use is intended. (*2-07:33:16)
+07:34:16> Oh, and that usage message box will appear EVERY startup until you+ (*2-07:34:45)
+        > chck the box that says "Don't show this again". (*2-07:34:45)
+07:35:03> And I'm also thinking of a disclaimer in the readme / Wiki intro /+ (*2-07:35:03)
+        > Yahoo Group that says something like: (*2-07:35:04)
+07:36:06> "This program is designed to transmit data via the Internet and RF+ (*3-07:36:14)
+        > frequencies that will contain personally identifiable information+ (*2-07:36:14)
+        > including but not limited to your Amateur Radio callsign, your+ (*2-07:36:15)
+        > current position, your speed, altitude and other GPS-related+ (*2-07:36:15)
+        > information, and who knows what else.  This information will be (*2-07:36:16)
+07:36:48> reported to publically visible APRS-IS server and potentially any+ (*2-07:36:48)
+        > other server for analytics." (*2-07:36:49)
+
+07:38:00< Probably in this litigation happy world you need to have some EULA+
+07:38:01< where people agree not to hold you liable if the program crashes+
+        < their PC, wipes their data, causes their spouse to divorce them or+
+07:38:02< anything else they might try to blame you for.
+
+07:39:32> Yeah, one final statement along the lines of "Use the program at+ (*2-07:43:15)
+        > your own risk.  It's free, and the author is not responsible for+ (*2-07:43:15)
+        > ANYTHING that might happen." (*2-07:43:16)
+
+07:40:16< By the way, if you do use your proposed wording I expect you'll+
+07:40:17< get a lot of questions about the meaning of "and who knows what+
+        < else" and "potentially any+12:36:49> other server for analytics
+07:40:47> I'm sure, and I'll just answer them with "what part of "who knows"+ (*2-07:43:17)
+        > do you not understand"? (*2-07:43:18)
+07:41:30> And point them to some conspiracy theory web site about the e-mail+ (*2-07:43:18)
+        > sniffer and Internet traffic monitors that are supposedly in place+ (*2-07:43:18)
+        > by several world governments. (*2-07:43:19)
+
+07:49:52> I've got Ack and "Best" vs "IS Only" vs "RF Only" and the Send+ (*2-07:50:23)
+        > button working.  No "clear on heard digipeat" yet, though. (*2-07:50:23)
+
+
+APRSISCE
+GEETING STARTED
+
+APRSISCE is downloaded as a zip file, Unzip the contents of this file to a Directory Name of your choice maybe “APRSISCE”.
+
+Now run the APRSISCE program, you will see a box to enter your callsign,  click on the symbol to change to symbol of your choice, enter your password for the aprs server connection, (if you don't have one send email to KJ4ERJ@arrl.net  with your name and call to get one) now at this point you are ready to go to map, and you can fine tune the other settings later. Now click Accept
+
+The next step is setting your Location, very important step...
+
+The box tells you zoom and drag to your location click OK, now you see a very small map, you need to zoom this map, you should see your symbol on the map center but very small, keep in mind that if you zoom too fast you will lose site of your symbol. So just zoom in small increments and drag the map to your station, (you're not dragging your station). 
+
+Keep zooming til you get to street level in your neighborhood and place your station.
+
+That's it, now close the program and reopen and you should be centered on your station.
+
+Hope you enjoy the Program
+For other helpful tips goto  http://aprsisce.wikidot.com/system:page-tags/tag/documentation 
+
+Rick/KD4DRA
+

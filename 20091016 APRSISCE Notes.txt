@@ -1,0 +1,111 @@
+Here's what's new in APRSISCE6P091016.zip
+
+1) The Tile prefetcher now has a better timeout.  I also run two concurrent threads (on the Windows Mobile platform) so the tiles fetch a bit faster.
+
+2) Bad tile files are now removed from the device when they are detected.  Still to come is a tile ager and purger.
+
+3) On larger screen devices, Icons will now grow to double size for better clarity (complements Noel W8TVI)
+
+4) The circle stations redraw has been optimized, especially if a flood of packets arrives in a short span of time.
+
+5) You can now center the screen on an arbitrary station.  Just select Center from a station's popup menu.  Double-clicking on the heading rectangle offers to center back on you.  If the station you're centered on moves, the map moves to keep it centered.  If the centered station ages out and is replaced, the center will automatically move back to you.
+
+6) Both the OpenStreetMap fetcher and the APRS-IS server connection cache the most recently resolved DNS name for faster connects.
+
+7) Messages sent with acks requested are now buffered until the ack is received.  The message rectangle turns yellow while there are ack-pending messages.  Access them for retry or cancel via Menu/Messages/Pending Messages (disabled when none are pending).  When expected acks are received, the Ack popup is suppressed.  Only unexpected or duplicate Acks will generate a popup.
+
+8) Battery voltage telemetry is now disablable (requested by Jason, K2ENG).  Battery voltage is still monitored and displayed in the slider.
+
+9) Other stations running APRSISCE are highlighted in pale yellow on the scrolling stations list.  You can request seeing others by adding u/APWM* to your filter text.  (That's how some of you get messages from me seemingly out of the blue!)
+
+10) Changed overlay symbol text color on Number Diamonds (Digi and HF Gateway).
+
+11) Optimized redrawing to decrease system load when lots of station updates come in quickly.  This is really important when you monitor a large radius or a busy area.  (This may slow updates down to 2 per second, but that seems fast enough).
+
+12) Increased cached fonts and support BOLD display of symbol overlays.
+
+13) Reversed Reply and Dismiss when messages are received to match the Dismiss placement of Windows Mobile appointment reminders.
+
+14) Tracks are now attached to their generating station even when zooming way out (they used to detach if you zoom out too far).
+
+15) Zooming out to extreme zoom now sticks the stations where they belong.  You can now zoom out to an entire world view (not that the phone platform can handle seeing all of that, but it's pretty neat when watching all APRSISCE users!)
+
+16) When centering on another station, APRSISCE automatically adds a friend filter using the configured radius around them.  This can cause more stations and map sections to be active, also benefiting from being able to zoom further out.  The original filter is restored when you move yourself back to the center.
+
+17) The configuration dialog now supports setting your symbol!  Just click on the symbol below the Genius(tm) button.  Select your table (Primary, Alternate, or Overlay) and then spin the spinner(s) and watch the symbol and name change.  Remember that not all clients support overlays on all symbols!  (Most recently requested by Jason, K2ENG).
+
+18) Overlays are now drawn MUCH more clearly on symbols of various sizes.  Play with them in the Configuration Dialog and see them in the circle and in the scrolling station list.
+
+19) The FIRST transmission now includes the satelite counts like GotFix always has.
+
+20) Sending an APRS message that starts with ? will suppress the request for an ack.  This seems to be necessary to talk to some servers.  If you need an ack on a ? message (like sending ? to CQSERV), enter it as <space>? and the ack will be requested.
+
+21) If centering on another station, other station Information popups will show Rel: nnnmi XXX as in distance and bearing from the center.  If you are centered, it still displays Pos: nnnmi XXX as the distance and bearing from YOU.
+
+22) The Spd: nnnmph is now actually displaying miles per hour rather than knots as it has been doing until now.
+
+23) Clicking on a station in either the station list or the circle will now present a popup menu of the station ID(s) with a cascade that will offer Info, Center, Lookup, and sometimes Message.
+Info gets you the old information popup about the station.
+Center will move that station to the center of the screen (indicated with a checkmark if you pop it up again).
+Lookup will send that station's callsign (sans -SSID) to WHO-IS via APRS messaging.
+Message is only offered if the station indicates messaging capability.
+
+24) Icons in the station list are larger than they were.  I think they're more clear, but they do touch and overlap somewhat.  Let me know what you think.
+
+25) Tracks now include dots where transmissions occured, but only for the station currently in the center of the screen.  If dots overlap (for instance when zoomed out), some will be suppressed.
+
+26) All track points are drawn for the center station.  Other stations only display the most recent N points of their recorded track.  Centering on a station will display the full track with dots on the most recent points.
+
+27) The message rectangle no longer scales the color.  It is Green when there is an incoming message pending, Yellow when there are outbound messages awaiting acks, and Orange/Red when both inbound and outbound messages are queued.  It also now says "No Msg" rather than "N/A" when there are no pending incoming messages.
+
+28) The pending tile fetch queue is flushed if you zoom in and out and move around a bunch before it catchs up.  If you go back to a previous area, it will requeue the tiles.
+
+29) Clear Tracks (and double-click the Odometer) now prompts for clearing other stations' tracks separately from your own.
+
+30) When selecting Menu/Messages/Pending Messages, you will get a popup of the target stations.  Selecting one will bring up that pending message and offer to Abort, Retry, or Ignore (keep).
+
+31) Support Item-In-Message display!  See http://www.aprs.org/aprs12/item-in-msg.txt - Basically, if you send item-position-formatted text to APRSISCE as a message, the object will be displayed.  Consider the following geocaches:
+)GC1TX0D!2800.38N/08039.03W.Turtle House D1.5T2.0
+)GC1RDVK!2805.13N/08036.32W.Hero Cache D1.5 T2.0
+)GC1EK82!2805.02N/08037.10W.Parking Fee D1.5 T1.0
+)GC1R0N6!2804.98N/08037.34W.STP #43 D1.5 T1.5
+)GC1QWQ7!2804.80N/08037.28W.Straw-post D3.5 T2.5
+)GC14TRT!2800.54N/08035.45W.But I can still see the CAR! D2.5 T2.5
+)GC14YPT!2800.61N/08035.54W.No Pooh Sticks Here! D3 T3
+)GC14YPT2!2800.56N/08035.62W.Pooh Sticks FINAL
+)GC14N1Y!2800.70N/08035.61W.TDJ's Quark and Riffster's Can D1.5 T2.5
+)GC17K8V!2800.73N/08035.20W.Small Trails - Smaller Cache (For Now) D2.5 T3.0
+)GC1JH1T!2758.51N/08039.53W.Smitty Clan Cache D2 T1.5
+If you copy each line of this and send it to APRSISCE, you'll get an X (/. symbol) on the spot of the geocache!  You can probably guess where THIS is going, eh?  I need to support !DAO! before you have a hope of finding a cache, though.  1/100 minute just isn't close enough!
+
+32) Begin to identify clients and handle extra and missing trailing spaces in APRS parser
+
+33) Parse and track MessageCapable-identified clients for offering Message in station popup
+
+34) Clean up comment text a bit
+
+To Dos: (Incomplete)
+Automatic, decaying retransmission of non-acked messages (start at 30+ seconds due to APRS-IS dupe checker)
+Read message display (they disappear now once read)
+Tile ager/purger - Critical now that you can center on other stations!
+Parse and display Frequency object information
+Parse, use, and transmit !DAO! (APRS PRECISION AND DATUM OPTION)
+Support the -180/180 latitude wrap with closest display tile
+Find a better icon scaling algorithm based on screen size & scale
+Fix up fonts for VGA (640x480) devices (test with Noel W8TVI)
+Allow configuration of location for OSMTiles cache (w/o editing XML)
+Allow configuration of date/time display & GMT vs local (Dave N8PU)
+Allow configurable removal of some screen elements (Satellites, John N8JJ)
+Pan (Drag) screen for browsing the map
+Record/Recall last DNS/IP for OSM/APRS-IS (in config file, for connecting without DNS)
+Asynchronous TCP/IP connections & reading (solves hangs)
+Timeout on OSM Tile fetcher (solves stalls)
+Implement whatever results from the Zoom +/- Poll
+
+Win32 client only for the following:
+Simultaneously track multiple targets in separate circles
+Support NMEA GPS
+
+Extreme future:
+Support KISS TNCs
+

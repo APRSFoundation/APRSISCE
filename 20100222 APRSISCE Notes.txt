@@ -1,0 +1,209 @@
+Here's what's new in the APRSISCE6P100222.zip and APRSIS32100222.zip
+
+Short version:
+
+NMEA serial (BlueTooth) GPS support for Windows Mobile - It now honors the port configuration of GPS! - Restart required after changing configuration.
+
+Fixed resource exhaustion program on Windows Mobile caused by increased size of Bitmap cache (completely blank screen)
+
+Fixed 180x90 coordinat causing blank map display if you drag too far north or south
+
+Dynamically adjust width of station and message panes for widest seen callsign.  This should fix issue reported by James Keep VE2KHC back on 9/30/2009!
+
+CSV tracks in GPS-enabled Win32 version {Francisco Guerra CT1AKV) (They'll be in your default directory)
+
+Split ?APRSD and ?APRSL lists into multiple messages - Also sorted the callsign list!
+
+Plot current (most recent) battery status on Win32 screen when telemetry is sent (also updates when double-clicked)
+
+TEXT mode TNC support for use with APRS Messenger (PSK-63 on 30m)
+
+Waded through recnt APRSISCE e-mails and expanded the ToDo List!  See the results below...
+
+Disable non-configured Enable Toggles (requires restart after configuration)
+
+
+
+To Dos:  (Still Incomplete and getting LONGER instead of SHORTER!)
+
+Display improvements:
+Dynamically adjust ALL screen panels for maximum size displayed
+Conditionalize +/- behavior on (visible) configuration parameter
+Implement whatever results from the Zoom +/- Poll
+Extend RF View filter to be by configured interface, eliminate if no RF interfaces are configured
+Visibility and controllability of Drag/Tracking/Me screen center mode
+Remove screen elements configurably and/or enable/disable (like GPS)
+Rotate icons to show direction of travel (beaconed or calculated) (Dave N8PU)
+Custom MessageBox() implementation to support Enable/Sound & Station icons & more
+Display grid locator in station info popup (Julian G4ILO)
+"Flatten" circle to be a true scale from center
+Optionally draw (accurate) PHG circles (View option)
+Find a better icon scaling algorithm based on screen size & scale
+Detect and highlight source of delayed duplications
+Additional View/Filter options based on symbol types
+Simultaneously track multiple targets in separate circles (Win32 only)
+
+
+Mapping Support:
+Support checking revision of tiles when loading, via OpenStreetMap.org's /status URL.
+OSM Tile access timestamping, revision checking, intelligent purger, grid (pixel?) cache display
+Find a way to mark tiles referenced on Windows Mobile without slowing down map loading (queue references to fetcher thread?).
+UI-View/.INF map support (Julian G4ILO)
+Does anyone know if UI-View correctly scales the N/S via the Mercator projection or does it linearly map the point in the vertical?
+Ability to override OSM map tiles for specific areas/zoom levels (Ordnance Survey maps showing contours, footpaths) (Julian G4ILO) (Colin M6XSD) (2/20/2010 6:20am)
+Precision Mapping Streets & Traveller (Alan WA4SCA)
+Lat/Lon grid on blank "map" screen (Sailor Dave KO4MI)
+Use HTTP/1.1 in OSM Tile Fetcher to improve throughput (multiple tile fetches on a single connection).
+Support the -180/180 latitude wrap with closest display tile
+Allow non-initial (re)configuration of location for OSMTiles cache (w/o editing XML)
+Internal support for OSM Map updates (Julian G4ILO)
+
+
+User/Alternate Input:
+Numeric keypad shortcuts to some functions (2 for up, 8 down, 4 left, 6 right) (Sean Brad Inggs ZR5BBL)
+Sprint Touch Pro 2 zoom slider (http://www.htc.com/us/content/images/phones/touch-pro2-sprint-Support-124.png) (Jason K2ENG) (Noel W8TVI)
+"Set My Coordinates" for non-GPS position updates (auto-transmit)
+Review keyboard access to all click/double-click features
+Find station dialog (enter callsign to center)
+
+
+Cool Features:
+GPX track saving for any station (w/inserted comments?) (Julian G4ILO) (Jerome WD4CWG)
+Web port for remote viewing (PNG) of current screen
+Screen save in PNG format.
+Alerts on various station activity (Tim G4VXE)
+Alternate Net (aprs101.pdf Chap 4) via user-specified ToCall
+Make APRSIS32 work under Wine (David WE1U) (Chris KJ4HPQ) (Josh W4SGC)
+Display and set "Destination Waypoints" (http://wa8lmf.net/bruninga/APRS-docs/MOBILE.TXT)
+Implement a compass direction/distance screen for homing in on GeoCaches.
+
+
+Parser/Station Information:
+CWOP feed (maybe Win32 only)
+Weather parsing and graphing
+Telemetry parsing and graphing, Configure telemetry rate, include OWN telemetry graphs!
+<IGATE capabilities parsing and graphing
+Parse and display Frequency object information
+Add RF traffic and IGate rates to Telemetry
+
+
+Messaging Subsystem:
+CQSRVR custom support, auto-keepalive, queries
+Enhanced message support (Julian G4ILO)
+Retransmit messages on beacon reception, but only ONE addition retry set
+Support remaining message-based queries, Configurable suppression of auto-answers
+"Group" messages per spec (ALL QST CQ - aprs101.pdf Page 72) (Julian G4ILO)
+Receive all messages for base callsign, ack only matching -SSID
+Bulletin support - Sending and Viewing (Julian G4ILO) (http://aprs.fi/bulletin/)
+Remember and provide for re-display of received messages.
+If target station's platform is known, format message sending screen accordingly.
+Support more ?APRSx queries
+
+
+APRS Objects:
+Support object creation and beaconing
+Support sending "Item-As-Message" to stations
+Interpret sent "Item-As-Message" for local display
+
+
+Power Management:
+Program-configurable screen dim, blank, and power control (Jeff KC8NNO)
+Figure out how to use WiFi rather than Cellular data when available (Julian G4ILO)
+Auto GPS disable if no fix within a minimum time (Julian G4ILO) (1/26/2010 8:25pm)
+
+
+Installation/First Use/Configuration:
+Installation .CAB file w/Icon as well (Kevin N1KCG-12)
+Icon selection dialog showing all (or more than one) icon
+"Coordinate Picker" dialog for centering, objects, Item-As-Message
+"Set My Coordinates" for non-GPS position updates (auto-transmit)
+Better, explicit, Buddy configuration (reserve one for tracking)
+Preserve comments in XML configuration file (if parser even gives them to me) (Dave N8PU)
+Multiple profile capability with quick switch (beaconing, Icon, status, and such; Hiking, Biking, Mobile, QTH/Stationary)
+WinCE support (Mustafa AYDIN 1/29/2010 12:05pm) (David VE7MDT 2/1/2010 9:49am)
+
+Metric units (Julian G4ILO)
+Allow configuration of date/time display & GMT vs local (Dave N8PU)
+Allow configurable removal of some screen elements (Satellites, John N8JJ)
+Make Local Hops, Recent Minutes, and Duplicate Seconds configuration options
+Make Message Retry parameters configuration options
+
+
+RF Interfaces:
+Gate messages from any interface to any other interface that "recently" heard the packet "locally" w/Configuration option to avoid polluting PSK-63 on 30m
+UI-View-compatible enter/exit KISS mode command file support (John Q1EUH)
+KISS TNC initialization files (adopt UI-View syntax)
+Do something with the Xmit checkboxes on port configuration dialogs
+AGWPE(pro) bi-directional support w/Port spec as well (Randy WF5X) (Andy AB9FX)
+Transmit support for AGW as well as Port selection for both receive and transmit
+MultiPort Status Monitor (multi-line or alternating APRS OK?)
+Link-specific status text and paths (Phillip ZL2TZE)
+
+
+GPS Support:
+GPS "Jitter" control when "stationary" (Paul KJ4DXK) (Disable Genius Beaconing?)
+Update Bluetooth Port Enumerator to show all under Windows Mobile
+Optionally transmit either 1 or 2 !DAO! digits.
+
+
+Network Features:
+Asynchronous TCP/IP connections & reading (solves hangs)
+Timeout on OSM Tile fetcher (solves stalls)
+Record/Recall last DNS/IP for OSM/APRS-IS (in config file, for connecting without DNS)
+Feed-through APRS-IS with local filters (for multiple instances of Win32 version with a single full feed to APRS-IS) (Win32 only)
+TCP/Port Data Source/Sink redesign/implementation - Code reduction and shared features (like asynch connect)
+
+
+Debug Support:
+Capture/Display logs from various port drivers
+Fine Granularity Enable Debug Logging (sub-sections)
+Better performance when doing Debug Logging (really slows down Windows Mobile!)
+Automatic notification and download of new versions
+Save previous debug log as dated file (maximum N copies?)
+
+
+Documentation:
+Update new features in APRSISCE.txt and in the Wiki (http://aprsisce.wikidot.com)
+Provide capabilities checklist to Curt WE7U (http://www.eskimo.com/~archer/aprs_capabilities.html)
+
+
+For the Wiki:
+Overall structure before I get too many pages in there!
+Click/Double-clicks and menu/keyboard equivalents
+Debug logging capture and reporting
+Files used and default locations
+XML editing procedure (client must be CLOSED)
+Automatic filter settings performed by APRSISCE/32
+Shortcut creation using File Explorer
+What sounds means, especially background sounds
+Station text color and closeness in APRSISCE.txt
+Moving OSMTiles location
+Recommended -SSIDs (link) and caution for uniqueness
+Link to Icons and Filter details
+Power Considerations (1/26/2010 1:49pm)
+Dynamic vs Disable/Enable vs Close/Restart Configuration Changes
+http://www.jeepreviews.com/wireless-gps-coordinates/
+http://www.geocaching.com/wpt/default.aspx
+"Slide To Unlock 2" (S2U2) automatic screen locking app http://www.ac-s2.com/ (Jerome WD4CWG)
+
+
+Capturing a debug log:
+1) Bring up the client
+2) Turn on Enables / Debug Logging
+3) Close the client
+4) Bring up the client
+5) Wait for a while, then do a screen capture (if you know how) or at 
+least note what it says in the APRS Status window (Top center 
+(View/Map/Wide) or 2'nd down on the left (View/Map/Narrow))
+6) Close the client
+7) "Me" popup APRS-IS server info
+
+
+Requested UI-View AddOn Features:
+UI-HeightTrack (Ron K0QVF)
+UI-NWS (Ron K0QVF)
+UI-Traffic (Ron K0QVF)
+UI-WEBServer (Ron K0QVF)
+PmapServer (Ron K0QVF)
+
+

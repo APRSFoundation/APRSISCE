@@ -1,0 +1,55 @@
+Group,
+
+There's another new version of APRSISCE for Windows Mobile just posted to the
+Files section. I discovered a fairly serious resource consumption that causes
+Windows Mobile to run out of resources and lock up if you drive around at a low
+zoom level causing lots of OpenStreetMap files to paint. This resource leak has
+been fixed along with the following changes.
+
+1) Reworked the APRS-IS network handling to improve responsiveness and reduce
+load on the device.
+
+2) Double-clicking the "APRS OK" window no longer brings up a series of network
+devices, but instead shows traffic statistics for the APRS-IS connection
+including packets and bytes sent and received for this session.
+
+3) Reworked where stations are painted on the OSM tiles. They weren't quite
+landing on streets at larger zoom levels. It uses the old way until all tiles
+have been filled in, so don't be alarmed if you see the stations "jump" right
+after the map completes. You should only see this the first time you're in an
+area while the OSM tiles are loading from the network instead of from the cache.
+
+4) The OSM map is now clipped to the old circle and doesn't overflow around and
+behind the various other windows.
+
+5) Double-clicking an empty space on the map will popup OpenStreetMap tile
+statistics if any tiles have been loaded in that session. Eventually, I hope to
+also show the status of the on-device cache of tiles by zoom level.
+
+6) Increased the available zoom levels. On my 320x240 AT&T Tilt, I can now zoom
+out to 524 miles instead of the old 256.
+
+7) Reworked how tiles are cached on CE. You might want to locate the OSMTiles
+folder (probably in the root of your device) and delete it and all files within
+it. The new caching layer uses directories that exactly mirror OSM's URLs.
+
+8) To store the OSM cache on a Storage Card (assuming you have one), close
+APRSISCE and edit the APRSISCE.xml file that should have synced to your desktop.
+Locate the <OSM.Path> argument and set it to <OSM.Path>/Storage
+Card/OSMTiles/</OSM.Path>. Save the file and wait for it to sync back to your
+device before running APRSISCE. You should then see an OSMTiles folder on your
+Storage Card.
+
+9) The OSM Tile Cache now prefetches tiles in anticipation of your movement or
+zooming. It fetchs one tile out in each ordinal direction from the screen along
+with all tiles one closer zoom below and one further zoom above.
+
+10) While APRSISCE is fetching OSM tiles, you'll see a yellow circle expanding
+from the center of the map. Each jump is one tile. When it reaches the outer
+circle, it has worked off all queued prefetches. It prioritizes the queue, so
+it'll still get the missing visible tiles first.
+
+Let me know what you think and let me know what you'd like to see enhanced
+and/or changed, especially if you encounter any bugs!
+
+Lynn (D) - Author of APRSISCE - (APRS message me at KJ4ERJ-12)

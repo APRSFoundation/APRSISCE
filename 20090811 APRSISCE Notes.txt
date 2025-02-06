@@ -1,0 +1,61 @@
+Testers,
+
+There's yet another release of APRSISCE available (APRSISCE6P090811.zip)!  Here's a short list of what's new and different.
+
+Lynn (D) - KJERJ
+
+1) Station comments are now displayed in the station popup.
+
+2) Station course and speed are parsed and displayed in the station popup (ONLY if provided by remote station, not "guessed" at by distance/time).  (Thanks to John N8JJ)  I'm thinking about providing a scaled arrow (short and thick for slow, long and thin for fast) in the course direction in the future, thoughts?  Also, should I think about calculating course and speed, even though this can result in strange answers?
+
+3) Station PHGR (Power/Height/Gain/Range) is parsed, calculated, and displayed, including the Beacon Rate (per hour) if provided.
+
+4) Rng: (Range) has changed to Pos: (Position) in the station popup and the bearing is now displayed in 16 compass point text, not degrees.  (16 points are also used for the course if displayed)
+
+5) Corrected the logon string's Version content so we should quit getting the "adjunct HH:MM Missing filter keyword" complaint at login (most of you have probably never noticed anyway).
+
+6) No longer display the Pos: 0 @ 0 if you station pop-up "ME".
+
+7) Screens bigger than 320x240 in size will increase the displayed icon size as you zoom in.  This looked better than I expected.  I just need to figure out a graceful scale also.
+
+8) Station popup coordinates no longer display table/icon information, but use spaces.  The coordinates are now more readable and the selected icon's name is displayed anyway.
+
+9) Double-clicking an empty map space now displays OSM Tile fetcher queue information and doesn't say (1 failed) while it is actively downloading a tile.
+
+10) The OSM Tile prefetcher now pulls all outward-zooming parent tiles whenever a lower level tile is retrieved.  This makes zooming out faster.  It is smart enough to stop when it encounters a tile that's already been loaded.
+
+11) Corrected a timing issue that could cause the tile pre-fetcher to access non-allocated memory.  I have no idea what the user-side of this would have looked like, but it probably would NOT have been pretty.
+
+12) TCP communication errors are now forced into APRSISCE.log, even if Debug Logging is not enabled.
+
+13) The forecast range red dot is now 100% opaque again to avoid the square background it had at 50%.  I need to get fade and transparency working together for the station icons.
+
+14) Double-clicking where a rectangle overlaps the circle should now honor the top rectangle, this was really strange for a while!
+
+Known Issues:
+
+1) I had the tile prefetcher lock up last night during testing.  I ran out of data coverage range and it just stopped fetching tiles.  Closing and restarting the client corrected the situation.
+
+2) If a corrupted OSM tile is fetched (web server error during the fetch, for instance), that tile file is detected as corrupt but not removed from the device.  This means you'll have a permanent map "hole" there at a single zoom level until I get this fixed.
+
+To Dos: (Incomplete)
+Parse and display Frequency object information
+Delete bad PNGs to allow refetch
+Support larger Icons (complements Noel W8TVI)
+Fix up fonts for VGA (640x480) devices (test with Noel W8TVI)
+Allow configuration of location for OSMTiles cache (w/o editing XML)
+Allow configuration of date/time display & GMT vs local (Dave N8PU)
+Allow configurable removal of some screen elements (Satellites, John N8JJ)
+Optimize circle redraws for off-screen stations
+Track selected station (in center of screen)
+Pan (Drag) screen for browsing the map
+Record/Recall last DNS/IP for OSM/APRS-IS (faster reconnect)
+Asynchronous TCP/IP connections & reading (solves hangs)
+Timeout on OSM Tile fetcher (solves stalls)
+Implement whatever results from the Zoom +/- Poll
+
+Win32 client only for the following:
+Simultaneously track multiple targets in separate circles
+Support NMEA GPS
+
+

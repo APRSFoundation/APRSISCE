@@ -1,0 +1,2638 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_BITMAP0             BITMAP                  "mysymb.bmp"
+IDR_BITMAP1             BITMAP                  "mysymb2.bmp"
+IDR_BITMAP2             BITMAP                  "GPXSym2.bmp"
+IDR_BITMAP3             BITMAP                  "GPXSym3.bmp"
+IDR_BITMAP4             BITMAP                  "GPXSym4.bmp"
+IDR_BITMAP5             BITMAP                  "GPXSym5.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDM_SATELLITE MENU 
+BEGIN
+    MENUITEM "Hide UnChecked",              IDM_TLE_HIDE
+    MENUITEM "Paste TLE",                   IDM_TLE_PASTE
+    POPUP "TLE Files"
+    BEGIN
+        MENUITEM "Load File...",                IDM_TLE_FILE
+        MENUITEM SEPARATOR
+    END
+    POPUP "TLE URLs"
+    BEGIN
+        MENUITEM "Fetch TLEs...",               IDM_TLE_FETCH
+        MENUITEM SEPARATOR
+    END
+END
+
+IDM_CHAT MENU 
+BEGIN
+    MENUITEM "Hide",                        ID_LOG_HIDE
+    POPUP "Edit"
+    BEGIN
+        MENUITEM "Clear",                       ID_LOG_CLEAR
+        MENUITEM "Copy",                        ID_LOG_COPY
+    END
+END
+
+IDM_LOG MENU 
+BEGIN
+    MENUITEM "Enable",                      ID_LOG_ENABLE
+    POPUP "Edit"
+    BEGIN
+        MENUITEM "Clear",                       ID_LOG_CLEAR
+        MENUITEM "Copy",                        ID_LOG_COPY
+    END
+END
+
+IDM_NOTIFY MENU 
+BEGIN
+    MENUITEM "Dismiss",                     40025
+    MENUITEM "Reply",                       40024
+END
+
+IDM_LOG_W32 MENU 
+BEGIN
+    MENUITEM "Enable",                      ID_LOG_ENABLE
+    MENUITEM "Clear",                       ID_LOG_CLEAR
+    MENUITEM "Copy",                        ID_LOG_COPY
+END
+
+IDM_CHAT_W32 MENU 
+BEGIN
+    MENUITEM "Clear",                       ID_LOG_CLEAR
+    MENUITEM "Copy",                        ID_LOG_COPY
+    MENUITEM "MultiTrack™",                 IDB_MULTITRACK
+END
+
+IDM_DF_QUALITY MENU 
+BEGIN
+    POPUP "Qualities"
+    BEGIN
+        MENUITEM "+/- 120",                     ID_DF_QUALITY_240
+        MENUITEM "+/- 60",                      ID_DF_QUALITY_120
+        MENUITEM "+/- 32",                      ID_DF_QUALITY_64
+        MENUITEM "+/- 16",                      ID_DF_QUALITY_32
+        MENUITEM "+/- 8",                       ID_DF_QUALITY_16
+        MENUITEM "+/- 4",                       ID_DF_QUALITY_8
+        MENUITEM "+/- 2",                       ID_DF_QUALITY_4
+        MENUITEM "+/- 1",                       ID_DF_QUALITY_2
+        MENUITEM "+/- 1/2",                     ID_DF_QUALITY_1
+    END
+END
+
+IDM_OBJ_AREA_SHAPE MENU 
+BEGIN
+    POPUP "Shapes"
+    BEGIN
+        MENUITEM "Box - Open",                  ID_OBJ_AREA_SHAPE_OPEN_BOX
+        MENUITEM "Box - Filled",                ID_OBJ_AREA_SHAPE_FILLED_BOX
+        MENUITEM "Circle - Open",               ID_OBJ_AREA_SHAPE_OPEN_CIRCLE
+        MENUITEM "Circle - Filled",             ID_OBJ_AREA_SHAPE_FILLED_CIRCLE
+        MENUITEM "Ellipse - Open",              ID_OBJ_AREA_SHAPE_OPEN_ELLIPSE
+        MENUITEM "Ellipse - Filled",            ID_OBJ_AREA_SHAPE_FILLED_ELLIPSE
+        MENUITEM "Triangle - Open",             ID_OBJ_AREA_SHAPE_OPEN_TRIANGLE
+        MENUITEM "Triangle - Filled",           ID_OBJ_AREA_SHAPE_FILLED_TRIANGLE
+        MENUITEM "Line Up/Left",                ID_OBJ_AREA_SHAPE_LINE_DOWN_RIGHT
+        MENUITEM "Line Up/Right",               ID_OBJ_AREA_SHAPE_LINE_DOWN_LEFT
+    END
+END
+
+IDM_OBJ_AREA_COLOR MENU 
+BEGIN
+    POPUP "Colors"
+    BEGIN
+        POPUP "Bright (High)"
+        BEGIN
+            MENUITEM "Blue",                        ID_OBJ_AREA_COLOR_HIGH_BLUE
+            MENUITEM "Green",                       ID_OBJ_AREA_COLOR_HIGH_GREEN
+            MENUITEM "Cyan",                        ID_OBJ_AREA_COLOR_HIGH_CYAN
+            MENUITEM "Red",                         ID_OBJ_AREA_COLOR_HIGH_RED
+            MENUITEM "Magenta",                     ID_OBJ_AREA_COLOR_HIGH_MAGENTA
+            MENUITEM "Yellow",                      ID_OBJ_AREA_COLOR_HIGH_YELLOW
+        END
+        POPUP "Dim (Low)"
+        BEGIN
+            MENUITEM "Blue",                        ID_OBJ_AREA_COLOR_LOW_BLUE
+            MENUITEM "Green",                       ID_OBJ_AREA_COLOR_LOW_GREEN
+            MENUITEM "Cyan",                        ID_OBJ_AREA_COLOR_LOW_CYAN
+            MENUITEM "Red",                         ID_OBJ_AREA_COLOR_LOW_RED
+            MENUITEM "Magenta",                     ID_OBJ_AREA_COLOR_LOW_MAGENTA
+            MENUITEM "Yellow",                      ID_OBJ_AREA_COLOR_LOW_YELLOW
+        END
+        MENUITEM "Black",                       ID_OBJ_AREA_COLOR_HIGH_BLACK
+        MENUITEM "Gray 1",                      ID_OBJ_AREA_COLOR_MEDIUM_GRAY
+        MENUITEM "Gray 2",                      ID_OBJ_AREA_COLOR_HIGH_GRAY
+        MENUITEM "Gray 3",                      ID_OBJ_AREA_COLOR_LIGHT_GRAY
+    END
+END
+
+IDM_MAIN MENU 
+BEGIN
+    MENUITEM "Transmit",                    ID_TRANSMIT
+    POPUP "Menu"
+    BEGIN
+        POPUP "Enables"
+        BEGIN
+            MENUITEM "APRS-IS Enabled",             ID_APRS_TOGGLE
+            MENUITEM "AutoSave GPX",                ID_AUTOSAVE_GPX
+            MENUITEM "Beaconing Enabled",           ID_BEACON_TOGGLE
+            MENUITEM "CSV Enabled",                 ID_CSV_TOGGLE
+            MENUITEM "Frequency Monitor",           ID_FREQ_TOGGLE
+            MENUITEM "GPS Enabled",                 ID_GPS_TOGGLE
+            MENUITEM "Internet Access",             ID_INTERNET_TOGGLE
+            MENUITEM "OSM Fetch Enabled",           ID_OSM_TOGGLE
+            MENUITEM "Sound Enabled",               ID_SOUND_TOGGLE
+            MENUITEM "Telemetry Enabled",           ID_TELEMETRY_TOGGLE
+            POPUP "Ports"
+            BEGIN
+                MENUITEM "All",                         ID_RFPORTS_ENABLE
+                MENUITEM "Log All",                     ID_RFPORTS_LOG_ALL
+                MENUITEM "Receive-Only",                ID_RFPORTS_NO_XMIT
+                MENUITEM SEPARATOR
+            END
+            POPUP "Logging"
+            BEGIN
+                MENUITEM "All At Startup",              ID_LOG_STARTUP
+                MENUITEM "File Enabled",                ID_LOG_FILE
+                MENUITEM "All OFF",                     ID_LOG_NONE
+                MENUITEM SEPARATOR
+                MENUITEM "General",                     ID_LOG_GENERAL
+            END
+            POPUP "View Logs"
+            BEGIN
+                MENUITEM "All",                         ID_LOG_ALL
+            END
+        END
+        POPUP "Messages"
+        BEGIN
+            MENUITEM "Read Message",                ID_READ_MESSAGE
+            MENUITEM "Send Message...",             ID_SEND_MESSAGE
+            MENUITEM "Send EMail...",               ID_SEND_EMAIL
+            MENUITEM "Pending Messages",            ID_PENDING_MESSAGES
+            POPUP "Announcements"
+            BEGIN
+                MENUITEM "Active Groups",               ID_CQSRVR_ACTIVE_GROUPS
+                MENUITEM "Describe Groups",             ID_CQSRVR_DESCRIBE_GROUPS
+                MENUITEM "My Groups",                   ID_CQSRVR_MEMBER_GROUPS
+                MENUITEM "Join Group...",               ID_CQSRVR_JOIN_GROUP
+            END
+            POPUP "Auto-Reply"
+            BEGIN
+                POPUP "Message"
+                BEGIN
+                    MENUITEM "None",                        ID_CONFIGURE_AUTO_REPLY_NONE
+                    MENUITEM "New...",                      ID_CONFIGURE_AUTO_REPLY_NEW
+                END
+                POPUP "Inactive For"
+                BEGIN
+                    MENUITEM "Immediate",                   ID_AUTO_REPLY_DELAY_ALWAYS
+                    MENUITEM "1 Minute",                    ID_AUTO_REPLY_DELAY_1_MIN
+                    MENUITEM "<= 5 Minutes",                ID_AUTO_REPLY_DELAY_5_MIN
+                    MENUITEM "<= 10 Minutes",               ID_AUTO_REPLY_DELAY_10_MIN
+                    MENUITEM "<= 30 Minutes",               ID_AUTO_REPLY_DELAY_30_MIN
+                    MENUITEM "Longer",                      ID_AUTO_REPLY_DELAY_LONGER
+                    MENUITEM "Forever (Disable)",           ID_AUTO_REPLY_DELAY_FOREVER
+                END
+                POPUP "No More Than"
+                BEGIN
+                    MENUITEM "1 Minute",                    ID_AUTO_REPLY_INTERVAL_1_MIN
+                    MENUITEM "<= 10 Minutes",               ID_AUTO_REPLY_INTERVAL_10_MIN
+                    MENUITEM "<= 30 Minutes",               ID_AUTO_REPLY_INTERVAL_30_MIN
+                    MENUITEM "<= 1 Hour",                   ID_AUTO_REPLY_INTERVAL_1_HOUR
+                    MENUITEM "<= 1 Day",                    ID_AUTO_REPLY_INTERVAL_1_DAY
+                    MENUITEM "<= 1 Year",                   ID_AUTO_REPLY_INTERVAL_1_YEAR
+                    MENUITEM "Longer",                      ID_AUTO_REPLY_INTERVAL_LONGER
+                    MENUITEM "Forever (Once Per)",          ID_AUTO_REPLY_INTERVAL_FOREVER
+                END
+            END
+            POPUP "Bulletins"
+            BEGIN
+                MENUITEM "View",                        ID_BULLETINS_VIEW
+                MENUITEM "Notify",                      ID_BULLETINS_NOTIFY_NEW
+                MENUITEM "Create...",                   ID_BULLETINS_NEW
+            END
+            POPUP "Chats"
+            BEGIN
+                MENUITEM "New...",                      ID_CHAT_NEW
+            END
+        END
+        POPUP "Screen"
+        BEGIN
+            MENUITEM "Dead Reckoning",              ID_SCREEN_DEAD_RECKON
+            MENUITEM "Filter Circle",               ID_SCREEN_FILTER_CIRCLE
+            MENUITEM "Tracks",                      ID_SCREEN_TRACKS
+            POPUP "AutoZoom View"
+            BEGIN
+                MENUITEM "AutoZoom All",                ID_SCREEN_AUTOZOOM_VIEW
+                MENUITEM "AutoZoom In",                 ID_SCREEN_AUTOZOOM_VIEW_IN
+                MENUITEM "AutoZoom Out",                ID_SCREEN_AUTOZOOM_VIEW_OUT
+                MENUITEM SEPARATOR
+                MENUITEM "Auto Center",                 ID_SCREEN_AUTOZOOM_VIEW_CTR
+                MENUITEM "Follow Locked",               ID_SCREEN_TRACK_LOCKED
+            END
+            POPUP "Brightness"
+            BEGIN
+                MENUITEM "Bright",                      ID_SCREEN_BRIGHT
+                MENUITEM "Dim",                         ID_SCREEN_DIM
+            END
+            POPUP "Direction Finding"
+            BEGIN
+                MENUITEM "Enabled",                     ID_SCREEN_DF_ENABLED
+                MENUITEM "Opacity...",                  ID_SCREEN_DF_OPACITY
+            END
+            POPUP "Follow"
+            BEGIN
+                MENUITEM "Find",                        ID_SCREEN_TRACK_FIND
+                MENUITEM "Center",                      ID_SCREEN_CENTER_TRACKED
+                MENUITEM "ME",                          ID_SCREEN_TRACK_ME
+                MENUITEM "Locked",                      ID_SCREEN_TRACK_LOCKED
+            END
+            POPUP "Labels"
+            BEGIN
+                MENUITEM "Altitude",                    ID_SCREEN_LABEL_ALTITUDE
+                MENUITEM "Ambiguity",                   ID_SCREEN_LABEL_AMBIGUITY
+                MENUITEM "Callsign",                    ID_SCREEN_CALLSIGN
+                MENUITEM "Cellular",                    ID_SCREEN_LABEL_CELLULAR
+                MENUITEM "Footprint",                   ID_SCREEN_FOOTPRINT
+                POPUP "Nicknames"
+                BEGIN
+					MENUITEM "New Nickname...",			ID_CONFIGURE_NICKNAME_NEW
+					MENUITEM "Delete All",				ID_SCREEN_LABEL_NICKNAME_DELETE
+					MENUITEM "Use Nickname",            ID_SCREEN_LABEL_NICKNAMES
+                    MENUITEM SEPARATOR
+                END
+                MENUITEM "NWS Calls",                   ID_SCREEN_LABEL_NWS
+                POPUP "Speed"
+                BEGIN
+                    MENUITEM "Beaconed",                    ID_SCREEN_SPEED_BEACONED
+                    MENUITEM "Calculated",                  ID_SCREEN_SPEED_CALCULATED
+                    MENUITEM "Average",                     ID_SCREEN_SPEED_AVERAGED
+                    MENUITEM "All",                         ID_SCREEN_SPEED_ALL
+                END
+                MENUITEM "Weather",                     ID_SCREEN_LABEL_WEATHER
+            END
+            POPUP "Paths"
+            BEGIN
+                MENUITEM "Appearance...",               ID_CONFIGURE_PATHS
+                MENUITEM "LclRF Only",                  ID_SCREEN_PATHS_RFONLY
+                MENUITEM "Network (Links)",             ID_SCREEN_PATHS_NETWORK
+                MENUITEM "Station (Packet)",            ID_SCREEN_PATHS_STATION
+                MENUITEM "ME (Packet)",                 ID_SCREEN_PATHS_MYSTATION
+            END
+            POPUP "PHG Range Circles"
+            BEGIN
+                MENUITEM "Full",                        ID_SCREEN_RANGE_FULL
+                MENUITEM "Half",                        ID_SCREEN_RANGE_HALF
+                MENUITEM "Opacity...",                  ID_SCREEN_RANGE_OPACITY
+            END
+            POPUP "Preferred"
+            BEGIN
+                MENUITEM "Restore",                     ID_VIEW_PREFERRED_RESTORE
+                MENUITEM "Save",                        ID_VIEW_PREFERRED_SAVE
+            END
+            POPUP "Tile Set"
+            BEGIN
+                MENUITEM "*None*",                      52001
+            END
+        END
+        POPUP "View"
+        BEGIN
+            MENUITEM "ALL",                         ID_VIEW_ALL
+            MENUITEM "NONE",                        ID_VIEW_NONE
+            MENUITEM "Chooser...",                  ID_VIEW_CHOOSER
+            MENUITEM "Altitudes",                   ID_VIEW_ALTITUDES
+            MENUITEM "Ambiguous",                   ID_VIEW_AMBIGUOUS
+            MENUITEM "Buddies",                     ID_VIEW_BUDDIES
+            MENUITEM "Duplicates",                  ID_VIEW_DUPLICATES
+            MENUITEM "FreqSpec",                    ID_VIEW_FREQSPEC
+            MENUITEM "Freq w/Issues",               ID_VIEW_FREQUENCIES
+            MENUITEM "Invalids",                    ID_VIEW_INVALIDS
+            MENUITEM "Message-able",                ID_VIEW_MESSAGEABLE
+            MENUITEM "Nicknamed",                   ID_VIEW_NICKNAMES
+            MENUITEM "NWS Objects",                 ID_VIEW_NWS
+            MENUITEM "Objects",                     ID_VIEW_OBJECTS
+            MENUITEM "Paths",                       ID_VIEW_PATHS
+            MENUITEM "Telemetry",                   ID_VIEW_TELEMETRY
+            MENUITEM "Tracks",                      ID_VIEW_TRACKS
+            POPUP "Mic-E"
+            BEGIN
+                MENUITEM "None",                        ID_VIEW_MICE_NONE
+            END
+            POPUP "Platforms"
+            BEGIN
+                MENUITEM "All",                         ID_VIEW_PLATFORMS_NONE
+            END
+            POPUP "RF"
+            BEGIN
+                MENUITEM "All",                         ID_VIEW_RF_ALL
+                MENUITEM "Direct",                      ID_VIEW_RF_DIRECT
+                MENUITEM "Local",                       ID_VIEW_RF_LOCAL
+                MENUITEM "3rd Party",                   ID_VIEW_RF_THIRD
+            END
+            POPUP "Shrieks"
+            BEGIN
+                MENUITEM "None",                        ID_VIEW_SHRIEKS_NONE
+            END
+            POPUP "Symbols"
+            BEGIN
+                MENUITEM "None",                        ID_VIEW_SYMBOLS_NONE
+                MENUITEM "Custom",                      ID_VIEW_CUSTOM
+                MENUITEM "Flight",                      ID_VIEW_FLIGHT
+                MENUITEM "Marine",                      ID_VIEW_MARINE
+                MENUITEM "Mobile",                      ID_VIEW_MOBILE
+                MENUITEM "RFID",                        ID_VIEW_RFID
+                MENUITEM "Weather",                     ID_VIEW_WEATHER
+                MENUITEM SEPARATOR
+            END
+            POPUP "Transport"
+            BEGIN
+                MENUITEM "RF Only",                     ID_VIEW_RF_ONLY
+                MENUITEM "RF + -IS",                    ID_VIEW_RF_INTERNET
+                MENUITEM "-IS Only",                    ID_VIEW_INTERNET_ONLY
+                MENUITEM SEPARATOR
+                MENUITEM "Digipeater",                  ID_VIEW_RF_DIGI
+                MENUITEM "IGate",                       ID_VIEW_RF_IGATE
+            END
+            MENUITEM "EchoLinks...",                ID_VIEW_ECHOLINKS
+            MENUITEM "GeoCaches...",                ID_VIEW_GEOCACHES
+        END
+        POPUP "Configure"
+        BEGIN
+            MENUITEM "General...",                  ID_CONFIGURE_GENERAL
+            MENUITEM "Genius™...",                  ID_CONFIGURE_GENIUS
+            MENUITEM "Status...",                   ID_CONFIGURE_STATUS_TEXT
+            POPUP "Aliases"
+            BEGIN
+                MENUITEM "New...",                      ID_ALIASES_KNOWN_NEW
+            END
+            POPUP "AltNet"
+            BEGIN
+                MENUITEM "None",                        ID_CONFIGURE_ALTNET_NONE
+                MENUITEM "New...",                      ID_CONFIGURE_ALTNET_NEW
+            END
+            POPUP "Beacon"
+            BEGIN
+                MENUITEM "After Transmit",              ID_CONFIGURE_BEACON_AFTER_TRANSMIT
+                MENUITEM "Timestamp",                   ID_CONFIGURE_BEACON_TIMESTAMP
+                MENUITEM "HHMMSS",                      ID_CONFIGURE_BEACON_HHMMSS
+                MENUITEM "Altitude",                    ID_CONFIGURE_BEACON_ALTITUDE
+                MENUITEM "Cellular",                    ID_CONFIGURE_BEACON_CELLULAR
+                MENUITEM "Compressed",                  ID_CONFIGURE_BEACON_COMPRESSED
+                MENUITEM "CourseSpeed",                 ID_CONFIGURE_BEACON_CSESPD
+                POPUP "Comment"
+                BEGIN
+                    MENUITEM "New...",                      ID_CONFIGURE_BEACON_COMMENT_NEW
+                    MENUITEM "None",                        ID_CONFIGURE_BEACON_COMMENT_NONE
+                END
+                POPUP "Mic-E Notif"
+                BEGIN
+                    MENUITEM "None",                        ID_CONFIGURE_BEACON_MICE_NONE
+                END
+                POPUP "Symbol"
+                BEGIN
+                    MENUITEM "New...",                      ID_CONFIGURE_SYMBOL_NEW
+                END
+                MENUITEM "Why",                         ID_CONFIGURE_BEACON_PRESSURE
+                POPUP "Precision"
+                BEGIN
+                    MENUITEM "Normal",                      ID_CONFIGURE_BEACON_DAO_0
+                    MENUITEM "Extra Digit",                 ID_CONFIGURE_BEACON_DAO_1
+                    MENUITEM "2 Digits",                    ID_CONFIGURE_BEACON_DAO_2
+                    MENUITEM "+/- 0.1nm",                   ID_CONFIGURE_BEACON_AMBIG_1
+                    MENUITEM "+/- 1nm",                     ID_CONFIGURE_BEACON_AMBIG_2
+                    MENUITEM "+/- 10nm",                    ID_CONFIGURE_BEACON_AMBIG_3
+                    MENUITEM "+/- 60nm",                    ID_CONFIGURE_BEACON_AMBIG_4
+                END
+                MENUITEM "Path...",                     ID_CONFIGURE_BEACON_PATH
+            END
+            POPUP "Companions"
+            BEGIN
+                MENUITEM "Enabled",                     ID_COMPANIONS_ENABLED
+                MENUITEM "New Companion",               ID_COMPANIONS_NEW
+                MENUITEM SEPARATOR
+            END
+            POPUP "DX"
+            BEGIN
+                MENUITEM "Min Dist",                    ID_CONFIGURE_DX_MIN_DIST
+                MENUITEM "Min Trigger",                 ID_CONFIGURE_DX_MIN_TRIGGER
+                MENUITEM "Min Interval",                ID_CONFIGURE_DX_MIN_INTERVAL
+                MENUITEM "Window",                      ID_CONFIGURE_DX_WINDOW
+                MENUITEM "Max Ever",                    ID_CONFIGURE_DX_MAXEVER
+                POPUP "Ignore"
+                BEGIN
+                    MENUITEM "None",                        ID_CONFIGURE_DX_IGNORE_NONE
+                END
+            END
+            POPUP "Map"
+            BEGIN
+                MENUITEM "Prefetch",                    ID_CONFIG_MAP_PREFETCH
+                MENUITEM "Purger Enabled",              ID_CONFIG_MAP_PURGER
+                POPUP "Tile Sets"
+                BEGIN
+                    MENUITEM "New Tile Set...",             ID_CONFIGURE_NEW_TILE_SERVER
+                    MENUITEM SEPARATOR
+                END
+            END
+            POPUP "Messages"
+            BEGIN
+                MENUITEM "My Messages",                 ID_MY_MESSAGES
+                MENUITEM "RF Eavesdrop",                ID_RF_MESSAGES
+                MENUITEM "Eavesdrop",                   ID_MESSAGES_EAVESDROP
+                MENUITEM "But Not NWS",                 ID_MESSAGES_HIDE_NWS
+                MENUITEM "Hide Queries",                ID_MESSAGES_HIDE_QUERIES
+                MENUITEM "Notify Query",                ID_MESSAGES_NOTIFY_ON_QUERY
+                MENUITEM "Notify New",                  ID_MESSAGES_NOTIFY_ON_NEW
+                MENUITEM "MultiTrack™ New Items",       ID_MESSAGES_MULTITRACK_ITEM
+                POPUP "Lookup(WHO-IS)"
+                BEGIN
+                    MENUITEM "Brief (1 Line)",              ID_CONFIGURE_WHOIS_BRIEF
+                    MENUITEM "Full Address",                ID_CONFIGURE_WHOIS_FULL
+                END
+            END
+            POPUP "Metric"
+            BEGIN
+                MENUITEM "Altitude",                    ID_VIEW_METRIC_ALTITUDE
+                MENUITEM "Distance",                    ID_VIEW_METRIC_DISTANCE
+                MENUITEM "Pressure",                    ID_VIEW_METRIC_PRESSURE
+                MENUITEM "Rainfall",                    ID_VIEW_METRIC_RAINFALL
+                MENUITEM "Temperature",                 ID_VIEW_METRIC_TEMPERATURE
+                MENUITEM "Wind (Knots)",                ID_VIEW_METRIC_WINDSPEED
+            END
+            POPUP "Mic-E Notifs"
+            BEGIN
+                MENUITEM "Suppress Notifs",             ID_CONFIGURE_MICE_NOTIF_SUPPRESSED
+                MENUITEM "Suppress EMERG Too",          ID_CONFIGURE_MICE_NOTIF_NO_EMERGENCY
+                MENUITEM SEPARATOR
+            END
+            POPUP "NWS Alerts"
+            BEGIN
+                MENUITEM "New Office...",               ID_CONFIGURE_NWS_NEW_OFFICE
+                MENUITEM "Messages",                    ID_CONFIGURE_NWS_MESSAGES
+                MENUITEM "Messages Not *ALL*",          ID_CONFIGURE_NWS_MESSAGES_NO_ALL
+                MENUITEM "Messages Notify",             ID_CONFIGURE_NWS_NOTIFY
+                POPUP "Notify LineType"
+                BEGIN
+                    MENUITEM "Placeholder",                 ID_CONFIGURE_MULTILINE_STYLE
+                END
+                POPUP "Notify Products"
+                BEGIN
+                    MENUITEM "None",                        ID_CONFIGURE_NWS_PRODUCTS
+                END
+                MENUITEM "Show Offices",                ID_CONFIGURE_NWS_SHOW_OFFICES_ALL
+                MENUITEM SEPARATOR
+                POPUP "NWS Entry Servers"
+                BEGIN
+                    MENUITEM "Placeholder",                 ID_CONFIGURE_NWS_ENTRY_SERVER
+                END
+            END
+            POPUP "NWS Shapes"
+            BEGIN
+                MENUITEM "Add File...",                 ID_CONFIGURE_NWS_NEW_SHAPEFILE
+                MENUITEM "Enabled",                     ID_CONFIGURE_NWS_SHAPES_ENABLED
+                MENUITEM "Opacity...",                  ID_CONFIGURE_NWS_SHAPE_OPACITY
+                MENUITEM "Quality...",                  ID_CONFIGURE_NWS_SHAPE_QUALITY
+                MENUITEM "Show Center",                 ID_CONFIGURE_NWS_SHAPE_TEST
+                MENUITEM SEPARATOR
+            END
+            POPUP "Objects"
+            BEGIN
+                MENUITEM "Create",                      ID_OBJECTS_NEW
+                MENUITEM "New Weather",                 ID_OBJECTS_NEW_WEATHER
+                MENUITEM "Show",                        ID_OBJECTS_SHOW
+                MENUITEM "Max Group Objects",           ID_MAX_GROUP_OBJS
+                POPUP "QRU"
+                BEGIN
+                    MENUITEM "Enabled",                     ID_QRU_ENABLE
+                    MENUITEM "Interval",                    ID_QRU_INTERVAL
+                    MENUITEM "Max Objects",                 ID_QRU_MAX_OBJS
+                    MENUITEM "Range",                       ID_QRU_RANGE
+                    MENUITEM "Retry Messages",              ID_QRU_RETRY_MESSAGES
+                END
+                MENUITEM SEPARATOR
+            END
+            POPUP "Overlays"
+            BEGIN
+                MENUITEM "Add GPX File...",             ID_CONFIGURE_GPX_NEW
+                MENUITEM "Add POS File...",             ID_CONFIGURE_OVERLAY_NEW
+                MENUITEM SEPARATOR
+            END
+            POPUP "Ports"
+            BEGIN
+                MENUITEM "New Port...",                 ID_CONFIGURE_NEW_RFPORT
+                MENUITEM "APRS-IS",                     ID_CONFIGURE_APRSIS
+                MENUITEM "NMEA",                        ID_CONFIGURE_NMEA
+            END
+            POPUP "Save Posits"
+            BEGIN
+                MENUITEM "Reload Paths",                ID_CONFIGURE_POSITS_PATHS
+                MENUITEM "Save Filter...",              ID_CONFIGURE_POSITS_FILTER
+            END
+            POPUP "Screen"
+            BEGIN
+                POPUP "Label"
+                BEGIN
+                    MENUITEM "Allow Overlap",               ID_SCREEN_LABEL_OVERLAP
+                    POPUP "Callsign"
+                    BEGIN
+                        MENUITEM "Not ME",                      ID_SCREEN_CALLSIGN_NOT_ME
+                        MENUITEM "Not Mine",                    ID_SCREEN_CALLSIGN_NOT_MINE
+                    END
+                    POPUP "Footprint"
+                    BEGIN
+                        MENUITEM "Min Altitude",                ID_SCREEN_FOOTPRINT_MIN
+                        MENUITEM "Max Altitude",                ID_SCREEN_FOOTPRINT_MAX
+                    END
+                    POPUP "GeoCache"
+                    BEGIN
+                        MENUITEM "GCnnnnn",                     ID_SCREEN_GEOCACHE_ID
+                        MENUITEM "Type",                        ID_SCREEN_GEOCACHE_TYPE
+                        MENUITEM "Container",                   ID_SCREEN_GEOCACHE_CONT
+                        MENUITEM "Diff/Terr",                   ID_SCREEN_GEOCACHE_DT
+                        MENUITEM "Max Labels...",               ID_SCREEN_GEOCACHE_LABEL_MAX
+                    END
+                    MENUITEM "Max Visible...",              ID_SCREEN_LABEL_MAX
+                END
+                MENUITEM "Altitude",                    ID_SCREEN_ALTITUDE
+                MENUITEM "Battery",                     ID_SCREEN_BATTERY
+                MENUITEM "Circle",                      ID_SCREEN_CIRCLE
+                POPUP "CrossHairs"
+                BEGIN
+                    MENUITEM "Always",                      ID_SCREEN_CROSSHAIRS_ALWAYS
+                    MENUITEM "Never",                       ID_SCREEN_CROSSHAIRS_NEVER
+                    MENUITEM "Timed",                       ID_SCREEN_CROSSHAIRS_TIMED
+                END
+                POPUP "Date/Time"
+                BEGIN
+                    MENUITEM "None",                        ID_SCREEN_DATETIME_NONE
+                    MENUITEM "Local",                       ID_SCREEN_DATETIME_LOCAL
+                    MENUITEM "GMT/UTC",                     ID_SCREEN_DATETIME_GMT
+                    MENUITEM "GPS Only",                    ID_SCREEN_DATETIME_GPS_ONLY
+                    MENUITEM "Performance",                 ID_SCREEN_DATETIME_PERFORMANCE
+                    MENUITEM SEPARATOR
+                    MENUITEM "Date Only",                   ID_SCREEN_DATETIME_DATE_ONLY
+                    MENUITEM "Default",                     ID_SCREEN_DATETIME_DEFAULT
+                    MENUITEM "Time Only",                   ID_SCREEN_DATETIME_TIME_ONLY
+                    POPUP "Custom"
+                    BEGIN
+                        MENUITEM "Date On 0",                   ID_SCREEN_DATETIME_0
+                        MENUITEM "Date On 1",                   ID_SCREEN_DATETIME_1
+                        MENUITEM "Date On 2",                   ID_SCREEN_DATETIME_2
+                        MENUITEM "Date On 3",                   ID_SCREEN_DATETIME_3
+                        MENUITEM "Date On 4",                   ID_SCREEN_DATETIME_4
+                        MENUITEM "Date On 5",                   ID_SCREEN_DATETIME_5
+                        MENUITEM "Date On 6",                   ID_SCREEN_DATETIME_6
+                        MENUITEM "Date On 7",                   ID_SCREEN_DATETIME_7
+                        MENUITEM "Date On 8",                   ID_SCREEN_DATETIME_8
+                        MENUITEM "Date On 9",                   ID_SCREEN_DATETIME_9
+                    END
+                END
+                MENUITEM "GridSquare",                  ID_SCREEN_GRIDSQUARE
+                MENUITEM "Lat/Lon",                     ID_SCREEN_LATLON
+                POPUP "Orientation"
+                BEGIN
+                    MENUITEM "Wide",                        ID_VIEW_PORTRAIT
+                    MENUITEM "Narrow",                      ID_VIEW_LANDSCAPE
+                    MENUITEM "Automatic",                   ID_VIEW_AUTOMATIC
+                END
+                MENUITEM "RedDot",                      ID_SCREEN_RED_DOT
+                MENUITEM "Satellites (GPS)",            ID_SCREEN_SATELLITES
+                MENUITEM "Speed Font Size...",          ID_SCREEN_SPEED_FONT
+                MENUITEM "Symbol Size...",              ID_SCREEN_SYMBOL_SIZE_ADJUST
+                POPUP "Tracks"
+                BEGIN
+                    POPUP "Follow"
+                    BEGIN
+                        MENUITEM "Color...",                    ID_SCREEN_TRACKS_FOLLOW_COLOR
+                        MENUITEM "Blocks...",                   ID_SCREEN_TRACKS_FOLLOW
+                        MENUITEM "Width...",                    ID_SCREEN_TRACKS_FOLLOW_WIDTH
+                    END
+                    POPUP "Other"
+                    BEGIN
+                        MENUITEM "Fixed Color...",              ID_SCREEN_TRACKS_OTHER_COLOR
+                        POPUP "Rotating..."
+                        BEGIN
+                            MENUITEM "Add Color...",                ID_SCREEN_TRACKS_OTHER_ADD_COLOR
+                            MENUITEM SEPARATOR
+                        END
+                        MENUITEM "Points...",                   ID_SCREEN_TRACKS_OTHER
+                        MENUITEM "Width...",                    ID_SCREEN_TRACKS_OTHER_WIDTH
+                    END
+                END
+                POPUP "Wind Barbs"
+                BEGIN
+                    MENUITEM "Enabled",                     ID_SCREEN_WINDBARBS_ENABLED
+                    MENUITEM "Rotate Storm",                ID_SCREEN_WINDBARBS_ROTATE
+                    MENUITEM "Color...",                    ID_SCREEN_WINDBARBS_COLOR
+                    MENUITEM "Width...",                    ID_SCREEN_WINDBARBS_WIDTH
+                END
+            END
+            POPUP "Scroller"
+            BEGIN
+                MENUITEM "Freeze On Click",             ID_CONFIGURE_SCROLLER_CLICK_FREEZE
+                MENUITEM "Show IGate/Digi",             ID_CONFIGURE_SCROLLER_SHOW_IGATE
+                MENUITEM SEPARATOR
+                MENUITEM "Filter...",                   ID_CONFIGURE_SCROLLER_FILTER
+                MENUITEM "Hide NoParse",                ID_CONFIGURE_SCROLLER_HIDE_NOPARSE
+                MENUITEM "No Internals",                ID_CONFIGURE_SCROLLER_NO_INTERNALS
+                MENUITEM "Not ME",                      ID_CONFIGURE_SCROLLER_NOT_ME
+                MENUITEM "Not Mine",                    ID_CONFIGURE_SCROLLER_NOT_MINE
+                MENUITEM "RF Only",                     ID_CONFIGURE_SCROLLER_RF_ONLY
+                MENUITEM "Show All",                    ID_CONFIGURE_SCROLLER_SHOW_ALL
+            END
+            POPUP "Status Report"
+            BEGIN
+                MENUITEM "Enabled",                     ID_CONFIGURE_STATUS_TEXT_ENABLED
+                MENUITEM "Cellular",                    ID_CONFIGURE_STATUS_TEXT_CELLULAR
+                MENUITEM "GridSquare",                  ID_CONFIGURE_STATUS_TEXT_GRIDSQ
+                MENUITEM "Timestamp",                   ID_CONFIGURE_STATUS_TEXT_TIME
+                MENUITEM "DX",                          ID_CONFIGURE_STATUS_TEXT_DX
+                MENUITEM "New...",                      ID_CONFIGURE_STATUS_TEXT_NEW
+                MENUITEM "None",                        ID_CONFIGURE_STATUS_TEXT_NONE
+                MENUITEM SEPARATOR
+            END
+        END
+        POPUP "Clear"
+        BEGIN
+            MENUITEM "Clear Eavesdrops",            ID_MESSAGES_PURGE_EAVESDROP
+            MENUITEM "Clear CQ/All Messages",       ID_MESSAGES_PURGE_SPECIAL
+            MENUITEM "Clear Group Messages",        ID_MESSAGES_PURGE_GROUP
+            MENUITEM "Clear My Messages",           ID_MESSAGES_PURGE_MY
+            MENUITEM "Clear NWS Messages",          ID_MESSAGES_PURGE_NWS
+            MENUITEM "Clear Paths",                 ID_CLEAR_PATHS
+            MENUITEM "Clear Stations",              ID_CLEAR_STATIONS
+            MENUITEM "Clear Tracks",                ID_CLEAR_TRACK
+            POPUP "Accumulated"
+            BEGIN
+                MENUITEM "Clear AltNets",               ID_CLEAR_ALTNETS
+                MENUITEM "Clear Bulletins",             ID_CLEAR_BULLETINS
+                MENUITEM "Reset MaxWidth Station",      ID_RESET_MAX_WIDTH
+                MENUITEM "Clear Tactical Nicknames",    ID_CLEAR_TACTICAL
+                MENUITEM "Clear Telemetry",             ID_CLEAR_TELEMETRY
+                MENUITEM "Clear Weather",               ID_CLEAR_WEATHER
+                MENUITEM "Clear Window Positions",      ID_CLEAR_WINDOW_POSITIONS
+            END
+            POPUP "Configured"
+            BEGIN
+                MENUITEM "Clear Auto-Replies",          ID_CLEAR_AUTO_REPLIES
+                MENUITEM "Clear Beacon Comments",       ID_CLEAR_BEACON_COMMENTS
+                POPUP "Clear Mic-E Ignores"
+                BEGIN
+                    MENUITEM "Clear All",                   ID_CLEAR_MICE_IGNORES
+                    MENUITEM SEPARATOR
+                END
+                MENUITEM "Clear Status Reports",        ID_CLEAR_STATUS_TEXTS
+                MENUITEM "Clear Symbols",               ID_CLEAR_SYMBOLS
+                POPUP "Clear TACTICAL Sources"
+                BEGIN
+                    MENUITEM "Clear Accepts",           ID_CLEAR_TACTICAL_ACCEPTS
+                    MENUITEM "Clear Nevers",            ID_CLEAR_TACTICAL_NEVERS
+                    MENUITEM SEPARATOR
+                END
+            END
+        END
+        MENUITEM "About",                       ID_ABOUT
+        MENUITEM "Exit",                        ID_EXIT
+    END
+END
+
+IDM_MAIN_W32 MENU 
+BEGIN
+    MENUITEM "Transmit",                    ID_TRANSMIT
+    POPUP "Enables"
+    BEGIN
+        MENUITEM "APRS-IS Enabled",             ID_APRS_TOGGLE
+        MENUITEM "AutoSave GPX",                ID_AUTOSAVE_GPX
+        MENUITEM "Beaconing Enabled",           ID_BEACON_TOGGLE
+        MENUITEM "CSV Enabled",                 ID_CSV_TOGGLE
+        MENUITEM "Frequency Monitor",           ID_FREQ_TOGGLE
+        MENUITEM "GPS Enabled",                 ID_GPS_TOGGLE
+        MENUITEM "Internet Access",             ID_INTERNET_TOGGLE
+        MENUITEM "OSM Fetch Enabled",           ID_OSM_TOGGLE
+        MENUITEM "Sound Enabled",               ID_SOUND_TOGGLE
+        MENUITEM "Telemetry Enabled",           ID_TELEMETRY_TOGGLE
+        POPUP "Ports"
+        BEGIN
+            MENUITEM "All",                         ID_RFPORTS_ENABLE
+            MENUITEM "Log All",                     ID_RFPORTS_LOG_ALL
+            MENUITEM "Receive-Only",                ID_RFPORTS_NO_XMIT
+            MENUITEM SEPARATOR
+        END
+        POPUP "Logging"
+        BEGIN
+            MENUITEM "All At Startup",              ID_LOG_STARTUP
+            MENUITEM "File Enabled",                ID_LOG_FILE
+            MENUITEM "All OFF",                     ID_LOG_NONE
+            MENUITEM SEPARATOR
+            MENUITEM "General",                     ID_LOG_GENERAL
+        END
+        POPUP "View Logs"
+        BEGIN
+            MENUITEM "All",                         ID_LOG_ALL
+        END
+    END
+    POPUP "Messages"
+    BEGIN
+        MENUITEM "Read Message",                ID_READ_MESSAGE
+        MENUITEM "Send Message...",             ID_SEND_MESSAGE
+        MENUITEM "Send EMail...",               ID_SEND_EMAIL
+        MENUITEM "Pending Messages",            ID_PENDING_MESSAGES
+        POPUP "Announcements"
+        BEGIN
+            MENUITEM "Active Groups",               ID_CQSRVR_ACTIVE_GROUPS
+            MENUITEM "Describe Groups",             ID_CQSRVR_DESCRIBE_GROUPS
+            MENUITEM "My Groups",                   ID_CQSRVR_MEMBER_GROUPS
+            MENUITEM "Join Group...",               ID_CQSRVR_JOIN_GROUP
+        END
+        POPUP "Auto-Reply"
+        BEGIN
+            POPUP "Message"
+            BEGIN
+                MENUITEM "None",                        ID_CONFIGURE_AUTO_REPLY_NONE
+                MENUITEM "New...",                      ID_CONFIGURE_AUTO_REPLY_NEW
+            END
+            POPUP "Inactive For"
+            BEGIN
+                MENUITEM "Immediate",                   ID_AUTO_REPLY_DELAY_ALWAYS
+                MENUITEM "1 Minute",                    ID_AUTO_REPLY_DELAY_1_MIN
+                MENUITEM "<= 5 Minutes",                ID_AUTO_REPLY_DELAY_5_MIN
+                MENUITEM "<= 10 Minutes",               ID_AUTO_REPLY_DELAY_10_MIN
+                MENUITEM "<= 30 Minutes",               ID_AUTO_REPLY_DELAY_30_MIN
+                MENUITEM "Longer",                      ID_AUTO_REPLY_DELAY_LONGER
+                MENUITEM "Forever (Disable)",           ID_AUTO_REPLY_DELAY_FOREVER
+            END
+            POPUP "No More Than"
+            BEGIN
+                MENUITEM "1 Minute",                    ID_AUTO_REPLY_INTERVAL_1_MIN
+                MENUITEM "<= 10 Minutes",               ID_AUTO_REPLY_INTERVAL_10_MIN
+                MENUITEM "<= 30 Minutes",               ID_AUTO_REPLY_INTERVAL_30_MIN
+                MENUITEM "<= 1 Hour",                   ID_AUTO_REPLY_INTERVAL_1_HOUR
+                MENUITEM "<= 1 Day",                    ID_AUTO_REPLY_INTERVAL_1_DAY
+                MENUITEM "<= 1 Year",                   ID_AUTO_REPLY_INTERVAL_1_YEAR
+                MENUITEM "Longer",                      ID_AUTO_REPLY_INTERVAL_LONGER
+                MENUITEM "Forever (Once Per)",          ID_AUTO_REPLY_INTERVAL_FOREVER
+            END
+        END
+        POPUP "Bulletins"
+        BEGIN
+            MENUITEM "View",                        ID_BULLETINS_VIEW
+            MENUITEM "Notify",                      ID_BULLETINS_NOTIFY_NEW
+            MENUITEM "Create...",                   ID_BULLETINS_NEW
+        END
+        POPUP "Chats"
+        BEGIN
+            MENUITEM "New...",                      ID_CHAT_NEW
+        END
+    END
+    POPUP "Screen"
+    BEGIN
+        MENUITEM "Dead Reckoning",              ID_SCREEN_DEAD_RECKON
+        MENUITEM "Filter Circle",               ID_SCREEN_FILTER_CIRCLE
+        MENUITEM "Tracks",                      ID_SCREEN_TRACKS
+        POPUP "AutoZoom View"
+        BEGIN
+            MENUITEM "AutoZoom All",                ID_SCREEN_AUTOZOOM_VIEW
+            MENUITEM "AutoZoom In",                 ID_SCREEN_AUTOZOOM_VIEW_IN
+            MENUITEM "AutoZoom Out",                ID_SCREEN_AUTOZOOM_VIEW_OUT
+            MENUITEM SEPARATOR
+            MENUITEM "Auto Center",                 ID_SCREEN_AUTOZOOM_VIEW_CTR
+            MENUITEM "Follow Locked",               ID_SCREEN_TRACK_LOCKED
+        END
+        POPUP "Brightness"
+        BEGIN
+            MENUITEM "Bright",                      ID_SCREEN_BRIGHT
+            MENUITEM "Dim",                         ID_SCREEN_DIM
+        END
+        POPUP "Direction Finding"
+        BEGIN
+            MENUITEM "Enabled",                     ID_SCREEN_DF_ENABLED
+            MENUITEM "Opacity...",                  ID_SCREEN_DF_OPACITY
+        END
+        POPUP "Follow"
+        BEGIN
+            MENUITEM "Find",                        ID_SCREEN_TRACK_FIND
+            MENUITEM "Center",                      ID_SCREEN_CENTER_TRACKED
+            MENUITEM "ME",                          ID_SCREEN_TRACK_ME
+            MENUITEM "Locked",                      ID_SCREEN_TRACK_LOCKED
+        END
+        POPUP "Labels"
+        BEGIN
+            MENUITEM "Altitude",                    ID_SCREEN_LABEL_ALTITUDE
+            MENUITEM "Ambiguity",                   ID_SCREEN_LABEL_AMBIGUITY
+            MENUITEM "Callsign",                    ID_SCREEN_CALLSIGN
+            MENUITEM "Footprint",                   ID_SCREEN_FOOTPRINT
+            POPUP "Nicknames"
+            BEGIN
+				MENUITEM "New Nickname...",			ID_CONFIGURE_NICKNAME_NEW
+				MENUITEM "Delete All",				ID_SCREEN_LABEL_NICKNAME_DELETE
+				MENUITEM "Use Nickname",			ID_SCREEN_LABEL_NICKNAMES
+				MENUITEM SEPARATOR
+            END
+            MENUITEM "NWS Calls",                   ID_SCREEN_LABEL_NWS
+            POPUP "Speed"
+            BEGIN
+                MENUITEM "Beaconed",                    ID_SCREEN_SPEED_BEACONED
+                MENUITEM "Calculated",                  ID_SCREEN_SPEED_CALCULATED
+                MENUITEM "Average",                     ID_SCREEN_SPEED_AVERAGED
+                MENUITEM "All",                         ID_SCREEN_SPEED_ALL
+            END
+            MENUITEM "Weather",                     ID_SCREEN_LABEL_WEATHER
+        END
+        POPUP "Paths"
+        BEGIN
+            MENUITEM "Appearance...",               ID_CONFIGURE_PATHS
+            MENUITEM "LclRF Only",                  ID_SCREEN_PATHS_RFONLY
+            MENUITEM "Network (Links)",             ID_SCREEN_PATHS_NETWORK
+            MENUITEM "Station (Packet)",            ID_SCREEN_PATHS_STATION
+            MENUITEM "ME (Packet)",                 ID_SCREEN_PATHS_MYSTATION
+        END
+        POPUP "PHG Range Circles"
+        BEGIN
+            MENUITEM "Full",                        ID_SCREEN_RANGE_FULL
+            MENUITEM "Half",                        ID_SCREEN_RANGE_HALF
+            MENUITEM "Opacity...",                  ID_SCREEN_RANGE_OPACITY
+        END
+        POPUP "Preferred"
+        BEGIN
+            MENUITEM "Restore",                     ID_VIEW_PREFERRED_RESTORE
+            MENUITEM "Save",                        ID_VIEW_PREFERRED_SAVE
+            POPUP "MultiTrack™"
+            BEGIN
+                MENUITEM "View None",                   ID_VIEW_PREFERRED_MULTITRACK_NONE
+                MENUITEM SEPARATOR
+                MENUITEM "Percent",                     ID_VIEW_PREFERRED_MULTITRACK_PERCENT
+                MENUITEM "Size",                        ID_VIEW_PREFERRED_MULTITRACK_SIZE
+                MENUITEM "Zoom",                        ID_VIEW_PREFERRED_MULTITRACK_ZOOM
+            END
+        END
+        POPUP "Tile Set"
+        BEGIN
+            MENUITEM "*None*",                      52001
+        END
+    END
+    POPUP "View"
+    BEGIN
+        MENUITEM "ALL",                         ID_VIEW_ALL
+        MENUITEM "NONE",                        ID_VIEW_NONE
+        MENUITEM "Chooser...",                  ID_VIEW_CHOOSER
+        MENUITEM "Altitudes",                   ID_VIEW_ALTITUDES
+        MENUITEM "Ambiguous",                   ID_VIEW_AMBIGUOUS
+        MENUITEM "Buddies",                     ID_VIEW_BUDDIES
+        MENUITEM "Duplicates",                  ID_VIEW_DUPLICATES
+        MENUITEM "FreqSpec",                    ID_VIEW_FREQSPEC
+        MENUITEM "Freq w/Issues",               ID_VIEW_FREQUENCIES
+        MENUITEM "Invalids",                    ID_VIEW_INVALIDS
+        MENUITEM "Message-able",                ID_VIEW_MESSAGEABLE
+        MENUITEM "Nicknamed",                   ID_VIEW_NICKNAMES
+        MENUITEM "NWS Objects",                 ID_VIEW_NWS
+        MENUITEM "Objects",                     ID_VIEW_OBJECTS
+        MENUITEM "Paths",                       ID_VIEW_PATHS
+        MENUITEM "Telemetry",                   ID_VIEW_TELEMETRY
+        MENUITEM "Tracks",                      ID_VIEW_TRACKS
+        POPUP "Mic-E"
+        BEGIN
+            MENUITEM "None",                        ID_VIEW_MICE_NONE
+        END
+        POPUP "Platforms"
+        BEGIN
+            MENUITEM "All",                         ID_VIEW_PLATFORMS_NONE
+        END
+        POPUP "RF"
+        BEGIN
+            MENUITEM "All",                         ID_VIEW_RF_ALL
+            MENUITEM "Direct",                      ID_VIEW_RF_DIRECT
+            MENUITEM "Local",                       ID_VIEW_RF_LOCAL
+            MENUITEM "3rd Party",                   ID_VIEW_RF_THIRD
+        END
+        POPUP "Shrieks"
+        BEGIN
+            MENUITEM "None",                        ID_VIEW_SHRIEKS_NONE
+        END
+        POPUP "Symbols"
+        BEGIN
+            MENUITEM "None",                        ID_VIEW_SYMBOLS_NONE
+            MENUITEM "Custom",                      ID_VIEW_CUSTOM
+            MENUITEM "Flight",                      ID_VIEW_FLIGHT
+            MENUITEM "Marine",                      ID_VIEW_MARINE
+            MENUITEM "Mobile",                      ID_VIEW_MOBILE
+            MENUITEM "RFID",                        ID_VIEW_RFID
+            MENUITEM "Weather",                     ID_VIEW_WEATHER
+            MENUITEM SEPARATOR
+        END
+        POPUP "Transport"
+        BEGIN
+            MENUITEM "RF Only",                     ID_VIEW_RF_ONLY
+            MENUITEM "RF + -IS",                    ID_VIEW_RF_INTERNET
+            MENUITEM "-IS Only",                    ID_VIEW_INTERNET_ONLY
+            MENUITEM SEPARATOR
+            MENUITEM "Digipeater",                  ID_VIEW_RF_DIGI
+            MENUITEM "IGate",                       ID_VIEW_RF_IGATE
+        END
+        MENUITEM "EchoLinks...",                ID_VIEW_ECHOLINKS
+        MENUITEM "GeoCaches...",                ID_VIEW_GEOCACHES
+    END
+    POPUP "Configure"
+    BEGIN
+        MENUITEM "General...",                  ID_CONFIGURE_GENERAL
+        MENUITEM "GeniusBeaconing™...",         ID_CONFIGURE_GENIUS
+        MENUITEM "Status...",                   ID_CONFIGURE_STATUS_TEXT
+        POPUP "Aliases"
+        BEGIN
+            POPUP "Known"
+            BEGIN
+                MENUITEM "New...",                      ID_ALIASES_KNOWN_NEW
+            END
+            MENUITEM "Accumulate",                  ID_ALIASES_ACCUMULATE
+            POPUP "Possible"
+            BEGIN
+                MENUITEM "Clear",                       ID_ALIASES_POSSIBLE_CLEAR
+            END
+            POPUP "Unused-0"
+            BEGIN
+                MENUITEM "Clear",                       ID_ALIASES_0_CLEAR
+            END
+        END
+        POPUP "AltNet"
+        BEGIN
+            MENUITEM "None",                        ID_CONFIGURE_ALTNET_NONE
+            MENUITEM "New...",                      ID_CONFIGURE_ALTNET_NEW
+        END
+        POPUP "Beacon"
+        BEGIN
+            MENUITEM "After Transmit",              ID_CONFIGURE_BEACON_AFTER_TRANSMIT
+            MENUITEM "Timestamp",                   ID_CONFIGURE_BEACON_TIMESTAMP
+            MENUITEM "HHMMSS",                      ID_CONFIGURE_BEACON_HHMMSS
+            MENUITEM "Altitude",                    ID_CONFIGURE_BEACON_ALTITUDE
+            MENUITEM "Compressed",                  ID_CONFIGURE_BEACON_COMPRESSED
+            MENUITEM "CourseSpeed",                 ID_CONFIGURE_BEACON_CSESPD
+            POPUP "Comment"
+            BEGIN
+                MENUITEM "New...",                      ID_CONFIGURE_BEACON_COMMENT_NEW
+                MENUITEM "None",                        ID_CONFIGURE_BEACON_COMMENT_NONE
+            END
+            POPUP "Mic-E Notification"
+            BEGIN
+                MENUITEM "None",                        ID_CONFIGURE_BEACON_MICE_NONE
+            END
+            POPUP "Symbol"
+            BEGIN
+                MENUITEM "New...",                      ID_CONFIGURE_SYMBOL_NEW
+            END
+            MENUITEM "Why",                         ID_CONFIGURE_BEACON_PRESSURE
+            POPUP "Precision"
+            BEGIN
+                MENUITEM "Normal",                      ID_CONFIGURE_BEACON_DAO_0
+                MENUITEM "Extra Digit",                 ID_CONFIGURE_BEACON_DAO_1
+                MENUITEM "2 Digits",                    ID_CONFIGURE_BEACON_DAO_2
+                MENUITEM "+/- 0.1nm",                   ID_CONFIGURE_BEACON_AMBIG_1
+                MENUITEM "+/- 1nm",                     ID_CONFIGURE_BEACON_AMBIG_2
+                MENUITEM "+/- 10nm",                    ID_CONFIGURE_BEACON_AMBIG_3
+                MENUITEM "+/- 60nm",                    ID_CONFIGURE_BEACON_AMBIG_4
+            END
+            MENUITEM "Path...",                     ID_CONFIGURE_BEACON_PATH
+        END
+        POPUP "Companions"
+        BEGIN
+            MENUITEM "Enabled",                     ID_COMPANIONS_ENABLED
+            MENUITEM "New Companion",               ID_COMPANIONS_NEW
+            MENUITEM SEPARATOR
+        END
+        POPUP "DX"
+        BEGIN
+            MENUITEM "Min Dist",                    ID_CONFIGURE_DX_MIN_DIST
+            MENUITEM "Min Trigger",                 ID_CONFIGURE_DX_MIN_TRIGGER
+            MENUITEM "Min Interval",                ID_CONFIGURE_DX_MIN_INTERVAL
+            MENUITEM "Window",                      ID_CONFIGURE_DX_WINDOW
+            MENUITEM "Max Ever",                    ID_CONFIGURE_DX_MAXEVER
+            POPUP "Ignore"
+            BEGIN
+                MENUITEM "None",                        ID_CONFIGURE_DX_IGNORE_NONE
+            END
+        END
+        POPUP "Map"
+        BEGIN
+            MENUITEM "Prefetch",                    ID_CONFIG_MAP_PREFETCH
+            MENUITEM "Purger Enabled",              ID_CONFIG_MAP_PURGER
+            POPUP "Tile Sets"
+            BEGIN
+                MENUITEM "New Tile Set...",             ID_CONFIGURE_NEW_TILE_SERVER
+                MENUITEM SEPARATOR
+            END
+        END
+        POPUP "Messages"
+        BEGIN
+            MENUITEM "My Messages",                 ID_MY_MESSAGES
+            MENUITEM "RF Eavesdrop",                ID_RF_MESSAGES
+            MENUITEM "Eavesdrop",                   ID_MESSAGES_EAVESDROP
+            MENUITEM "But Not NWS",                 ID_MESSAGES_HIDE_NWS
+            MENUITEM "Hide Queries",                ID_MESSAGES_HIDE_QUERIES
+            MENUITEM "Notify Query",                ID_MESSAGES_NOTIFY_ON_QUERY
+            MENUITEM "Notify New",                  ID_MESSAGES_NOTIFY_ON_NEW
+            MENUITEM "MultiTrack™ New Items",       ID_MESSAGES_MULTITRACK_ITEM
+            POPUP "Lookup(WHO-IS)"
+            BEGIN
+                MENUITEM "Brief (1 Line)",              ID_CONFIGURE_WHOIS_BRIEF
+                MENUITEM "Full Address",                ID_CONFIGURE_WHOIS_FULL
+            END
+        END
+        POPUP "Metric"
+        BEGIN
+            MENUITEM "Altitude",                    ID_VIEW_METRIC_ALTITUDE
+            MENUITEM "Distance",                    ID_VIEW_METRIC_DISTANCE
+            MENUITEM "Pressure",                    ID_VIEW_METRIC_PRESSURE
+            MENUITEM "Rainfall",                    ID_VIEW_METRIC_RAINFALL
+            MENUITEM "Temperature",                 ID_VIEW_METRIC_TEMPERATURE
+            MENUITEM "Wind (Knots)",                ID_VIEW_METRIC_WINDSPEED
+        END
+        POPUP "Mic-E Notifications"
+        BEGIN
+            MENUITEM "Suppress Notifications",      ID_CONFIGURE_MICE_NOTIF_SUPPRESSED
+            MENUITEM "Suppress EMERGENCY Too",      ID_CONFIGURE_MICE_NOTIF_NO_EMERGENCY
+            MENUITEM SEPARATOR
+        END
+        POPUP "NWS (http://www.aprs-is.net/wx/)"
+        BEGIN
+            MENUITEM "New Office...",               ID_CONFIGURE_NWS_NEW_OFFICE
+            MENUITEM "Messages",                    ID_CONFIGURE_NWS_MESSAGES
+            MENUITEM "Messages Not *ALL*",          ID_CONFIGURE_NWS_MESSAGES_NO_ALL
+            MENUITEM "Messages Notify",             ID_CONFIGURE_NWS_NOTIFY
+            POPUP "Notify LineType"
+            BEGIN
+                MENUITEM "Placeholder",                 ID_CONFIGURE_MULTILINE_STYLE
+            END
+            POPUP "Notify Products"
+            BEGIN
+                MENUITEM "None",                        ID_CONFIGURE_NWS_PRODUCTS
+            END
+            POPUP "Popup MultiTrack™"
+            BEGIN
+                MENUITEM "Always",                      ID_CONFIGURE_NWS_MULTITRACK
+                MENUITEM "Only If New",                 ID_CONFIGURE_NWS_MULTITRACK_NEW
+                MENUITEM "Only Areas",                  ID_CONFIGURE_NWS_MULTITRACK_LINES
+                MENUITEM "All Moving",                  ID_CONFIGURE_NWS_MULTITRACK_MOVING
+                MENUITEM "Only Over Me",                ID_CONFIGURE_NWS_MULTITRACK_ME
+                MENUITEM "Only Range of Me",            ID_CONFIGURE_NWS_MULTITRACK_RANGE
+                MENUITEM "Prefer Specific",             ID_CONFIGURE_NWS_MULTITRACK_SPECIFIC
+                MENUITEM "Close On Expire",             ID_CONFIGURE_NWS_MULTITRACK_CLOSE
+            END
+            POPUP "Show Offices"
+            BEGIN
+                MENUITEM "Show Coverage",               ID_CONFIGURE_NWS_SHOW_OFFICES_ALL
+                MENUITEM "Show Individuals",            ID_CONFIGURE_NWS_SHOW_OFFICES
+            END
+            MENUITEM SEPARATOR
+            POPUP "NWS Entry Servers"
+            BEGIN
+                MENUITEM "Placeholder",                 ID_CONFIGURE_NWS_ENTRY_SERVER
+            END
+        END
+        POPUP "NWS Shapes (http://tinyurl.com/NWS-Shapes)"
+        BEGIN
+            MENUITEM "Add File...",                 ID_CONFIGURE_NWS_NEW_SHAPEFILE
+            MENUITEM "Enabled",                     ID_CONFIGURE_NWS_SHAPES_ENABLED
+            MENUITEM "Opacity...",                  ID_CONFIGURE_NWS_SHAPE_OPACITY
+            MENUITEM "Quality...",                  ID_CONFIGURE_NWS_SHAPE_QUALITY
+            MENUITEM "Show Center",                 ID_CONFIGURE_NWS_SHAPE_TEST
+            MENUITEM SEPARATOR
+        END
+        POPUP "Objects"
+        BEGIN
+            MENUITEM "Create",                      ID_OBJECTS_NEW
+            MENUITEM "New JT65",                    ID_OBJECTS_NEW_JT65
+            MENUITEM "New Weather",                 ID_OBJECTS_NEW_WEATHER
+            MENUITEM "Show",                        ID_OBJECTS_SHOW
+            MENUITEM "Max Group Objects",           ID_MAX_GROUP_OBJS
+            POPUP "QRU"
+            BEGIN
+                MENUITEM "Enabled",                     ID_QRU_ENABLE
+                MENUITEM "Interval",                    ID_QRU_INTERVAL
+                MENUITEM "Max Objects",                 ID_QRU_MAX_OBJS
+                MENUITEM "Range",                       ID_QRU_RANGE
+                MENUITEM "Retry Messages",              ID_QRU_RETRY_MESSAGES
+            END
+            MENUITEM SEPARATOR
+        END
+        POPUP "Overlays"
+        BEGIN
+            MENUITEM "Add GPX File...",             ID_CONFIGURE_GPX_NEW
+            MENUITEM "Add POS File...",             ID_CONFIGURE_OVERLAY_NEW
+            MENUITEM SEPARATOR
+        END
+        POPUP "Ports"
+        BEGIN
+            MENUITEM "New Port...",                 ID_CONFIGURE_NEW_RFPORT
+            MENUITEM "APRS-IS",                     ID_CONFIGURE_APRSIS
+            MENUITEM "NMEA",                        ID_CONFIGURE_NMEA
+        END
+        POPUP "Save Posits"
+        BEGIN
+            MENUITEM "Reload Paths",                ID_CONFIGURE_POSITS_PATHS
+            MENUITEM "Save Filter...",              ID_CONFIGURE_POSITS_FILTER
+        END
+        POPUP "Screen"
+        BEGIN
+            POPUP "Label"
+            BEGIN
+                MENUITEM "Allow Overlap",               ID_SCREEN_LABEL_OVERLAP
+                POPUP "Callsign"
+                BEGIN
+                    MENUITEM "Not ME",                      ID_SCREEN_CALLSIGN_NOT_ME
+                    MENUITEM "Not Mine",                    ID_SCREEN_CALLSIGN_NOT_MINE
+                END
+                POPUP "Footprint"
+                BEGIN
+                    MENUITEM "Min Altitude",                ID_SCREEN_FOOTPRINT_MIN
+                    MENUITEM "Max Altitude",                ID_SCREEN_FOOTPRINT_MAX
+                END
+                POPUP "GeoCache"
+                BEGIN
+                    MENUITEM "GCnnnnn",                     ID_SCREEN_GEOCACHE_ID
+                    MENUITEM "Type",                        ID_SCREEN_GEOCACHE_TYPE
+                    MENUITEM "Container",                   ID_SCREEN_GEOCACHE_CONT
+                    MENUITEM "Diff/Terr",                   ID_SCREEN_GEOCACHE_DT
+                    MENUITEM "Max Labels...",               ID_SCREEN_GEOCACHE_LABEL_MAX
+                END
+                MENUITEM "Max Visible...",              ID_SCREEN_LABEL_MAX
+            END
+            MENUITEM "Altitude",                    ID_SCREEN_ALTITUDE
+            MENUITEM "Battery",                     ID_SCREEN_BATTERY
+            MENUITEM "Circle",                      ID_SCREEN_CIRCLE
+            POPUP "CrossHairs"
+            BEGIN
+                MENUITEM "Always",                      ID_SCREEN_CROSSHAIRS_ALWAYS
+                MENUITEM "Never",                       ID_SCREEN_CROSSHAIRS_NEVER
+                MENUITEM "Timed",                       ID_SCREEN_CROSSHAIRS_TIMED
+            END
+            POPUP "Date/Time"
+            BEGIN
+                MENUITEM "None",                        ID_SCREEN_DATETIME_NONE
+                MENUITEM "Local",                       ID_SCREEN_DATETIME_LOCAL
+                MENUITEM "GMT/UTC",                     ID_SCREEN_DATETIME_GMT
+                MENUITEM "GPS Only",                    ID_SCREEN_DATETIME_GPS_ONLY
+                MENUITEM "Performance",                 ID_SCREEN_DATETIME_PERFORMANCE
+                MENUITEM SEPARATOR
+                MENUITEM "Date Only",                   ID_SCREEN_DATETIME_DATE_ONLY
+                MENUITEM "Default",                     ID_SCREEN_DATETIME_DEFAULT
+                MENUITEM "Time Only",                   ID_SCREEN_DATETIME_TIME_ONLY
+                POPUP "Custom"
+                BEGIN
+                    MENUITEM "Date On 0",                   ID_SCREEN_DATETIME_0
+                    MENUITEM "Date On 1",                   ID_SCREEN_DATETIME_1
+                    MENUITEM "Date On 2",                   ID_SCREEN_DATETIME_2
+                    MENUITEM "Date On 3",                   ID_SCREEN_DATETIME_3
+                    MENUITEM "Date On 4",                   ID_SCREEN_DATETIME_4
+                    MENUITEM "Date On 5",                   ID_SCREEN_DATETIME_5
+                    MENUITEM "Date On 6",                   ID_SCREEN_DATETIME_6
+                    MENUITEM "Date On 7",                   ID_SCREEN_DATETIME_7
+                    MENUITEM "Date On 8",                   ID_SCREEN_DATETIME_8
+                    MENUITEM "Date On 9",                   ID_SCREEN_DATETIME_9
+                END
+            END
+            MENUITEM "GridSquare",                  ID_SCREEN_GRIDSQUARE
+            MENUITEM "Lat/Lon",                     ID_SCREEN_LATLON
+            POPUP "Orientation"
+            BEGIN
+                MENUITEM "Wide",                        ID_VIEW_PORTRAIT
+                MENUITEM "Narrow",                      ID_VIEW_LANDSCAPE
+                MENUITEM "Automatic",                   ID_VIEW_AUTOMATIC
+            END
+            MENUITEM "RedDot",                      ID_SCREEN_RED_DOT
+            MENUITEM "Satellites (GPS)",            ID_SCREEN_SATELLITES
+            MENUITEM "Speed Font Size...",          ID_SCREEN_SPEED_FONT
+            MENUITEM "Symbol Size...",              ID_SCREEN_SYMBOL_SIZE_ADJUST
+            POPUP "Tracks"
+            BEGIN
+                POPUP "Follow"
+                BEGIN
+                    MENUITEM "Color...",                    ID_SCREEN_TRACKS_FOLLOW_COLOR
+                    MENUITEM "Blocks...",                   ID_SCREEN_TRACKS_FOLLOW
+                    MENUITEM "Width...",                    ID_SCREEN_TRACKS_FOLLOW_WIDTH
+                END
+                POPUP "Other"
+                BEGIN
+                    MENUITEM "Fixed Color...",              ID_SCREEN_TRACKS_OTHER_COLOR
+                    POPUP "Rotating..."
+                    BEGIN
+                        MENUITEM "Add Color...",                ID_SCREEN_TRACKS_OTHER_ADD_COLOR
+                        MENUITEM SEPARATOR
+                    END
+                    MENUITEM "Points...",                   ID_SCREEN_TRACKS_OTHER
+                    MENUITEM "Width...",                    ID_SCREEN_TRACKS_OTHER_WIDTH
+                END
+            END
+            POPUP "Wind Barbs"
+            BEGIN
+                MENUITEM "Enabled",                     ID_SCREEN_WINDBARBS_ENABLED
+                MENUITEM "Rotate Storm",                ID_SCREEN_WINDBARBS_ROTATE
+                MENUITEM "Color...",                    ID_SCREEN_WINDBARBS_COLOR
+                MENUITEM "Width...",                    ID_SCREEN_WINDBARBS_WIDTH
+            END
+        END
+        POPUP "Scroller"
+        BEGIN
+            MENUITEM "Freeze On Click",             ID_CONFIGURE_SCROLLER_CLICK_FREEZE
+            MENUITEM "Show IGate/Digi",             ID_CONFIGURE_SCROLLER_SHOW_IGATE
+            MENUITEM SEPARATOR
+            MENUITEM "Filter...",                   ID_CONFIGURE_SCROLLER_FILTER
+            MENUITEM "Hide NoParse",                ID_CONFIGURE_SCROLLER_HIDE_NOPARSE
+            MENUITEM "No Internals",                ID_CONFIGURE_SCROLLER_NO_INTERNALS
+            MENUITEM "Not ME",                      ID_CONFIGURE_SCROLLER_NOT_ME
+            MENUITEM "Not Mine",                    ID_CONFIGURE_SCROLLER_NOT_MINE
+            MENUITEM "RF Only",                     ID_CONFIGURE_SCROLLER_RF_ONLY
+            MENUITEM "Show All",                    ID_CONFIGURE_SCROLLER_SHOW_ALL
+        END
+        POPUP "Status Report"
+        BEGIN
+            MENUITEM "Enabled",                     ID_CONFIGURE_STATUS_TEXT_ENABLED
+            MENUITEM "GridSquare",                  ID_CONFIGURE_STATUS_TEXT_GRIDSQ
+            MENUITEM "Timestamp",                   ID_CONFIGURE_STATUS_TEXT_TIME
+            MENUITEM "DX",                          ID_CONFIGURE_STATUS_TEXT_DX
+            MENUITEM "New...",                      ID_CONFIGURE_STATUS_TEXT_NEW
+            MENUITEM "None",                        ID_CONFIGURE_STATUS_TEXT_NONE
+            MENUITEM SEPARATOR
+        END
+    END
+    POPUP "Clear"
+    BEGIN
+        MENUITEM "Clear Eavesdrops",            ID_MESSAGES_PURGE_EAVESDROP
+        MENUITEM "Clear CQ/All Messages",       ID_MESSAGES_PURGE_SPECIAL
+        MENUITEM "Clear Group Messages",        ID_MESSAGES_PURGE_GROUP
+        MENUITEM "Clear My Messages",           ID_MESSAGES_PURGE_MY
+        MENUITEM "Clear NWS Messages",          ID_MESSAGES_PURGE_NWS
+        MENUITEM "Clear Paths",                 ID_CLEAR_PATHS
+        MENUITEM "Clear Stations",              ID_CLEAR_STATIONS
+        MENUITEM "Clear Tracks",                ID_CLEAR_TRACK
+        POPUP "Accumulated"
+        BEGIN
+            MENUITEM "Clear AltNets",               ID_CLEAR_ALTNETS
+            MENUITEM "Clear Bulletins",             ID_CLEAR_BULLETINS
+            MENUITEM "Reset MaxWidth Station",      ID_RESET_MAX_WIDTH
+            MENUITEM "Clear Tactical Nicknames",    ID_CLEAR_TACTICAL
+            MENUITEM "Clear Telemetry",             ID_CLEAR_TELEMETRY
+            MENUITEM "Clear Weather",               ID_CLEAR_WEATHER
+            MENUITEM "Clear Window Positions",      ID_CLEAR_WINDOW_POSITIONS
+        END
+        POPUP "Configured"
+        BEGIN
+            MENUITEM "Clear Auto-Replies",          ID_CLEAR_AUTO_REPLIES
+            MENUITEM "Clear Beacon Comments",       ID_CLEAR_BEACON_COMMENTS
+            POPUP "Clear Mic-E Ignores"
+            BEGIN
+                MENUITEM "Clear All",                   ID_CLEAR_MICE_IGNORES
+                MENUITEM SEPARATOR
+            END
+            MENUITEM "Clear Status Reports",        ID_CLEAR_STATUS_TEXTS
+            MENUITEM "Clear Symbols",               ID_CLEAR_SYMBOLS
+            POPUP "Clear TACTICAL Sources"
+            BEGIN
+                MENUITEM "Clear Accepts",           ID_CLEAR_TACTICAL_ACCEPTS
+                MENUITEM "Clear Nevers",            ID_CLEAR_TACTICAL_NEVERS
+                MENUITEM SEPARATOR
+            END
+        END
+    END
+    MENUITEM "About",                       ID_ABOUT
+    MENUITEM "Exit",                        ID_EXIT
+END
+
+IDM_TRACKER MENU 
+BEGIN
+    POPUP "Follow"
+    BEGIN
+        MENUITEM "Find",                        ID_SCREEN_TRACK_FIND
+        MENUITEM "Center",                      ID_SCREEN_CENTER_TRACKED
+        MENUITEM "ME",                          ID_SCREEN_TRACK_ME
+        MENUITEM "Locked",                      ID_SCREEN_TRACK_LOCKED
+    END
+    POPUP "Preferred"
+    BEGIN
+        MENUITEM "View None",                   ID_VIEW_PREFERRED_MULTITRACK_NONE
+        MENUITEM SEPARATOR
+        MENUITEM "Percent",                     ID_VIEW_PREFERRED_MULTITRACK_PERCENT
+        MENUITEM "Size",                        ID_VIEW_PREFERRED_MULTITRACK_SIZE
+        MENUITEM "Zoom",                        ID_VIEW_PREFERRED_MULTITRACK_ZOOM
+    END
+    POPUP "Screen"
+    BEGIN
+        POPUP "AutoZoom View"
+        BEGIN
+            MENUITEM "AutoZoom All",                ID_SCREEN_AUTOZOOM_VIEW
+            MENUITEM "AutoZoom In",                 ID_SCREEN_AUTOZOOM_VIEW_IN
+            MENUITEM "AutoZoom Out",                ID_SCREEN_AUTOZOOM_VIEW_OUT
+            MENUITEM SEPARATOR
+            MENUITEM "Auto Center",                 ID_SCREEN_AUTOZOOM_VIEW_CTR
+            MENUITEM "Follow Locked",               ID_SCREEN_TRACK_LOCKED
+        END
+        POPUP "Follow"
+        BEGIN
+            MENUITEM "Find",                        ID_SCREEN_TRACK_FIND
+            MENUITEM "Center",                      ID_SCREEN_CENTER_TRACKED
+            MENUITEM "ME",                          ID_SCREEN_TRACK_ME
+            MENUITEM "Locked",                      ID_SCREEN_TRACK_LOCKED
+        END
+        POPUP "Paths"
+        BEGIN
+            MENUITEM "Appearance...",               ID_CONFIGURE_PATHS
+            MENUITEM "LclRF Only",                  ID_SCREEN_PATHS_RFONLY
+            MENUITEM "Network (Links)",             ID_SCREEN_PATHS_NETWORK
+            MENUITEM "Station (Packet)",            ID_SCREEN_PATHS_STATION
+            MENUITEM "ME (Packet)",                 ID_SCREEN_PATHS_MYSTATION
+        END
+        POPUP "Tile Set"
+        BEGIN
+            MENUITEM "*None*",                      52001
+        END
+    END
+    POPUP "View"
+    BEGIN
+        MENUITEM "ALL",                         ID_VIEW_ALL
+        MENUITEM "NONE",                        ID_VIEW_NONE
+        MENUITEM "Chooser...",                  ID_VIEW_CHOOSER
+        MENUITEM "Altitudes",                   ID_VIEW_ALTITUDES
+        MENUITEM "Ambiguous",                   ID_VIEW_AMBIGUOUS
+        MENUITEM "Buddies",                     ID_VIEW_BUDDIES
+        MENUITEM "Duplicates",                  ID_VIEW_DUPLICATES
+        MENUITEM "FreqSpec",                    ID_VIEW_FREQSPEC
+        MENUITEM "Freq w/Issues",               ID_VIEW_FREQUENCIES
+        MENUITEM "Invalids",                    ID_VIEW_INVALIDS
+        MENUITEM "Message-able",                ID_VIEW_MESSAGEABLE
+        MENUITEM "Nicknamed",                   ID_VIEW_NICKNAMES
+        MENUITEM "NWS Objects",                 ID_VIEW_NWS
+        MENUITEM "Objects",                     ID_VIEW_OBJECTS
+        MENUITEM "Paths",                       ID_VIEW_PATHS
+        MENUITEM "Telemetry",                   ID_VIEW_TELEMETRY
+        MENUITEM "Tracks",                      ID_VIEW_TRACKS
+        POPUP "Mic-E"
+        BEGIN
+            MENUITEM "None",                        ID_VIEW_MICE_NONE
+        END
+        POPUP "Platforms"
+        BEGIN
+            MENUITEM "All",                         ID_VIEW_PLATFORMS_NONE
+        END
+        POPUP "RF"
+        BEGIN
+            MENUITEM "All",                         ID_VIEW_RF_ALL
+            MENUITEM "Direct",                      ID_VIEW_RF_DIRECT
+            MENUITEM "Local",                       ID_VIEW_RF_LOCAL
+            MENUITEM "3rd Party",                   ID_VIEW_RF_THIRD
+        END
+        POPUP "Shrieks"
+        BEGIN
+            MENUITEM "None",                        ID_VIEW_SHRIEKS_NONE
+        END
+        POPUP "Symbols"
+        BEGIN
+            MENUITEM "None",                        ID_VIEW_SYMBOLS_NONE
+            MENUITEM "Custom",                      ID_VIEW_CUSTOM
+            MENUITEM "Flight",                      ID_VIEW_FLIGHT
+            MENUITEM "Marine",                      ID_VIEW_MARINE
+            MENUITEM "Mobile",                      ID_VIEW_MOBILE
+            MENUITEM "RFID",                        ID_VIEW_RFID
+            MENUITEM "Weather",                     ID_VIEW_WEATHER
+            MENUITEM SEPARATOR
+        END
+        POPUP "Transport"
+        BEGIN
+            MENUITEM "RF Only",                     ID_VIEW_RF_ONLY
+            MENUITEM "RF + -IS",                    ID_VIEW_RF_INTERNET
+            MENUITEM "-IS Only",                    ID_VIEW_INTERNET_ONLY
+            MENUITEM SEPARATOR
+            MENUITEM "Digipeater",                  ID_VIEW_RF_DIGI
+            MENUITEM "IGate",                       ID_VIEW_RF_IGATE
+        END
+        MENUITEM "EchoLinks",                   ID_VIEW_ECHOLINKS
+        MENUITEM "GeoCaches",                   ID_VIEW_GEOCACHES
+    END
+    MENUITEM "Close",                       ID_EXIT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SEND_MESSAGE DIALOG  0, 0, 95, 59
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Send To"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    COMBOBOX        IDL_TO_CALL,25,6,59,66,CBS_DROPDOWN | CBS_AUTOHSCROLL | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "Chat",IDB_SEND,23,37,50,14,BS_NOTIFY
+    LTEXT           "  To:",IDC_STATIC,6,9,16,8
+    CONTROL         "Allow Lower Case",IDC_LOWER,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,14,22,74,10
+END
+
+IDD_PORT_CONFIG DIALOG  0, 0, 158, 130
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+CAPTION "Port Configuration"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "Inherit",IDC_INHERIT,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,8,5,35,10
+    EDITTEXT        IDE_CALLSIGN,87,3,45,14,ES_UPPERCASE | ES_AUTOHSCROLL
+    CONTROL         "Symbol",IDB_SYMBOL,"Button",BS_OWNERDRAW | BS_NOTIFY | WS_TABSTOP,135,2,21,17
+    EDITTEXT        IDE_COMMENT,46,22,101,14,ES_AUTOHSCROLL
+    EDITTEXT        IDE_QUIET_TIME,49,39,39,14,ES_AUTOHSCROLL
+    CONTROL         "",IDS_QUIET_TIME,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,76,39,12,14
+    LTEXT           "sec",IDC_STATIC,91,43,12,8
+    CONTROL         "RF to IS",IDC_RFTOIS,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,108,36,47,10
+    CONTROL         "IS to RF",IDC_ISTORF,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,108,47,47,10
+    CONTROL         "NoGate ME",IDC_NOGATEME,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,108,58,47,10
+    COMBOBOX        IDL_RFBAUD,49,55,54,66,CBS_DROPDOWN | CBS_AUTOHSCROLL | CBS_SORT | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Enabled",IDC_ENABLED,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,10,72,42,10
+    CONTROL         "Xmit Enable",IDC_XMIT,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,10,84,53,10
+    CONTROL         "Beacon",IDC_BEACON,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,68,83,39,10
+    PUSHBUTTON      "B Path",IDB_BEACON_PATH,98,94,26,14,BS_NOTIFY
+    CONTROL         "Telemetry",IDC_TELEMETRY,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,110,83,49,10
+    PUSHBUTTON      "T Path",IDB_TELEMETRY_PATH,127,94,26,14,BS_NOTIFY
+    PUSHBUTTON      "Device",IDB_DEVICE,6,112,32,14,BS_NOTIFY
+    PUSHBUTTON      "Genius™",IDB_GENIUS,42,112,33,14,BS_NOTIFY
+    DEFPUSHBUTTON   "Accept",IDB_ACCEPT,86,113,32,14,BS_NOTIFY
+    PUSHBUTTON      "Delete",IDB_DELETE,123,113,32,14,BS_NOTIFY
+    RTEXT           "MyCall-ssid:",IDC_STATIC,46,6,40,8
+    RTEXT           "Quiet Time:",IDC_STATIC,7,42,40,8
+    RTEXT           "RFBaud:",IDC_STATIC,16,56,28,8
+    RTEXT           "Comment:",IDC_STATIC,7,25,35,8
+    CONTROL         "Bulletin/Obj",IDC_BULLETIN_OBJECT,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,56,72,54,10
+    CONTROL         "Messages",IDC_MESSAGE,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,110,71,48,10
+    CONTROL         "GPS/NMEA",IDC_NMEA,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,10,96,51,10
+    CONTROL         "DX",IDC_DX2,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,68,95,25,10
+END
+
+IDD_GENIUS_BEACON DIALOG  0, 0, 156, 129
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "GeniusBeaconing™ Settings"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    EDITTEXT        IDE_MIN_TIME,72,7,40,14,ES_AUTOHSCROLL
+    CONTROL         "",IDS_MIN_TIME,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,112,7,10,14
+    EDITTEXT        IDE_MAX_TIME,72,23,40,14,ES_AUTOHSCROLL
+    CONTROL         "",IDS_MAX_TIME,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,112,23,11,14
+    EDITTEXT        IDE_BEARING_CHANGE,72,55,40,14,ES_AUTOHSCROLL
+    CONTROL         "",IDS_BEARING_CHANGE,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,112,55,11,14
+    EDITTEXT        IDE_FORECAST_ERROR,72,71,40,14,ES_AUTOHSCROLL
+    CONTROL         "",IDS_FORECAST_ERROR,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,112,71,11,14
+    EDITTEXT        IDE_MAX_DISTANCE,72,87,40,14,ES_AUTOHSCROLL
+    CONTROL         "",IDS_MAX_DISTANCE,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,112,87,11,14
+    PUSHBUTTON      "Accept",IDB_ACCEPT,20,108,50,14,BS_NOTIFY
+    PUSHBUTTON      "Cancel",IDB_CANCEL,86,108,50,14,BS_NOTIFY
+    RTEXT           "Min Time:",IDC_STATIC,9,9,61,8
+    RTEXT           "Max Time:",IDC_STATIC,9,25,61,8
+    RTEXT           "Heading Change:",IDC_STATIC,9,57,61,8
+    RTEXT           "Forecast Error:",IDC_STATIC,9,73,61,8
+    RTEXT           "Max Distance:",IDC_STATIC,9,89,61,8
+    LTEXT           "sec",IDC_STATIC,123,10,24,8
+    LTEXT           "min",IDC_STATIC,123,26,24,8
+    LTEXT           "deg",IDC_STATIC,123,58,24,8
+    LTEXT           "1/10 mi",IDC_STATIC,123,74,32,8
+    LTEXT           "1/10 mi",IDC_STATIC,123,90,32,8
+    CONTROL         "Time Only",IDC_TIME_ONLY,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT | BS_NOTIFY | WS_GROUP | WS_TABSTOP,10,40,50,10
+    CONTROL         "Start/Stop",IDC_START_STOP,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT | BS_NOTIFY | WS_GROUP | WS_TABSTOP,84,40,50,10
+END
+
+IDD_SEND_EMAIL DIALOG  0, 0, 156, 83
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Send EMail"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    COMBOBOX        IDL_EMAIL,25,14,122,66,CBS_DROPDOWN | CBS_AUTOHSCROLL | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDE_TEXT,26,33,123,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "Send",IDB_SEND,7,62,50,14,BS_NOTIFY
+    PUSHBUTTON      "Cancel",IDB_CANCEL,99,62,50,14,BS_NOTIFY
+    LTEXT           "  To:",IDC_STATIC,7,17,16,8
+    LTEXT           "Text:",IDC_STATIC,7,35,18,8
+END
+
+IDD_SYMBOL DIALOG  0, 0, 155, 121
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Select Symbol"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    EDITTEXT        IDE_SYM_OVERLAY,110,46,30,14,ES_AUTOHSCROLL
+    CONTROL         "",IDS_SYM_OVERLAY,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,127,46,12,14
+    EDITTEXT        IDE_SYM_VALUE,110,19,29,14,ES_AUTOHSCROLL
+    CONTROL         "",IDS_SYM_VALUE,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,127,19,12,14
+    PUSHBUTTON      "Cancel",IDB_CANCEL,85,91,50,14,BS_NOTIFY
+    RTEXT           "Overlay:",IDC_STATIC,69,48,38,8
+    RTEXT           "Symbol:",IDC_STATIC,74,21,33,8
+    LTEXT           "Symbol Description",IDC_SYM_TEXT,50,69,87,8,SS_CENTERIMAGE
+    CONTROL         "Symbol",IDB_SYMBOL,"Button",BS_OWNERDRAW | BS_NOTIFY | WS_TABSTOP,25,65,21,17
+    DEFPUSHBUTTON   "Accept",IDB_ACCEPT,24,90,32,14,BS_NOTIFY
+    CONTROL         "Primary",IDC_PRIMARY,"Button",BS_AUTORADIOBUTTON | BS_NOTIFY,23,16,41,10
+    CONTROL         "Alternate",IDC_ALTERNATE,"Button",BS_AUTORADIOBUTTON | BS_NOTIFY,23,31,46,10
+    CONTROL         "Overlay",IDC_OVERLAY,"Button",BS_AUTORADIOBUTTON | BS_NOTIFY,23,46,41,10
+    GROUPBOX        "Table",IDC_STATIC,18,7,49,53
+    CTEXT           "RA",IDC_SYM_SYMBOL,103,35,32,9,SS_NOPREFIX | SS_CENTERIMAGE
+END
+
+COMMPORT DIALOG  0, 0, 142, 91
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+CAPTION "Port Configuration"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    COMBOBOX        IDC_COMMPORT,7,7,55,90,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    COMBOBOX        IDC_BAUDRATE,78,7,48,90,CBS_DROPDOWNLIST | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    CONTROL         "None",IDR_NONE,"Button",BS_AUTORADIOBUTTON | BS_NOTIFY | WS_GROUP | WS_TABSTOP,14,31,33,10
+    CONTROL         "Even",IDR_EVEN,"Button",BS_AUTORADIOBUTTON | BS_NOTIFY,51,31,31,10
+    CONTROL         "Odd",IDR_ODD,"Button",BS_AUTORADIOBUTTON | BS_NOTIFY,85,31,29,10
+    CONTROL         "7",IDR_SEVEN,"Button",BS_AUTORADIOBUTTON | BS_NOTIFY | WS_GROUP | WS_TABSTOP,15,56,20,10
+    CONTROL         "8",IDR_EIGHT,"Button",BS_AUTORADIOBUTTON | BS_NOTIFY,14,67,20,10
+    CONTROL         "1",IDR_ONE,"Button",BS_AUTORADIOBUTTON | BS_NOTIFY | WS_GROUP | WS_TABSTOP,62,56,20,10
+    CONTROL         "2",IDR_TWO,"Button",BS_AUTORADIOBUTTON | BS_NOTIFY,63,67,20,10
+    CONTROL         "Xmit",IDC_XMIT,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | NOT WS_VISIBLE | WS_GROUP | WS_TABSTOP,100,52,28,10
+    DEFPUSHBUTTON   "OK",IDOK,103,70,24,14,0,WS_EX_DLGMODALFRAME | WS_EX_LEFTSCROLLBAR | WS_EX_CONTROLPARENT
+    GROUPBOX        "Parity",IDC_STATIC,7,22,121,25
+    GROUPBOX        "Data",IDC_STATIC,7,47,44,37
+    GROUPBOX        "Stop",IDC_STATIC,54,47,44,37
+END
+
+TCPPORT DIALOG  0, 0, 142, 91
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+CAPTION "TCP Configuration"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,103,70,24,14,0,WS_EX_DLGMODALFRAME | WS_EX_LEFTSCROLLBAR | WS_EX_CONTROLPARENT
+    CONTROL         "Xmit",IDC_XMIT,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | NOT WS_VISIBLE | WS_GROUP | WS_TABSTOP,100,51,28,10
+    EDITTEXT        IDE_IP_DNS,45,11,86,14,ES_AUTOHSCROLL
+    RTEXT           "IP or DNS:",IDC_STATIC,8,13,35,8
+    EDITTEXT        IDE_PORT,45,27,35,14,ES_AUTOHSCROLL | ES_NUMBER
+    RTEXT           "Port:",IDC_STATIC,7,29,35,8
+END
+
+IDD_STRING_PROMPT DIALOG  0, 0, 155, 59
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "String Prompt"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    EDITTEXT        IDE_TEXT,6,22,142,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "Enter",IDOK,6,42,50,14,BS_NOTIFY
+    PUSHBUTTON      "Cancel",IDCANCEL,98,42,50,14,BS_NOTIFY
+    LTEXT           "  To:",IDC_PROMPT,6,6,142,8
+END
+
+IDD_NEW_RFPORT DIALOG  0, 0, 156, 83
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "New RFPort"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    COMBOBOX        IDL_TYPE,31,15,66,66,CBS_DROPDOWN | CBS_AUTOHSCROLL | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDE_TEXT,30,33,119,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "Create",IDB_CREATE,7,62,50,14,BS_NOTIFY
+    PUSHBUTTON      "Cancel",IDB_CANCEL,99,62,50,14,BS_NOTIFY
+    LTEXT           "Type:",IDC_STATIC,7,17,22,8
+    LTEXT           "Name:",IDC_STATIC,7,35,23,8
+END
+
+IDD_FIND_STATION DIALOG  0, 0, 156, 83
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Find Station"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    COMBOBOX        IDL_TO_CALL,62,12,63,66,CBS_DROPDOWN | CBS_AUTOHSCROLL | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "Find",IDB_FIND,6,60,36,14,BS_NOTIFY
+    PUSHBUTTON      "Cancel",IDB_CANCEL,114,60,36,14,BS_NOTIFY
+    RTEXT           " Station:",-1,29,15,29,8
+    CTEXT           "Found NN Stations",IDT_TEXT,16,44,119,8
+    PUSHBUTTON      "MultiTrack™",IDB_MULTITRACK,54,60,48,14,BS_NOTIFY
+    CONTROL         "Allow Lower Case",IDC_LOWER,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,52,28,74,10
+END
+
+IDD_CONFIG DIALOG  0, 0, 154, 137
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+EXSTYLE WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+CAPTION "Client Configuration"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    EDITTEXT        IDE_CALLSIGN,46,4,47,14,ES_UPPERCASE | ES_AUTOHSCROLL
+    EDITTEXT        IDE_PASSWORD,46,20,47,14,ES_AUTOHSCROLL
+    EDITTEXT        IDE_QUIET_TIME,46,37,39,14,ES_AUTOHSCROLL
+    CONTROL         "",IDS_QUIET_TIME,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,73,37,12,14
+    EDITTEXT        IDE_RANGE,47,52,37,14,ES_AUTOHSCROLL
+    CONTROL         "",IDS_RANGE,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,73,52,12,14
+    EDITTEXT        IDE_FILTER,49,70,101,14,ES_AUTOHSCROLL
+    EDITTEXT        IDE_COMMENT,49,88,101,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "Accept",IDB_ACCEPT,15,117,32,14,BS_NOTIFY
+    PUSHBUTTON      "Genius™",IDB_GENIUS,111,26,39,16,BS_NOTIFY
+    PUSHBUTTON      "Cancel",IDB_CANCEL,105,117,32,14,BS_NOTIFY
+    RTEXT           "MyCall-ssid:",IDC_STATIC,6,7,40,8
+    RTEXT           "Passcode:",IDC_STATIC,4,22,40,8
+    RTEXT           "Quiet Time:",IDC_STATIC,4,40,40,8
+    RTEXT           "Range:",IDC_STATIC,4,55,40,8
+    RTEXT           "Add Filter:",IDC_STATIC,4,71,40,8
+    RTEXT           "Comment:",IDC_STATIC,4,91,40,8
+    LTEXT           "1/10 mi",IDC_STATIC,86,55,26,8
+    LTEXT           "sec",IDC_STATIC,88,41,12,8
+    CONTROL         "Symbol",IDB_SYMBOL,"Button",BS_OWNERDRAW | BS_NOTIFY | WS_TABSTOP,96,3,21,17
+    PUSHBUTTON      "NMEA",IDB_NMEA,115,48,35,16,BS_NOTIFY
+    LTEXT           "<Click to <Change",IDC_STATIC,121,4,32,20
+    PUSHBUTTON      "PHG",IDB_PHG,67,117,18,14,BS_NOTIFY
+    CONTROL         "Confirm On Close",IDC_VERIFY_CLOSE,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,2,104,73,10
+    CONTROL         "Restart On About",IDC_ABOUT_RESTART,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,79,104,72,10
+END
+
+IDD_BULLETIN DIALOG  0, 0, 158, 94
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+CAPTION "Bulletin"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "Enabled",IDC_ENABLED,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,6,6,42,10
+    COMBOBOX        IDL_LINE,48,6,24,66,CBS_DROPDOWN | CBS_AUTOHSCROLL | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDL_GROUP,108,6,36,66,CBS_DROPDOWN | CBS_AUTOHSCROLL | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDE_COMMENT,49,22,101,14,ES_AUTOHSCROLL
+    EDITTEXT        IDE_INTERVAL,49,39,39,14,ES_AUTOHSCROLL
+    CONTROL         "",IDS_INTERVAL,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,76,39,12,14
+    CONTROL         "Via -IS",IDC_VIA_IS,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,108,36,47,10
+    CONTROL         "Via RF",IDC_VIA_RF,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,108,47,47,10
+    EDITTEXT        IDE_RF_PATH,49,60,101,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "Accept",IDB_ACCEPT,42,78,32,14,BS_NOTIFY
+    PUSHBUTTON      "Delete",IDB_DELETE,90,78,32,14,BS_NOTIFY
+    RTEXT           "Comment:",IDC_STATIC,7,25,35,8
+    RTEXT           "Group:",IDC_STATIC,78,6,24,12
+    LTEXT           "min",IDC_STATIC,91,43,12,8
+    RTEXT           "Interval:",IDC_STATIC,7,42,35,8
+    RTEXT           "RF Path:",IDC_STATIC,6,63,35,8
+END
+
+IDD_OBJECT DIALOG  0, 0, 158, 124
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+CAPTION "Object"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "Enabled",IDC_ENABLED,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,6,2,36,10
+    COMBOBOX        IDL_GROUP,75,3,75,66,CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Kill Flag",IDC_KILL,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,6,14,36,10
+    CONTROL         "Symbol",IDB_SYMBOL,"Button",BS_OWNERDRAW | BS_NOTIFY | WS_TABSTOP,49,17,21,17
+    EDITTEXT        IDE_CALLSIGN,74,19,76,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "PHG",IDB_PHG,5,37,18,14,BS_NOTIFY
+    EDITTEXT        IDE_COMMENT,49,36,101,14,ES_AUTOHSCROLL
+    CONTROL         "Item",IDC_ITEM,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,6,53,31,10
+    CONTROL         "DHMz",IDC_DHM,"Button",BS_AUTORADIOBUTTON | BS_NOTIFY,39,53,34,10
+    CONTROL         "HMSh",IDC_HMS,"Button",BS_AUTORADIOBUTTON | BS_NOTIFY,75,53,35,10
+    CONTROL         "111111z",IDC_PERMANENT,"Button",BS_AUTORADIOBUTTON | BS_NOTIFY,112,52,43,10
+    RTEXT           "Interval:",-1,7,66,35,8
+    EDITTEXT        IDE_INTERVAL,49,65,39,14,ES_AUTOHSCROLL
+    CONTROL         "",IDS_INTERVAL,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,76,65,12,14
+    CONTROL         "Via -IS",IDC_VIA_IS,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,108,62,47,10
+    CONTROL         "Via RF",IDC_VIA_RF,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,108,73,47,10
+    PUSHBUTTON      "DF",IDB_DF,6,74,14,14,BS_NOTIFY
+    PUSHBUTTON      "DFS",IDB_DFS,24,74,18,14,BS_NOTIFY
+    EDITTEXT        IDE_RF_PATH,49,86,101,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "Accept",IDB_ACCEPT,6,105,27,14,BS_NOTIFY
+    PUSHBUTTON      "Move",IDB_MOVE,47,105,22,14,BS_NOTIFY
+    PUSHBUTTON      "GoTo",IDB_SHOW,83,105,22,14,BS_NOTIFY
+    PUSHBUTTON      "Delete",IDB_DELETE,119,105,26,14,BS_NOTIFY
+    RTEXT           "Cmnt:",-1,25,39,21,8
+    LTEXT           "min",-1,91,69,12,8
+    RTEXT           "RF Path:",-1,6,89,35,8
+    RTEXT           "Group:",-1,49,6,23,8
+    CONTROL         "Comprs",IDC_COMPRESSED,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,6,25,36,10
+END
+
+IDD_CQSRVR DIALOG  0, 0, 158, 88
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+CAPTION "AN/CQSRVR"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "Keep Active",IDC_ENABLED,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,6,6,54,10
+    EDITTEXT        IDE_COMMENT,49,47,101,14,ES_AUTOHSCROLL
+    EDITTEXT        IDE_INTERVAL,92,5,39,14,ES_AUTOHSCROLL
+    CONTROL         "",IDS_INTERVAL,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,119,5,12,14
+    CONTROL         "IS Only",IDC_VIA_IS,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,107,31,39,10
+    DEFPUSHBUTTON   "Accept",IDB_ACCEPT,23,68,32,14,BS_NOTIFY
+    PUSHBUTTON      "Delete",IDB_DELETE,103,68,32,14,BS_NOTIFY
+    RTEXT           "CQ Text:",-1,13,50,30,8
+    LTEXT           "hours",-1,134,9,19,8
+    CONTROL         "Only If Present",IDC_PRESENT,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,20,31,64,10
+    PUSHBUTTON      "Send",IDB_SEND,63,68,32,14,BS_NOTIFY
+    RTEXT           "Every:",-1,58,8,28,8
+    CONTROL         "Quietly",IDC_MONITOR,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,20,18,38,10
+    CONTROL         "Use CQSRVR",IDC_VIA_CQSRVR,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,66,19,58,10
+END
+
+IDD_SEND_MESSAGE1 DIALOG  0, 0, 156, 83
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Send Message"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    COMBOBOX        IDL_TO_CALL,25,6,48,66,CBS_DROPDOWN | CBS_AUTOHSCROLL | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDE_TEXT,25,22,123,38,ES_MULTILINE | ES_AUTOVSCROLL
+    DEFPUSHBUTTON   "Send",IDB_SEND,7,62,50,14,BS_NOTIFY
+    PUSHBUTTON      "Cancel",IDB_CANCEL,99,62,50,14,BS_NOTIFY
+    LTEXT           "  To:",IDC_STATIC,6,9,16,8
+    LTEXT           "Text:",IDC_STATIC,5,24,18,8
+    CONTROL         "Ack",IDC_ACK,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,117,7,27,10
+END
+
+IDD_STATUS_REPORT DIALOG  0, 0, 158, 130
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+EXSTYLE WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+CAPTION "Status Configuration"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    EDITTEXT        IDE_COMMENT,52,11,101,14,ES_AUTOHSCROLL
+    EDITTEXT        IDE_COMMENT_INTERVAL,51,27,39,14,ES_AUTOHSCROLL
+    CONTROL         "",IDS_COMMENT_INTERVAL,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,78,27,12,14
+    RTEXT           "0 = Every",IDC_STATIC,111,31,32,8
+    CONTROL         "Enabled",IDC_ENABLED,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,10,59,42,10
+    CONTROL         "GridSquare",IDC_GRIDSQUARE,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,55,59,53,10
+    CONTROL         "Timestamp",IDC_TIMESTAMP,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,105,59,53,10
+    EDITTEXT        IDE_STATUS_INTERVAL,50,72,37,14,ES_AUTOHSCROLL
+    CONTROL         "",IDS_STATUS_INTERVAL,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,76,72,12,14
+    CONTROL         "DX",IDC_DX,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,105,74,25,10
+    EDITTEXT        IDE_STATUS_TEXT,49,89,101,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "Accept",IDB_ACCEPT,12,111,32,14,BS_NOTIFY
+    PUSHBUTTON      "PHG",IDB_PHG,70,111,18,14,BS_NOTIFY
+    PUSHBUTTON      "Cancel",IDB_CANCEL,114,111,32,14,BS_NOTIFY
+    RTEXT           "Comment:",IDC_STATIC,7,14,40,8
+    RTEXT           "Interval:",IDC_STATIC,19,30,28,8,0,WS_EX_RIGHT
+    LTEXT           "min",IDC_STATIC,93,31,13,8
+    RTEXT           "Interval:",IDC_STATIC,7,75,40,8
+    RTEXT           "Status:",IDC_STATIC,6,90,40,8
+    LTEXT           "min",IDC_STATIC,89,75,13,8
+    GROUPBOX        "Beacon Comment",IDC_STATIC,6,1,150,41
+    GROUPBOX        "Status Report",IDC_STATIC,6,47,150,60
+END
+
+IDD_APRSIS_CONFIG DIALOG  0, 0, 158, 130
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+CAPTION "APRS-IS Configuration"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    EDITTEXT        IDE_CALLSIGN,87,3,45,14,ES_UPPERCASE | ES_AUTOHSCROLL
+    CONTROL         "Symbol",IDB_SYMBOL,"Button",BS_OWNERDRAW | BS_NOTIFY | WS_TABSTOP,135,2,21,17
+    EDITTEXT        IDE_COMMENT,46,22,101,14,ES_AUTOHSCROLL
+    EDITTEXT        IDE_QUIET_TIME,49,39,39,14,ES_AUTOHSCROLL
+    CONTROL         "",IDS_QUIET_TIME,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,76,39,12,14
+    LTEXT           "sec",-1,91,43,12,8
+    CONTROL         "RF to IS",IDC_RFTOIS,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,108,36,47,10
+    CONTROL         "IS to RF",IDC_ISTORF,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,108,47,47,10
+    CONTROL         "Enabled",IDC_ENABLED,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,9,72,42,10
+    CONTROL         "Xmit Enable",IDC_XMIT,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,9,89,53,10
+    CONTROL         "Beacon",IDC_BEACON,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,67,83,39,10
+    PUSHBUTTON      "B Path",IDB_BEACON_PATH,68,94,26,14,BS_NOTIFY
+    CONTROL         "Telemetry",IDC_TELEMETRY,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,110,83,49,10
+    PUSHBUTTON      "T Path",IDB_TELEMETRY_PATH,110,94,26,14,BS_NOTIFY
+    PUSHBUTTON      "Device",IDB_DEVICE,6,112,32,14,BS_NOTIFY
+    PUSHBUTTON      "Genius™",IDB_GENIUS,42,112,33,14,BS_NOTIFY
+    DEFPUSHBUTTON   "Accept",IDB_ACCEPT,86,114,32,14,BS_NOTIFY
+    RTEXT           "MyCall-ssid:",-1,46,6,40,8
+    RTEXT           "Quiet Time:",-1,7,42,40,8
+    RTEXT           "Comment:",-1,7,25,35,8
+    CONTROL         "Bulletin/Obj",IDC_BULLETIN_OBJECT,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,56,72,54,10
+    CONTROL         "Messages",IDC_MESSAGE,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,110,71,48,10
+END
+
+IDD_SPIN_PROMPT DIALOG  0, 0, 155, 59
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Number Prompt"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    DEFPUSHBUTTON   "Enter",IDOK,6,42,50,14,BS_NOTIFY
+    PUSHBUTTON      "Cancel",IDCANCEL,98,42,50,14,BS_NOTIFY
+    LTEXT           "  To:",IDC_PROMPT,6,6,142,8
+    EDITTEXT        IDE_RANGE,12,19,74,14,ES_AUTOHSCROLL
+    CONTROL         "",IDS_RANGE,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,75,19,12,14
+    LTEXT           "1/10 mi",IDC_UNITS,88,22,56,8
+END
+
+IDD_TILE_SERVER DIALOG  0, 0, 158, 124
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+CAPTION "Tile Set"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    EDITTEXT        IDE_NAME,30,3,102,14,ES_AUTOHSCROLL
+    EDITTEXT        IDE_SERVER,31,19,83,14,ES_AUTOHSCROLL
+    EDITTEXT        IDE_PORT,117,19,38,14,ES_AUTOHSCROLL
+    CONTROL         "",IDS_PORT,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,146,19,12,14
+    EDITTEXT        IDE_URL,30,36,101,14,ES_AUTOHSCROLL
+    CONTROL         "Purge Enabled",IDC_ENABLED,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,8,54,63,10
+    EDITTEXT        IDE_DAYS,100,52,39,14,ES_AUTOHSCROLL
+    CONTROL         "",IDS_DAYS,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,127,52,12,14
+    EDITTEXT        IDE_ZOOM1,9,80,39,14,ES_AUTOHSCROLL
+    CONTROL         "",IDS_ZOOM1,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,39,80,12,14
+    EDITTEXT        IDE_ZOOM2,55,80,39,14,ES_AUTOHSCROLL
+    CONTROL         "",IDS_ZOOM2,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,84,80,12,14
+    EDITTEXT        IDE_ZOOM3,102,80,39,14,ES_AUTOHSCROLL
+    CONTROL         "",IDS_ZOOM3,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,131,80,12,14
+    DEFPUSHBUTTON   "Accept",IDB_ACCEPT,6,108,27,14,BS_NOTIFY
+    PUSHBUTTON      "Flush",IDB_FLUSH,83,108,22,14,BS_NOTIFY
+    PUSHBUTTON      "Delete",IDB_DELETE,119,108,26,14,BS_NOTIFY
+    RTEXT           "Name:",IDC_STATIC,5,6,23,8
+    RTEXT           "Server:",IDC_STATIC,1,21,26,8
+    RTEXT           "Retain:",IDC_STATIC,73,55,24,8
+    RTEXT           "URL:",IDC_STATIC,11,38,16,8
+    LTEXT           "days",IDC_STATIC,142,55,16,8
+    RTEXT           "Min",IDC_STATIC,14,94,12,8
+    RTEXT           "Retain",IDC_STATIC,59,94,22,8
+    RTEXT           "Max",IDC_STATIC,105,94,14,8
+    GROUPBOX        "Zooms",IDC_STATIC,4,69,152,36
+    CTEXT           ":",IDC_STATIC,111,21,10,8
+    CONTROL         "",IDC_STATUS,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,134,41,11,10
+    RTEXT           "/status",IDC_STATIC,132,33,23,8
+    PUSHBUTTON      "About",IDB_ABOUT,47,108,22,14,BS_NOTIFY
+END
+
+IDD_NICKNAME DIALOG  0, 0, 157, 125
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+CAPTION "Nickname"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "Enabled",IDC_ENABLED,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,6,5,42,10
+    CONTROL         "Override Symbol",IDC_OVERRIDE,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT | BS_NOTIFY | WS_GROUP | WS_TABSTOP,57,5,70,10
+    CONTROL         "Symbol",IDB_SYMBOL,"Button",BS_OWNERDRAW | BS_NOTIFY | WS_TABSTOP,133,4,21,17
+    CONTROL         "New",IDC_MULTI_NEW,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,48,17,30,10
+    CONTROL         "Active",IDC_MULTI_ACTIVE,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,80,17,35,10
+    CONTROL         "Always",IDC_MULTI_ALWAYS,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,119,19,39,10
+    EDITTEXT        IDE_CALLSIGN,48,29,76,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_OVERRIDE_LABEL,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT | BS_NOTIFY | WS_GROUP | WS_TABSTOP,1,47,16,10
+    EDITTEXT        IDE_LABEL,48,45,76,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_OVERRIDE_COMMENT,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT | BS_NOTIFY | WS_GROUP | WS_TABSTOP,1,64,16,10
+    EDITTEXT        IDE_COMMENT,56,62,97,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_OVERRIDE_COLOR,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT | BS_NOTIFY | WS_GROUP | WS_TABSTOP,1,83,16,10
+    COMBOBOX        IDL_COLOR,48,82,96,90,CBS_DROPDOWNLIST | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    PUSHBUTTON      "+",IDB_MORE,145,81,10,14,BS_NOTIFY
+    DEFPUSHBUTTON   "Accept",IDB_ACCEPT,6,97,27,14,BS_NOTIFY
+    PUSHBUTTON      "Transmit",IDB_SEND,59,97,34,14,BS_NOTIFY
+    PUSHBUTTON      "Delete",IDB_DELETE,119,97,26,14,BS_NOTIFY
+    RTEXT           "Comment:",IDC_STATIC,18,65,35,8
+    RTEXT           "Station:",IDC_STATIC,17,33,27,8
+    RTEXT           "Label:",IDC_STATIC,23,48,21,8
+    RTEXT           "Color:",IDC_STATIC,23,84,21,8
+    CTEXT           "From: xxxxxx-nn",IDC_FROM,37,113,84,8
+    CTEXT           "MultiTrack™",IDC_FROM2,3,18,41,8
+END
+
+IDD_DF DIALOG  0, 0, 158, 94
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+CAPTION "Direction Finder"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "Useless",IDC_ENABLED,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,6,17,41,10
+    COMBOBOX        IDL_N,19,41,29,66,CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDL_QUALITY,85,41,41,66,CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDE_COMMENT,49,59,101,14,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDE_BEARING,84,4,42,14,ES_AUTOHSCROLL
+    CONTROL         "",IDS_BEARING,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,115,4,12,14
+    DEFPUSHBUTTON   "Accept",IDB_ACCEPT,42,78,32,14,BS_NOTIFY
+    PUSHBUTTON      "Cancel",IDB_CANCEL,90,78,32,14,BS_NOTIFY
+    RTEXT           "BRG/NRQ:",IDC_STATIC,7,62,34,8
+    RTEXT           "Quality:",IDC_STATIC,55,43,26,8
+    LTEXT           "deg",IDC_STATIC,129,8,12,8
+    RTEXT           "Bearing:",IDC_STATIC,42,7,35,8
+    RTEXT           "N:",IDC_STATIC,3,43,10,8
+    LTEXT           "miles",IDC_STATIC,129,26,18,8
+    RTEXT           "Range:",IDC_STATIC,42,25,35,8
+    LTEXT           "deg",IDC_STATIC,129,43,12,8
+    COMBOBOX        IDL_RANGE,84,23,42,66,CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_DFS DIALOG  0, 0, 158, 100
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+CAPTION "Omni DF Signal"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    COMBOBOX        IDL_GAIN,42,33,36,66,CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDE_COMMENT,42,63,101,14,ES_AUTOHSCROLL | WS_DISABLED
+    DEFPUSHBUTTON   "Accept",IDB_ACCEPT,42,81,32,14,BS_NOTIFY
+    PUSHBUTTON      "Cancel",IDB_CANCEL,90,81,32,14,BS_NOTIFY
+    RTEXT           "DFS:",IDC_STATIC,21,66,17,8
+    RTEXT           "Gain:",IDC_STATIC,20,35,18,8
+    LTEXT           "S-points",IDC_STATIC,81,5,27,8
+    RTEXT           "Strength:",IDC_STATIC,7,5,32,8
+    LTEXT           "feet",IDC_STATIC,80,21,14,8
+    RTEXT           "HAAT:",IDC_STATIC,15,20,24,8
+    LTEXT           "dB",IDC_STATIC,81,35,12,8
+    COMBOBOX        IDL_HEIGHT,42,18,36,66,CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDL_STRENGTH,42,3,36,66,CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDL_DIRECT,42,47,36,66,CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Direct:",IDC_STATIC,15,49,23,8
+    LTEXT           "deg",IDC_STATIC,81,49,12,8
+END
+
+IDD_PHG DIALOG  0, 0, 158, 100
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+CAPTION "Power/Height/Gain"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "Probe Rate",IDC_ENABLED,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,98,35,52,10
+    COMBOBOX        IDL_GAIN,42,33,36,66,CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDE_COMMENT,49,63,101,14,ES_AUTOHSCROLL | WS_DISABLED
+    DEFPUSHBUTTON   "Accept",IDB_ACCEPT,42,81,32,14,BS_NOTIFY
+    PUSHBUTTON      "Cancel",IDB_CANCEL,90,81,32,14,BS_NOTIFY
+    RTEXT           "PHG(R):",IDC_STATIC,18,66,27,8
+    RTEXT           "Gain:",IDC_STATIC,20,35,18,8
+    LTEXT           "watts",IDC_STATIC,81,5,19,8
+    RTEXT           "Power:",IDC_STATIC,15,5,24,8
+    LTEXT           "meters",IDT_UNITS,80,21,24,8
+    RTEXT           "HAAT:",IDC_STATIC,15,20,24,8
+    LTEXT           "dB",IDC_STATIC,81,35,12,8
+    COMBOBOX        IDL_HEIGHT,42,18,36,66,CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDL_POWER,42,3,36,66,CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDL_DIRECT,42,47,36,66,CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Direct:",IDC_STATIC,16,49,23,8
+    LTEXT           "deg",IDC_STATIC,81,49,12,8
+    LTEXT           "/hr",IDC_STATIC,144,50,12,8
+    EDITTEXT        IDE_RATE,98,46,42,14,ES_AUTOHSCROLL
+    CONTROL         "",IDS_RATE,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,129,46,12,14
+END
+
+BTPORT DIALOG  0, 0, 142, 52
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+CAPTION "BT Configuration"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,102,30,24,14,0,WS_EX_DLGMODALFRAME | WS_EX_LEFTSCROLLBAR | WS_EX_CONTROLPARENT
+    RTEXT           "Device:",-1,8,13,25,8
+    COMBOBOX        IDC_BTPORT,37,10,95,90,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+END
+
+IDD_COLOR DIALOG  0, 0, 154, 130
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+EXSTYLE WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+CAPTION "Select Color"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    DEFPUSHBUTTON   "Accept",IDB_ACCEPT,18,109,32,14,BS_NOTIFY
+    PUSHBUTTON      "Cancel",IDB_CANCEL,90,108,32,14,BS_NOTIFY
+    CTEXT           "Available Track Colors",IDC_COLORS_SHOWN,6,6,144,8
+    PUSHBUTTON      "Track",IDB_MORE,129,54,23,14,BS_NOTIFY
+    LISTBOX         IDL_COLOR,6,18,120,84,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "ALL",IDB_MORE2,129,84,23,14,BS_NOTIFY
+    PUSHBUTTON      "Avail",IDB_LESS,129,24,23,14,BS_NOTIFY
+END
+
+IDD_PATHS DIALOG  0, 0, 154, 153
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+CAPTION "Configure Paths"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "Station (Pkt)",IDC_STATION_PACKET,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,3,3,57,10
+    EDITTEXT        IDE_WIDTH_PACKET,83,1,24,14,ES_AUTOHSCROLL
+    CONTROL         "",IDS_WIDTH_PACKET,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,95,1,12,14
+    COMBOBOX        IDL_COLOR_PACKET,108,1,43,66,CBS_DROPDOWN | CBS_AUTOHSCROLL | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Network (Links)",IDC_NETWORK_LINKS,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,3,15,67,10
+    CONTROL         "RF Only",IDC_SHOW_RF_ONLY,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,70,15,41,10
+    CONTROL         "All",IDC_SHOW_ALL,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,3,28,24,10
+    EDITTEXT        IDE_OPACITY,116,13,27,14,ES_AUTOHSCROLL
+    CONTROL         "",IDS_OPACITY,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,131,13,12,14
+    CONTROL         "Direct",IDC_TYPE_DIRECT,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,28,36,35,10
+    CONTROL         "First",IDC_TYPE_FIRST,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,28,50,30,10
+    CONTROL         "Middle",IDC_TYPE_MIDDLE,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,28,64,37,10
+    CONTROL         "Final",IDC_TYPE_FINAL,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,28,77,31,10
+    EDITTEXT        IDE_WIDTH_DIRECT,67,34,24,14,ES_AUTOHSCROLL
+    CONTROL         "",IDS_WIDTH_DIRECT,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,79,34,12,14
+    COMBOBOX        IDL_COLOR_DIRECT,94,35,49,66,CBS_DROPDOWN | CBS_AUTOHSCROLL | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDE_WIDTH_FIRST,67,48,24,14,ES_AUTOHSCROLL
+    CONTROL         "",IDS_WIDTH_FIRST,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,79,48,12,14
+    COMBOBOX        IDL_COLOR_FIRST,94,49,49,66,CBS_DROPDOWN | CBS_AUTOHSCROLL | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDE_WIDTH_MIDDLE,67,62,24,14,ES_AUTOHSCROLL
+    CONTROL         "",IDS_WIDTH_MIDDLE,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,79,62,12,14
+    COMBOBOX        IDL_COLOR_MIDDLE,94,63,49,66,CBS_DROPDOWN | CBS_AUTOHSCROLL | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDE_WIDTH_FINAL,67,75,24,14,ES_AUTOHSCROLL
+    CONTROL         "",IDS_WIDTH_FINAL,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,79,75,12,14
+    COMBOBOX        IDL_COLOR_FINAL,94,76,49,66,CBS_DROPDOWN | CBS_AUTOHSCROLL | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "All",IDC_TIME_ALL,"Button",BS_AUTORADIOBUTTON | BS_NOTIFY,9,96,24,10
+    CONTROL         "Flash",IDC_TIME_FLASH,"Button",BS_AUTORADIOBUTTON | BS_NOTIFY,9,106,33,10
+    CONTROL         "Short",IDC_TIME_SHORT,"Button",BS_AUTORADIOBUTTON | BS_NOTIFY,9,120,34,10
+    CONTROL         "Last",IDC_TIME_ONE,"Button",BS_AUTORADIOBUTTON | BS_NOTIFY,74,93,29,10
+    CONTROL         "Med",IDC_TIME_MEDIUM,"Button",BS_AUTORADIOBUTTON | BS_NOTIFY,74,105,30,10
+    CONTROL         "Long",IDC_TIME_LONG,"Button",BS_AUTORADIOBUTTON | BS_NOTIFY | WS_TABSTOP,74,119,31,10
+    EDITTEXT        IDE_TIME_FLASH,43,103,27,14,ES_AUTOHSCROLL
+    CONTROL         "",IDS_TIME_FLASH,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,58,103,12,14
+    EDITTEXT        IDE_TIME_SHORT,43,118,27,14,ES_AUTOHSCROLL
+    CONTROL         "",IDS_TIME_SHORT,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,58,118,12,14
+    EDITTEXT        IDE_TIME_MEDIUM,108,103,27,14,ES_AUTOHSCROLL
+    CONTROL         "",IDS_TIME_MEDIUM,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,123,103,12,14
+    EDITTEXT        IDE_TIME_LONG,108,117,27,14,ES_AUTOHSCROLL
+    CONTROL         "",IDS_TIME_LONG,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,123,117,12,14
+    CTEXT           "(sec)",IDC_STATIC,42,94,18,8
+    CTEXT           "(min)",IDC_STATIC,108,94,18,8
+    RTEXT           "%",IDC_STATIC,142,16,10,8
+    GROUPBOX        "   Links       Width && Color",IDC_STATIC,25,26,124,65
+    GROUPBOX        "Times",IDC_STATIC,4,88,138,47
+    PUSHBUTTON      "19999",IDB_MAX_LENGTH,0,49,25,14,BS_NOTIFY
+    DEFPUSHBUTTON   "Accept",IDB_ACCEPT,24,137,27,14,BS_NOTIFY
+    PUSHBUTTON      "Undo",IDB_UNDO,63,137,27,14,BS_NOTIFY
+    PUSHBUTTON      "Default",IDB_DEFAULT,102,137,27,14,BS_NOTIFY
+    CTEXT           "Max",IDC_STATIC,4,40,18,8
+    PUSHBUTTON      "Expert",IDB_EXPERT,0,73,25,14,BS_NOTIFY
+    CONTROL         "ME",IDC_SHOW_MY_PACKET,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,58,3,26,10
+END
+
+IDD_VIEW DIALOG  0, 0, 154, 150
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+CAPTION "View Selector"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "Show ALL",IDC_SHOW_ALL,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,3,3,48,10
+    PUSHBUTTON      "Clear",IDB_CLEAR,53,2,28,14,BS_NOTIFY
+    CONTROL         "All",IDC_RF_ALL,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,9,23,24,10
+    CONTROL         "Direct",IDC_RF_DIRECT,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,34,23,35,10
+    CONTROL         "Local",IDC_RF_LOCAL,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,70,23,33,10
+    CONTROL         "3rd",IDC_RF_3RD,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,104,23,27,10
+    CONTROL         "RF Only",IDC_XPORT_RF_ONLY,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,7,47,41,10
+    CONTROL         "RF + -IS",IDC_XPORT_RF_IS,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,7,58,43,10
+    CONTROL         "IS Only",IDC_XPORT_IS_ONLY,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,7,69,39,10
+    CONTROL         "Digi",IDC_NETWORK_DIGI,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,59,45,28,10
+    CONTROL         "IGate",IDC_NETWORK_IGATE,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,59,55,33,10
+    CONTROL         "Buddies",IDC_BUDDIES,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,100,46,41,10
+    CONTROL         "Nicknamed",IDC_NICKNAMED,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,100,56,51,10
+    CONTROL         "CustSymb",IDC_SYM_CUSTOM,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,100,67,51,10
+    CONTROL         "CE",IDC_APRSISCE,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,54,71,25,10
+    CONTROL         "DR",IDC_APRSISDR,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,54,80,25,10
+    CONTROL         "32",IDC_APRSIS32,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,78,71,24,10
+    CONTROL         "RFID",IDC_SYM_RFID,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,100,78,31,10
+    CONTROL         "Altitudes",IDC_ATTR_ALTITUDES,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,6,90,44,10
+    CONTROL         "Ambiguous",IDC_ATTR_AMBIGUOUS,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,6,101,52,10
+    CONTROL         "Freq",IDC_ATTR_FREQUENCIES,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,6,112,31,10
+    CONTROL         "Spec",IDC_ATTR_FREQSPEC,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,36,112,32,10
+    CONTROL         "Messaging",IDC_ATTR_MSGS,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,58,92,50,10
+    CONTROL         "NWS-Objs",IDC_ATTR_NWS,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,58,102,49,10
+    CONTROL         "Objects",IDC_ATTR_OBJECTS,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,67,112,41,10
+    CONTROL         "Paths",IDC_ATTR_PATHS,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,105,92,34,10
+    CONTROL         "Telemetry",IDC_ATTR_TELEMETRY,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,105,102,49,10
+    CONTROL         "Tracks",IDC_ATTR_TRACKS,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,108,112,38,10
+    CONTROL         "Air",IDC_SYM_FLIGHT,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,7,133,25,10
+    CONTROL         "Land",IDC_SYM_MOBILE,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,36,133,31,10
+    CONTROL         "Water",IDC_SYM_MARINE,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,69,133,36,10
+    CONTROL         "Weather",IDC_SYM_WEATHER,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,106,133,44,10
+    CTEXT           "Last: nnn/mmmm",IDC_LAST_COUNT,84,5,69,8
+    GROUPBOX        "RF",IDC_STATIC,3,14,132,23
+    GROUPBOX        "Transport",IDC_STATIC,2,37,50,46
+    GROUPBOX        "Attributes",IDC_STATIC,2,83,149,42
+    GROUPBOX        "Symbols",IDC_STATIC,2,125,150,22
+    GROUPBOX        "Network",IDC_STATIC,54,37,40,32
+    GROUPBOX        "Local Control",IDC_STATIC,96,38,56,42
+END
+
+IDD_OVERLAY DIALOG  0, 0, 154, 161
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+CAPTION "Overlay File"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "Visible",IDC_VISIBLE,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,6,6,37,10
+    CONTROL         "None",IDC_LABEL_NONE,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,81,11,33,10
+    CONTROL         "ID",IDC_LABEL_ID,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,115,11,23,10
+    CONTROL         "Comment",IDC_LABEL_COMMENT,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,81,20,47,10
+    CONTROL         "Status",IDC_LABEL_STATUS,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,81,29,37,10
+    CONTROL         "Altitude",IDC_LABEL_ALTITUDE,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,81,38,41,10
+    CONTROL         "Time",IDC_LABEL_TIME,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,81,47,33,10
+    CONTROL         "NoDate",IDC_LABEL_NODATE,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,111,47,39,10
+    CONTROL         "Show",IDC_SHOW_POINTS,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,5,25,34,10
+    CONTROL         "Label",IDC_LABEL_POINTS,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,5,35,33,10
+    CONTROL         "Symbol",IDC_SHOW_SYMBOL_POINTS,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,5,45,40,10
+    CONTROL         "Symbol",IDB_SYMBOL_POINTS,"Button",BS_OWNERDRAW | BS_NOTIFY | WS_TABSTOP,49,26,21,17
+    CONTROL         "Force",IDC_FORCE_SYMBOL_POINTS,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,44,45,34,10
+    CONTROL         "Show",IDC_SHOW_ROUTES,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,8,68,34,10
+    CONTROL         "Label",IDC_LABEL_ROUTES,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,51,68,33,10
+    CONTROL         "Symbol",IDC_SHOW_SYMBOL_ROUTES,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,87,69,40,10
+    CONTROL         "Symbol",IDB_SYMBOL_ROUTES,"Button",BS_OWNERDRAW | BS_NOTIFY | WS_TABSTOP,127,65,21,17
+    EDITTEXT        IDE_OPACITY_ROUTES,29,83,27,14,ES_AUTOHSCROLL
+    CONTROL         "",IDS_OPACITY_ROUTES,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,44,83,12,14
+    EDITTEXT        IDE_WIDTH_ROUTES,69,83,24,14,ES_AUTOHSCROLL
+    CONTROL         "",IDS_WIDTH_ROUTES,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,81,83,12,14
+    COMBOBOX        IDL_COLOR_ROUTES,96,84,49,66,CBS_DROPDOWN | CBS_AUTOHSCROLL | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Show",IDC_SHOW_TRACKS,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,8,111,34,10
+    CONTROL         "Label",IDC_LABEL_TRACKS,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,51,111,33,10
+    CONTROL         "Symbol",IDC_SHOW_SYMBOL_TRACKS,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,87,112,40,10
+    CONTROL         "Symbol",IDB_SYMBOL_TRACKS,"Button",BS_OWNERDRAW | BS_NOTIFY | WS_TABSTOP,127,108,21,17
+    EDITTEXT        IDE_OPACITY_TRACKS,29,126,27,14,ES_AUTOHSCROLL
+    CONTROL         "",IDS_OPACITY_TRACKS,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,44,126,12,14
+    EDITTEXT        IDE_WIDTH_TRACKS,69,126,24,14,ES_AUTOHSCROLL
+    CONTROL         "",IDS_WIDTH_TRACKS,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,81,126,12,14
+    COMBOBOX        IDL_COLOR_TRACKS,96,127,49,66,CBS_DROPDOWN | CBS_AUTOHSCROLL | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "Accept",IDB_ACCEPT,4,146,27,14,BS_NOTIFY
+    PUSHBUTTON      "Undo",IDB_UNDO,34,146,27,14,BS_NOTIFY
+    PUSHBUTTON      "Show",IDB_SHOW,64,146,27,14,BS_NOTIFY
+    PUSHBUTTON      "Delete",IDB_DELETE,94,146,27,14,BS_NOTIFY
+    PUSHBUTTON      "Default",IDB_DEFAULT,124,146,27,14,BS_NOTIFY
+    GROUPBOX        "Label",IDC_STATIC,78,4,73,56
+    GROUPBOX        "Points (nnnn)",IDC_BOX_POINTS,2,17,75,43
+    GROUPBOX        "Routes (nnnn)",IDC_BOX_ROUTES,3,59,147,41
+    RTEXT           "%",IDC_STATIC,55,86,10,8
+    GROUPBOX        "Tracks (nnnn)",IDC_BOX_TRACKS,2,102,147,42
+    RTEXT           "%",IDC_STATIC,55,129,10,8
+    RTEXT           "Line:",IDC_STATIC,10,85,17,8
+    RTEXT           "Line:",IDC_STATIC,10,129,17,8
+END
+
+IDD_COMPANION DIALOG  0, 0, 158, 124
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+CAPTION "Companion"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "Enabled",IDC_ENABLED,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,6,5,36,10
+    CONTROL         "Symbol",IDB_SYMBOL,"Button",BS_OWNERDRAW | BS_NOTIFY | WS_TABSTOP,49,1,21,17
+    EDITTEXT        IDE_CALLSIGN,74,3,76,14,ES_AUTOHSCROLL
+    EDITTEXT        IDE_COMMENT,49,20,101,14,ES_AUTOHSCROLL
+    CONTROL         "Object",IDC_ITEM,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,51,103,37,10
+    CONTROL         "Via -IS",IDC_VIA_IS,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,7,80,38,10
+    CONTROL         "RF",IDC_VIA_RF,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,7,91,25,10
+    EDITTEXT        IDE_RF_PATH,57,86,101,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "Accept",IDB_ACCEPT,90,105,27,14,BS_NOTIFY
+    PUSHBUTTON      "Delete",IDB_DELETE,126,105,26,14,BS_NOTIFY
+    RTEXT           "Comment:",IDC_STATIC,12,23,35,8
+    RTEXT           "Path:",IDC_STATIC,31,92,18,8
+    EDITTEXT        IDE_MIN_TIME,55,36,31,14,ES_AUTOHSCROLL
+    CONTROL         "",IDS_MIN_TIME,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,75,36,10,14
+    EDITTEXT        IDE_MAX_TIME,109,37,29,14,ES_AUTOHSCROLL
+    CONTROL         "",IDS_MAX_TIME,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,127,37,11,14
+    RTEXT           "Min",IDC_STATIC,39,39,15,8
+    RTEXT           "Max",IDC_STATIC,89,42,17,8
+    LTEXT           "sec",IDC_STATIC,86,35,12,8
+    LTEXT           "min",IDC_STATIC,145,40,13,8
+    CONTROL         "",IDC_TIME_ONLY,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,6,38,16,10
+    CONTROL         "",IDC_START_STOP,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,6,54,16,10
+    LTEXT           "Time",IDC_STATIC,18,35,18,8
+    LTEXT           "Only",IDC_STATIC,19,42,18,8
+    LTEXT           "Start",IDC_STATIC,19,51,18,8
+    LTEXT           "Stop",IDC_STATIC,20,58,18,8
+    EDITTEXT        IDE_FORECAST_ERROR,76,54,40,14,ES_AUTOHSCROLL
+    CONTROL         "",IDS_FORECAST_ERROR,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,116,54,11,14
+    RTEXT           "Error:",IDC_STATIC,53,56,20,8
+    LTEXT           "1/10 mi",IDC_STATIC,132,57,26,8
+    EDITTEXT        IDE_MAX_DISTANCE,76,69,40,14,ES_AUTOHSCROLL
+    CONTROL         "",IDS_MAX_DISTANCE,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,116,69,11,14
+    RTEXT           "Distance:",IDC_STATIC,43,71,31,8
+    LTEXT           "1/10 mi",IDC_STATIC,132,72,26,8
+    CONTROL         "Beacon",IDC_BEACON,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,7,103,39,10
+    CONTROL         "Messages",IDC_MESSAGE,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_GROUP | WS_TABSTOP,7,114,48,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_NEW_RFPORT DLGINIT
+BEGIN
+    IDL_TYPE, 0x403, 5, 0
+0x4554, 0x5458, "\000" 
+    0
+END
+
+IDD_PORT_CONFIG DLGINIT
+BEGIN
+    IDL_RFBAUD, 0x403, 5, 0
+0x4554, 0x5458, "\000" 
+    0
+END
+
+IDD_BULLETIN DLGINIT
+BEGIN
+    IDL_LINE, 0x403, 5, 0
+0x4554, 0x5458, "\000" 
+    IDL_GROUP, 0x403, 5, 0
+0x4554, 0x5458, "\000" 
+    0
+END
+
+IDD_DF DLGINIT
+BEGIN
+    IDL_N, 0x403, 5, 0
+0x6f4e, 0x656e, "\000" 
+    IDL_N, 0x403, 2, 0
+0x0031, 
+    IDL_N, 0x403, 2, 0
+0x0032, 
+    IDL_N, 0x403, 2, 0
+0x0033, 
+    IDL_N, 0x403, 2, 0
+0x0034, 
+    IDL_N, 0x403, 2, 0
+0x0035, 
+    IDL_N, 0x403, 2, 0
+0x0036, 
+    IDL_N, 0x403, 2, 0
+0x0037, 
+    IDL_N, 0x403, 2, 0
+0x0038, 
+    IDL_N, 0x403, 7, 0
+0x614d, 0x756e, 0x6c61, "\000" 
+    IDL_QUALITY, 0x403, 8, 0
+0x7355, 0x6c65, 0x7365, 0x0073, 
+    IDL_QUALITY, 0x403, 5, 0
+0x323c, 0x3034, "\000" 
+    IDL_QUALITY, 0x403, 5, 0
+0x313c, 0x3032, "\000" 
+    IDL_QUALITY, 0x403, 4, 0
+0x363c, 0x0034, 
+    IDL_QUALITY, 0x403, 4, 0
+0x333c, 0x0032, 
+    IDL_QUALITY, 0x403, 4, 0
+0x313c, 0x0036, 
+    IDL_QUALITY, 0x403, 3, 0
+0x383c, "\000" 
+    IDL_QUALITY, 0x403, 3, 0
+0x343c, "\000" 
+    IDL_QUALITY, 0x403, 3, 0
+0x323c, "\000" 
+    IDL_QUALITY, 0x403, 3, 0
+0x313c, "\000" 
+    IDL_RANGE, 0x403, 2, 0
+0x0031, 
+    IDL_RANGE, 0x403, 2, 0
+0x0032, 
+    IDL_RANGE, 0x403, 2, 0
+0x0034, 
+    IDL_RANGE, 0x403, 2, 0
+0x0038, 
+    IDL_RANGE, 0x403, 3, 0
+0x3631, "\000" 
+    IDL_RANGE, 0x403, 3, 0
+0x3233, "\000" 
+    IDL_RANGE, 0x403, 3, 0
+0x3436, "\000" 
+    IDL_RANGE, 0x403, 4, 0
+0x3231, 0x0038, 
+    IDL_RANGE, 0x403, 4, 0
+0x3532, 0x0036, 
+    IDL_RANGE, 0x403, 4, 0
+0x3135, 0x0032, 
+    0
+END
+
+IDD_DFS DLGINIT
+BEGIN
+    IDL_GAIN, 0x403, 2, 0
+0x0030, 
+    IDL_GAIN, 0x403, 2, 0
+0x0031, 
+    IDL_GAIN, 0x403, 2, 0
+0x0032, 
+    IDL_GAIN, 0x403, 2, 0
+0x0033, 
+    IDL_GAIN, 0x403, 2, 0
+0x0034, 
+    IDL_GAIN, 0x403, 2, 0
+0x0035, 
+    IDL_GAIN, 0x403, 2, 0
+0x0036, 
+    IDL_GAIN, 0x403, 2, 0
+0x0037, 
+    IDL_GAIN, 0x403, 2, 0
+0x0038, 
+    IDL_GAIN, 0x403, 2, 0
+0x0039, 
+    IDL_HEIGHT, 0x403, 3, 0
+0x3031, "\000" 
+    IDL_HEIGHT, 0x403, 3, 0
+0x3032, "\000" 
+    IDL_HEIGHT, 0x403, 3, 0
+0x3034, "\000" 
+    IDL_HEIGHT, 0x403, 3, 0
+0x3038, "\000" 
+    IDL_HEIGHT, 0x403, 4, 0
+0x3631, 0x0030, 
+    IDL_HEIGHT, 0x403, 4, 0
+0x3233, 0x0030, 
+    IDL_HEIGHT, 0x403, 4, 0
+0x3436, 0x0030, 
+    IDL_HEIGHT, 0x403, 5, 0
+0x3231, 0x3038, "\000" 
+    IDL_HEIGHT, 0x403, 5, 0
+0x3532, 0x3036, "\000" 
+    IDL_HEIGHT, 0x403, 5, 0
+0x3135, 0x3032, "\000" 
+    IDL_STRENGTH, 0x403, 2, 0
+0x0030, 
+    IDL_STRENGTH, 0x403, 2, 0
+0x0031, 
+    IDL_STRENGTH, 0x403, 2, 0
+0x0032, 
+    IDL_STRENGTH, 0x403, 2, 0
+0x0033, 
+    IDL_STRENGTH, 0x403, 2, 0
+0x0034, 
+    IDL_STRENGTH, 0x403, 2, 0
+0x0035, 
+    IDL_STRENGTH, 0x403, 2, 0
+0x0036, 
+    IDL_STRENGTH, 0x403, 2, 0
+0x0037, 
+    IDL_STRENGTH, 0x403, 2, 0
+0x0038, 
+    IDL_STRENGTH, 0x403, 2, 0
+0x0039, 
+    IDL_DIRECT, 0x403, 5, 0
+0x6d6f, 0x696e, "\000" 
+    IDL_DIRECT, 0x403, 8, 0
+0x454e, 0x2820, 0x3534, 0x0029, 
+    IDL_DIRECT, 0x403, 7, 0
+0x2045, 0x3928, 0x2930, "\000" 
+    IDL_DIRECT, 0x403, 9, 0
+0x4553, 0x2820, 0x3331, 0x2935, "\000" 
+    IDL_DIRECT, 0x403, 8, 0
+0x2053, 0x3128, 0x3038, 0x0029, 
+    IDL_DIRECT, 0x403, 9, 0
+0x5753, 0x2820, 0x3232, 0x2935, "\000" 
+    IDL_DIRECT, 0x403, 8, 0
+0x2057, 0x3228, 0x3037, 0x0029, 
+    IDL_DIRECT, 0x403, 9, 0
+0x574e, 0x2820, 0x3133, 0x2935, "\000" 
+    IDL_DIRECT, 0x403, 8, 0
+0x204e, 0x3328, 0x3036, 0x0029, 
+    0
+END
+
+IDD_PHG DLGINIT
+BEGIN
+    IDL_GAIN, 0x403, 2, 0
+0x0030, 
+    IDL_GAIN, 0x403, 2, 0
+0x0031, 
+    IDL_GAIN, 0x403, 2, 0
+0x0032, 
+    IDL_GAIN, 0x403, 2, 0
+0x0033, 
+    IDL_GAIN, 0x403, 2, 0
+0x0034, 
+    IDL_GAIN, 0x403, 2, 0
+0x0035, 
+    IDL_GAIN, 0x403, 2, 0
+0x0036, 
+    IDL_GAIN, 0x403, 2, 0
+0x0037, 
+    IDL_GAIN, 0x403, 2, 0
+0x0038, 
+    IDL_GAIN, 0x403, 2, 0
+0x0039, 
+    IDL_HEIGHT, 0x403, 3, 0
+0x3031, "\000" 
+    IDL_HEIGHT, 0x403, 3, 0
+0x3032, "\000" 
+    IDL_HEIGHT, 0x403, 3, 0
+0x3034, "\000" 
+    IDL_HEIGHT, 0x403, 3, 0
+0x3038, "\000" 
+    IDL_HEIGHT, 0x403, 4, 0
+0x3631, 0x0030, 
+    IDL_HEIGHT, 0x403, 4, 0
+0x3233, 0x0030, 
+    IDL_HEIGHT, 0x403, 4, 0
+0x3436, 0x0030, 
+    IDL_HEIGHT, 0x403, 5, 0
+0x3231, 0x3038, "\000" 
+    IDL_HEIGHT, 0x403, 5, 0
+0x3532, 0x3036, "\000" 
+    IDL_HEIGHT, 0x403, 5, 0
+0x3135, 0x3032, "\000" 
+    IDL_POWER, 0x403, 2, 0
+0x0030, 
+    IDL_POWER, 0x403, 2, 0
+0x0031, 
+    IDL_POWER, 0x403, 2, 0
+0x0034, 
+    IDL_POWER, 0x403, 2, 0
+0x0039, 
+    IDL_POWER, 0x403, 3, 0
+0x3631, "\000" 
+    IDL_POWER, 0x403, 3, 0
+0x3532, "\000" 
+    IDL_POWER, 0x403, 3, 0
+0x3633, "\000" 
+    IDL_POWER, 0x403, 3, 0
+0x3934, "\000" 
+    IDL_POWER, 0x403, 3, 0
+0x3436, "\000" 
+    IDL_POWER, 0x403, 3, 0
+0x3138, "\000" 
+    IDL_DIRECT, 0x403, 5, 0
+0x6d6f, 0x696e, "\000" 
+    IDL_DIRECT, 0x403, 8, 0
+0x454e, 0x2820, 0x3534, 0x0029, 
+    IDL_DIRECT, 0x403, 7, 0
+0x2045, 0x3928, 0x2930, "\000" 
+    IDL_DIRECT, 0x403, 9, 0
+0x4553, 0x2820, 0x3331, 0x2935, "\000" 
+    IDL_DIRECT, 0x403, 8, 0
+0x2053, 0x3128, 0x3038, 0x0029, 
+    IDL_DIRECT, 0x403, 9, 0
+0x5753, 0x2820, 0x3232, 0x2935, "\000" 
+    IDL_DIRECT, 0x403, 8, 0
+0x2057, 0x3228, 0x3037, 0x0029, 
+    IDL_DIRECT, 0x403, 9, 0
+0x574e, 0x2820, 0x3133, 0x2935, "\000" 
+    IDL_DIRECT, 0x403, 8, 0
+0x204e, 0x3328, 0x3036, 0x0029, 
+    0
+END
+
+IDD_OBJECT DLGINIT
+BEGIN
+    IDL_GROUP, 0x403, 2, 0
+0x0031, 
+    IDL_GROUP, 0x403, 2, 0
+0x0032, 
+    IDL_GROUP, 0x403, 2, 0
+0x0034, 
+    IDL_GROUP, 0x403, 2, 0
+0x0038, 
+    IDL_GROUP, 0x403, 3, 0
+0x3631, "\000" 
+    IDL_GROUP, 0x403, 3, 0
+0x3233, "\000" 
+    IDL_GROUP, 0x403, 3, 0
+0x3436, "\000" 
+    IDL_GROUP, 0x403, 4, 0
+0x3231, 0x0038, 
+    IDL_GROUP, 0x403, 4, 0
+0x3532, 0x0036, 
+    IDL_GROUP, 0x403, 4, 0
+0x3135, 0x0032, 
+    0
+END
+
+IDD_PATHS DLGINIT
+BEGIN
+    IDL_COLOR_PACKET, 0x403, 5, 0
+0x4554, 0x5458, "\000" 
+    IDL_COLOR_DIRECT, 0x403, 5, 0
+0x4554, 0x5458, "\000" 
+    IDL_COLOR_FIRST, 0x403, 5, 0
+0x4554, 0x5458, "\000" 
+    IDL_COLOR_MIDDLE, 0x403, 5, 0
+0x4554, 0x5458, "\000" 
+    IDL_COLOR_FINAL, 0x403, 5, 0
+0x4554, 0x5458, "\000" 
+    0
+END
+
+IDD_OVERLAY DLGINIT
+BEGIN
+    IDL_COLOR_ROUTES, 0x403, 5, 0
+0x4554, 0x5458, "\000" 
+    IDL_COLOR_TRACKS, 0x403, 5, 0
+0x4554, 0x5458, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_CONFIG, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 136
+    END
+
+    IDD_OBJECT, DIALOG
+    BEGIN
+        RIGHTMARGIN, 153
+        BOTTOMMARGIN, 22
+    END
+
+    IDD_CQSRVR, DIALOG
+    BEGIN
+        RIGHTMARGIN, 153
+        BOTTOMMARGIN, 82
+    END
+
+    IDD_TILE_SERVER, DIALOG
+    BEGIN
+        RIGHTMARGIN, 153
+        BOTTOMMARGIN, 22
+    END
+
+    IDD_NICKNAME, DIALOG
+    BEGIN
+        LEFTMARGIN, 1
+        BOTTOMMARGIN, 123
+    END
+
+    IDD_DFS, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_PHG, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_COLOR, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 129
+    END
+
+    IDD_PATHS, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 152
+    END
+
+    IDD_VIEW, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 148
+    END
+
+    IDD_OVERLAY, DIALOG
+    BEGIN
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 160
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_MY_ICON             ICON                    "G4ILO.ico"
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

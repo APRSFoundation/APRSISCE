@@ -1,0 +1,83 @@
+Here's what's new in the APRSISCE6P100212.zip
+
+Short version:
+
+1) Fixed Win32 version to actually beacon positions even for fixed-locations (it was inadvertantly requiring GPSEnabled).  Enables/Tracking governs position beacons now, as it should have.
+
+2) Honor Enables/APRS-IS.  This was completely non-functioning until G4ILO noticed it this morning.
+
+3) Suppress the redundant ack message popup.  This was really bad in multi-digi coverage areas!
+
+4) Tracks will now continue to be drawn for the tracking station even if you pan the map so that the station's current position is not visible.
+
+5) Shorten the maximum paint delay for tile loading. You shouldn't see a long-duration white screen when jumping the map across the world (#3 below).
+
+6) Performance measure tile fetching phases.  If anyone does a prefetch, when it is completed (the yellow circle has expanded and disappeared) please double-click the map and e-mail me the string of numbers from the popup (see long version #2).  Oh, let me know if it was on Windows Mobile or Win32.  The file system behaves very differently on the two platforms!
+
+7) Station list and message panels dynamically resize if longer callsigns are heard.  This may cause the screen to clear once or twice shortly after startup as these fields adapt to the widest call heard to date.
+
+8) To allow for (3), I resized the speed panel to hold 99 instead of 199 as a maximum.  This panel will also resize if your speed ever cracks 99mph (Hm, I'll have to remember this for kph). The program will NOT make the panel wider if you exceed 1000mph!
+
+Longer version:
+
+1) Configuration validator now removes spaces from Callsigns.  I know I might take some flack for this, but embedded spaces in things is just plain obtuse to me!
+
+2) Added a line of numbers starting with Sec: to the OSM tile information popup.  These are the elapsed seconds that various phases of fetching OSM tiles accumulated.  In order, they are DNS resolution, Connect, Send, Receive, and File times.  I'm looking into making the tile fetcher use HTTP/1.1 persistent connections to reduce the connect delays and may also single-thread the actual file saving of the fetched tiles to ease the load on Windows Mobile and overlap local file I/O with web I/O.
+
+3) Limit how many tiles are loaded from disk into memory-based bitmaps for a single paint operation.  This may cause the edges of the map to appear momentarily fuzzy and shortly resolve with no tiles fetched from the web.  The algorithm favors loading the center of the map first and "breathes" before doing the fringes if too many tile bitmaps were not previously cached in memory.  (Tiles have 2 caches, the persistent disk cache to avoid hitting the web server and an in-memory cache of the tiles most recently referenced.  This latter cache is stored as DIBs (Device Independant Bitmaps) to speed painting operations when you pan or zoom back and forth in a small area).
+
+4) Increased Windows Mobile tile fetcher thread count from 3 to 4 just to round out the double-column display of active queue server threads in the OSM info popup.
+
+5) Some callsigns were too long for the scrolling station list and Message Pending panels.  I now dynamically stretch these panel sizes if a wider callsign is detected.  Also, if you're running AGW or KISS enabled, the station list is made wider yet to hold the *n indicating an RF receive and duplicate packet count (like hearing multiple digipeats).
+
+6) Don't disable the Transmit menu option just because the GPS is disabled.  It will (in the next release) disable if Tracking is disabled.
+
+7) Honor Enables/APRS-IS.
+
+8) Beacon fixed locations solely on Enables/Tracking, not Enables/GPS.
+
+9) When the program closes, if an <IGATE capabilities has been transmitted, attempt a last gasp of <IGATE,CLOSED just in case anyone's watching!
+
+To Dos:  (Still Incomplete and getting LONGER instead of SHORTER!)
+
+Wade through pending APRSISCE e-mails and expand the ToDo List!
+
+Support checking revision of tiles when loading, via OpenStreetMap.org's /status URL.
+Find a way to mark tiles referenced on Windows Mobile without slowing down map loading (queue references to fetcher thread?).
+Use HTTP/1.1 in OSM Tile Fetcher to improve throughput (multiple tile fetches on a single connection).
+Implement a compass direction/distance screen for homing in on GeoCaches.
+NMEA serial (BlueTooth) GPS support for Windows Mobile.
+Update Bluetooth Port Enumerator to show all under Windows Mobile
+KISS TNC initialization files (adopt UI-View syntax)
+Transmit support for AGW as well as Port selection for both receive and transmit
+Remember and provide for re-display of received messages.
+If target station's platform is known, format message sending screen accordingly.
+Optionally transmit either 1 or 2 !DAO! digits.
+Parse and display Frequency object information
+Support the -180/180 latitude wrap with closest display tile
+Find a better icon scaling algorithm based on screen size & scale
+Allow non-initial (re)configuration of location for OSMTiles cache (w/o editing XML)
+Allow configuration of date/time display & GMT vs local (Dave N8PU)
+Allow configurable removal of some screen elements (Satellites, John N8JJ)
+Record/Recall last DNS/IP for OSM/APRS-IS (in config file, for connecting without DNS)
+Asynchronous TCP/IP connections & reading (solves hangs)
+Timeout on OSM Tile fetcher (solves stalls)
+Implement whatever results from the Zoom +/- Poll
+
+Make Local Hops, Recent Minutes, and Duplicate Seconds configuration options
+Make Message Retry parameters configuration options
+
+Split ?APRSD and ?APRSL lists into multiple messages
+Support more ?APRSx queries
+
+Add RF traffic and IGate rates to Telemetry
+
+Win32 client only for the following:
+Simultaneously track multiple targets in separate circles
+
+Detect and highlight source of delayed duplications
+Additional View/Filter options based on symbol types
+
+Feed-through APRS-IS with local filters (for multiple instances of Win32 version with a single full feed to APRS-IS).
+
+

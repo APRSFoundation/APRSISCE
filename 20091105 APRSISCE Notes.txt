@@ -1,0 +1,77 @@
+Here's what's new in APRSISCE6P091105.zip
+
+Those that had screen layout and font size issues, give this version a try and read #2 and #16.
+
+1) Corrected a spontaneous exit issue if OSM Tile loading fails.
+
+2) Support operator selection of Orientation via View/Map Menu.  Options are Automatic (what it originally was), Wide (stuff at the top), or Narrow (stuff at the left).  The choice is recorded in the XML configuration file and is used on restart.  (For you XML hackers, the tag is <Orientation> and 0=Narrow, 1=Wide, 2=Auto).
+
+3) Support XML configuration of the toggle between Date and Time.  The originally coded value of 2367 is the default.  The value is which units digits of the seconds will display the Date.  To have only time displayed, the value should be empty.  To only display the date, the value should be 0123456789.  Get it?
+
+4) Detect and track time-delayed duplicate track entries caused (apparently) by KPC-3+ Digis in KISS mode.  These display as yellow squares in the tracks which no longer ping-pong back and forth if the duplicate is detected.  Dupes are also counted and displayed in the station Information window.  Hopefully in the future I'll be able to highlight the Digi and/or IGates that are causing the delayed duplication.
+
+5) Did some work with rejecting position updates that are too far away or too fast of moving, but I still don't like it so it mostly just complains into the .LOG file and accepts the position update anyway...
+
+6) Ability to filter what stations are displayed via a View menu option.  Choices are All (original and default), Buddies (only those stations listed in a b/ in your filter), Duplicates (only those stations with detected duplicates), and Tracks (only stations that have moved).  The View filter is NOT recorded and reverts back to all on a restart.  There will be future additions to the filter options.
+
+7) Only treat a { in a message as the ack delimiter if it is within 6 characters of the end of the message.
+
+8) Improve drawing performance of max-ed or min-ed colored bar charts (empty rectangles).
+
+9) Display local date/time when the GPS is disabled
+
+10) Suppress Lookup and Message menu options for Objects
+
+11) Added the ability to Retry or Abort a pending (non-acknowledged) message.  No auto-retry yet, though.
+
+12) The map is no longer clipped to the circle but overflows and fills between the other boxes.  The circle is still there to provide for a scale.  Let me know what you think about this change.  I kind of like not wasting the screen estate and seeing the stations outside the circle.
+
+13) Satellite PRNs (numbers) are shown in a smaller font both in the circle and at the bottom of the screen.  I can still read them on my phone, but I'm anxious to see if I made them too small for some platforms.
+
+14) Fix leaking GDI brush in painting the Pending Message window.  This would cause the client to lock up your phone if you left it running for a LONG time.
+
+15) The Win32 version of the client detects and complains about leaking GDI resources (this is how I figured out #14).
+
+16) Made some MAJOR revisions in how the various information rectangles are positioned during resizing.  Nearly all of it is based on fonts now, so those of you that had trouble with the satellites at the bottom or the stations on the left should see a HUGE improvement.  Let me know what you think.  If you don't like one layout, toggle the View/Map and try it the other way.
+
+17) Warn if closing the client with non-acknowledged messages pending.
+
+18) Ack indicators ({nnnnn) are removed from messages
+
+19) Much improved and extended Platform detection using ToCalls
+
+Completed ToDo from previous release:
+
+Fix up fonts for VGA (640x480) devices (test with Noel W8TVI)
+
+To Dos: (Incomplete)
+Automatic, decaying retransmission of non-acked messages (start at 30+ seconds due to APRS-IS dupe checker)
+Read message display (they disappear now once read)
+Tile ager/purger - Critical now that you can center on other stations!
+Parse and display Frequency object information
+Parse, use, and transmit !DAO! (APRS PRECISION AND DATUM OPTION)
+Support the -180/180 latitude wrap with closest display tile
+Find a better icon scaling algorithm based on screen size & scale
+Allow configuration of location for OSMTiles cache (w/o editing XML)
+Allow configuration of date/time display & GMT vs local (Dave N8PU)
+Allow configurable removal of some screen elements (Satellites, John N8JJ)
+Pan (Drag) screen for browsing the map
+Record/Recall last DNS/IP for OSM/APRS-IS (in config file, for connecting without DNS)
+Asynchronous TCP/IP connections & reading (solves hangs)
+Timeout on OSM Tile fetcher (solves stalls)
+Implement whatever results from the Zoom +/- Poll
+
+Win32 client only for the following:
+Simultaneously track multiple targets in separate circles
+Support NMEA GPS
+
+Extreme future:
+Support KISS TNCs
+
+Detect and highlight source of delayed duplications
+Better speed/distance rejection algorithms
+Additional View/Filter options based on symbol types
+Auto-retry Pending Messages
+
+Feed-through APRS-IS with local filters (for multiple instances of Win32 version with a single full feed to APRS-IS).
+

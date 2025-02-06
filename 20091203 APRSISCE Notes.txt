@@ -1,0 +1,93 @@
+Here's what's new in the APRSISCE6P091203.zip
+
+1) Map display dragging!  You can now drag the map anywhere you want in addition to still centering on (and following) a specific station.  The filter is automatically adjusted to include the configured range around the map center (r/lat/lon/range) in addition to the range around the home (GPS on Windows Mobile) location (m/range).  If you are centered on a station, the range around that station is added to the filter (f/call/range).
+
+2) Save/Restore map center position if not tracking self.
+
+3) Mouse wheels do zoom on the Win32 platform (unless someone has a wheel mouse on Windows Mobile?).
+
+4) Support loading and displaying GPX and LOC (untested) files from GeoCaching.com.  Windows Mobile displays only the short description while Win32 provides the full description.  Use View/Geocaches to toggle on and off.  To load multiple files, load one, toggle it off, load another.  Repeat as necessary (and memory allows).
+
+5) Station address lookup from GeoNames.org - Access from the station popup menu.
+
+6) OSM Tiles are now purged after an xml-configurable RetainDays (defaults to 7).  Double-clicking the circle tells you how many tiles are cached and how much space they occupy, but only after the client has been running a while.
+
+7) On the Win32 platform, tiles are marked as referenced when accessed.  This is too slow on the Windows Mobile platform, so even frequently used tiles will be deleted in 7 days until I figure out a better way to do it.
+
+8) Improved OSM Tile Fetcher read timing to display freshly fetched tiles faster.
+
+9) Support decaying time retransmission of messages until an ack is received or it times out.  First retry is in 31 seconds with 15 seconds added for each retry up to 6 transmissions.
+/* Retries	Seconds */
+/*   0      31 */
+/*   1      46 */
+/*   2      61 */
+/*   3      76 */
+/*   4      91 */
+/*   5	   106 */
+/*  Total  411=6.85 minutes */
+
+10) Message acks must come from the addressed station.  The iPhone IBCNU app acknowledges ANY subsequent messages sent by a station that previously sent to the IBCNU station.  APRSISCE now informs you that some other station "pirated" a subsequent ack.
+
+11) Revamp how packets are tested for reasonableness to take into account calculated speed and duplications.  "Invalid" packets are remembered, but not drawn with connected lines as it is unlikely that the station actually moved that way.
+
+12) View/Invalids similar to view duplicates to only see stations with Invalid (too quick/too fast) track points.
+
+13) Track point validity can be one of the following displayed in the indicated colors on the map (sometimes without connecting lines).  The background of the scrolling station display will also display in this color for non-OK packets.
+OK - Normal black dot
+(Purple) Duplicate - Duplicate position received within 10 minutes
+(Pink) Quick - Less than 1 second between packets
+(Red) Fast - Calculated speed too fast
+(Aqua) Restart - "Jumped"
+
+14) Calculate (and display in station popup) both Instantaneous (packet-to-packet) speed and rolling (4 sample) average.  Track points will not be connected (and will be drawing in ???) if they move "too fast".  Speed is learned, so even jet airplanes might only skip 2 or 3 packets.  Satellites are even displayed after a short "acceleration" period.
+
+15) Parse Lat/Lon extended digits (!DAO!).  Some station popups will show additional minute decimal places.  Due to space constrains, a full 4 digit precision station will show 3 digits and a + rather than the 4 digits displayed in the Win32 version.  "My" coordinates are displayed in high resolution, although !DAO! is not yet transmitted.
+
+16) Ignore $GPRMC packets without valid fix flag
+
+17) Changed a few prompts on the configuration dialog.
+
+18) Require callsign to be set when a new configuration file is created.
+
+19) Prompt for location of OSM Tile cache when a new configuration file is created.
+
+20) In Win32, record screen center as "home" coordinates the first time the program is exited after a new configuration file is created.  This is used for beaconing a fixed position from Win32 at the Genius Beaconing(r) Max Time rate (default 30 minutes) if both GPS and Tracking are enabled.  It can be changed by editing the XML configuration file.
+
+21) Default initial Win32 screen to 640x480 in a system-determined position.  Actual size and location are recorded and restored when program is restarted.
+
+22) Fixed a nasty notification lockup bug if the last received message is dismissed from the notification window with previously received messages pending.  I actually restructured a bunch of memory buffers in a misguided thought that large local variables (TCHAR[256] for those programmers out there) were at the root of this issue, but it turned out much simpler than that.  Oh well!
+
+
+
+
+To Dos:  (Still Incomplete and getting LONGER instead of SHORTER!)
+
+Support checking revision of tiles when loading, via OpenStreetMap.org's /status URL.
+Find a way to mark tiles referenced on Windows Mobile without slowing down map loading (queue references to fetcher thread?).
+Use HTTP/1.1 in OSM Tile Fetcher to improve throughput (multiple tile fetches on a single connection).
+Implement a compass direction/distance screen for homing in on GeoCaches.
+NMEA serial (BlueTooth) GPS support, primarily for Win32, but may also work on Windows Mobile.
+KISS TNC support via serial (BlueTooth) ports for both Win32 and Windows Mobile.
+Remember and provide for re-display of received messages.
+If target station's platform is known, format message sending screen accordingly.
+Optionally transmit either 1 or 2 !DAO! digits.
+Parse and display Frequency object information
+Support the -180/180 latitude wrap with closest display tile
+Find a better icon scaling algorithm based on screen size & scale
+Allow non-initial (re)configuration of location for OSMTiles cache (w/o editing XML)
+Allow configuration of date/time display & GMT vs local (Dave N8PU)
+Allow configurable removal of some screen elements (Satellites, John N8JJ)
+Record/Recall last DNS/IP for OSM/APRS-IS (in config file, for connecting without DNS)
+Asynchronous TCP/IP connections & reading (solves hangs)
+Timeout on OSM Tile fetcher (solves stalls)
+Implement whatever results from the Zoom +/- Poll
+
+Win32 client only for the following:
+Simultaneously track multiple targets in separate circles
+
+Detect and highlight source of delayed duplications
+Additional View/Filter options based on symbol types
+
+Feed-through APRS-IS with local filters (for multiple instances of Win32 version with a single full feed to APRS-IS).
+
+

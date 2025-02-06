@@ -1,0 +1,156 @@
+Beta Testers,
+
+Here's a stream of consciousness (actually a brain dump from my version
+control system) of what's new since January in APRSISCE (for Windows
+Mobile).
+
+1) It generates a date/time-stamped CSV file in your Documents folder
+with all of the transmitted coordinates. It does this even if you have
+APRS-IS disabled. I used this to track myself when I was out of the
+country without phone/Internet services. Some day I'll make it an Enable.
+
+2) If you add any b/Buddies to your filter text, they will be
+reverse-video'd when scrolling in the recent station list.
+
+3) I now notice that the tracking in general is NEW! All stations that
+move will leave a single width black line behind themselves. You clear
+these with Menu/Clear Track or double-click the Odometer.
+
+4) Secondary symbol table symbols now do overlays if specified by the
+client. This is NOT restricted to the subset that is documented, but is
+displayed on any symbol if so configured by the remote station.
+
+5) Your last known good position is saved when the client is closed and
+recalled when you run it again. This means that the map will be
+displayed along with other stations' relative positions even before you
+get a new fix.
+
+6) Scale factors have changed due to the OpenStreetMap implementation.
+You can actually zoom further out than before and if you zoom too far
+in, the maps will disappear and the circle will come back. The circle
+is also displayed if there are no maps currently loaded for the selected
+zoom level. Maps will appear when they finally begin arriving.
+
+7) Objects are tracked by the originating call sign in addition to the
+object name itself. This helps avoid object ID collisions in a close
+geographic area, but it can generate extra objects if ownership is
+intentionally changed.
+
+8) The path of the most recently heard packet for a station is
+remembered and displayed on the station popup. Object owners also
+appear here along with your configured APRS-IS server name if you click
+your own icon in the center.
+
+9) Several packet parser corrections have been implemented. Some
+packets that were previously considered bad parses will now be properly
+displayed.
+
+10) The javAPRSsrvr # heartbeat is no longer considered to be a received
+packet. This means that the activity timer may expire more often than
+it has before causing Force Disconnects. If you get an inordinate
+number of these, increase your Quiet Time configuration parameter. This
+was done because some APRS-IS servers seem to go dumb and quit
+transmitting packets but continue to transmit the heartbeats.
+
+11) Station Icons will fade away as they age. The XML configuration
+file lets you specify a minimum and maximum station age (in minutes).
+Stations will stay 100% for the minimum time and will then fade until
+the maximum time at which point they are deleted. Any message from a
+station will restore it to full brightness.
+
+(Note: a bug was just reported in the left/right arrow map fade
+controls. If you decrease it below zero with the left arrow, it will
+wrap back up to 100%. This will get fixed, but I probably won't bother
+with a new release for it).
+
+12) The station popup (click on the map icon or the recent station list)
+has been streamlined to remove information that is empty and add new
+additional information. It will show some or all of the following:
+
+Title bar shows station and IGate (this is APRS-IS after all)
+
+Sym: Symbol name and overlay (if any)
+Rng: miles @ bearing (if you have a fix)
+n/m Tracks (mKB) (if you've moved)
+Last known coordinates in APRS format
+Last heard timestamp (yyyy-mm-dd hh:mm:ss)
+Path (if not empty between tocall and qXX,Igate)
+
+13) Zoom factors are now different due to OpenStreetMap tile scaling
+
+14) Circle no longer rotates, but North is always up. I need to make
+OSM an enable to restore the old rotating circle behavior. Or just
+restore rotation if you crank the visibility down to 0%?
+
+15) Statistics display (double-click the split station/memory bar) shows
+both your and total track counts and memory consumption. I hope to add
+network traffic counters and Tile "disk" and memory consumption
+information here someday.
+
+16) The recent station list now pops up the station on a single tap, a
+double-click is no longer necessary. This was done to make it
+consistent with the circle station display.
+
+17) The recent station list will reverse-video any station that appears
+as a buddy in your filter settings. Eventually I want to make the buddy
+list configurable so you don't have to manually add b/Callsign to your
+filter.
+
+18) I already mentioned the track drawing, but saw it again in the
+difference listing. I'm open to suggestions if the tracks need to be
+bolder, wider, or selectable by station. This is one of the reasons for
+the buddy list configuration also. I'm hoping to allow you to color the
+tracks of your buddies and possibly disable tracking or non-buddy stations.
+
+19) The OpenStreetMap currently covers all of the background available.
+I need to figure out how to clip them to the original circle, or at
+least draw a circle over top of the map. Remember that the height of
+the +/- scale bar is the radius of the circle. The number that appears
+above (landscape) or below (portrait) of the scale bar is the radius of
+the circle in miles (or feet if you zoom in far enough). Someday I
+might support a metric toggle for this display.
+
+20) Wait, it looks like the January release DID draw your own track!
+The new one just adds tracks for everyone that moves (including
+satellites that fly by). The track is only drawn if the current station
+position is visible on screen, though, so don't be alarmed if lines
+appear and disappear when you zoom out and in.
+
+21) I think I already mentioned that station Icons fade out as they age,
+but I just saw it again also. Obviously the recent station list doesn't
+fade because it's recent, right?
+
+22) Last known satellite positions (the pale numbers inside the circle)
+are now removed if you disable the GPS.
+
+23) The ranging red dot (forecast position based on last beaconed speed
+and heading) is partially faded. I need to make this percentage a
+configuration parameter too.
+
+24) That CSV Track file I mentioned at the top closes and restarts
+itself when you clear your odometer.
+
+25) A bunch of the various text displays are now better centered in the
+vertical direction. I'm talking about the +/-, H/V, Odometer, Heading,
+and stuff like that.
+
+26) Battery telemetry is no longer sent unless something has changed.
+This makes for rougher looking graphs, but less traffic and storage on
+the servers as well. If the battery is going up or down, it's smooth.
+
+27) Your last known position along with your current scale/zoom level
+are recorded and recalled the next time you run the client.
+
+Now, for the homework. To see if you've managed to read the whole thing
+through, can someone pull out all of my notes of what I still need to do
+and make a ToDo list for me?
+
+I'm also open to any and all suggestions of what to prioritize next.
+One of the things on my list is to make the APRS-IS connection
+asynchronous so it quits locking up the client when the cellular
+connection is bad or non-existent.
+
+Lynn (D) - KJ4ERJ - Author of APRSISCE for Windows Mobile
+
+PS. Would anyone be interested in a non-tracking, non-GPS, view-only
+Win32 version of the program?

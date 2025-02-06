@@ -1,0 +1,187 @@
+Here's what's new in the APRSISCE6P100209.zip
+
+Short version:
+
+1) Win32 version supports NMEA GPS
+
+2) Both versions support KISS TNCs
+
+3) Both versions support receive-only AGWPE (all ports)
+
+4) OSM Maps can be pre-fetched and the fetcher can be disabled
+
+5) UTF-8 characters are supported in Addresses, Messages, and Comment texts
+
+Longer version:
+
+1) Support UTF-8 characters in Address information
+
+2) Initial support for AGW's Packet Engine (Receive-Only via "m" monitor command)
+
+3) New configuration parameters for (at least in XML file!):
+	Enables for AGW, KISS, and OSMFetch
+	Outbound Beacon Path (defaults to WIDE1-1,WIDE2-1)
+	Preferred map view
+	GPS, AGW, and KISS Ports (Com or TCP)
+	Telemetry Interval
+
+4) Com port configuration dialog (used for NMEA GPS and KISS)
+	This may not show all of your Bluetooth ports (yet)
+
+5) TCP IP/Port configuration dialog (used for AGW, NMEA GPS, and KISS)
+
+6) Corrected truncation issue on additional Filter text and comments
+
+7) Configuration Dialog now has AGW, KISS, and NMEA buttons
+
+8) Support UTF-8 characters in APRS Messaging and Station Comments
+
+9) Tweak EarthRadius from 3,959.0 miles to 3958.76 miles
+
+10) Stretch OSM tiles if a correct one isn't available (will resolve as soon as fetched)
+
+11) Support zooming in further than actual OSM maps support (important for geocaching)
+
+12) Support prefetching OSM tiles along with disabling fetching on-the-fly (allows for offline operations)
+
+13) Provide age-bucketed count and size of cached OSM tiles
+
+14) Only purge old OSM tiles if fetching is enabled
+
+15) Support NMEA GPS (only on Win32 currently)
+
+16) Support KISS TNCs via serial (hardwire or Bluetooth) or TCP/IP port
+	Currently sends the following hard-coded command sequence:
+		KISSCommand(&cp, "\r");
+		KISSCommand(&cp, "\r");
+		KISSCommand(&cp, "XFLOW OFF\r");
+		KISSCommand(&cp, "KISS ON\r");
+		KISSCommand(&cp, "RESTART\r");
+	Otherwise, it expects the TNC to already be in KISS mode
+
+17) New View/Map/Prefetch menu option - This prefetchs 3 zoom levels of OSM tiles covering the entire visible map when selected.  Note: You better be on a fast connection when you do this!
+
+18) View/Preferred/Restore and Save - This will allow you to save a center point and zoom level for later recall.  If one is saved, the program starts in the preferred view.  Double-clicking the Scale number restores the preferred view.
+
+19) View RF/All, Direct, or Local - Filters the display to stations received over RF, either All, or Direct (0 hops), or Local (up to 2 hops).
+
+20) Double-clicking the Battery Bar (extreme right edge) now shows the power status of the machine.
+
+21) Telemetry is now possible from Win32 (especially useful for mobile laptops)
+
+22) APRSISCE/32's window title now reflects the configured callsign
+
+23) Handle "rej" packets and stop retransmitting an outbound message
+
+24) Auto-respond to various queries:
+	?APRSD - send a list of "recently" directly heard stations
+	?APRSL - send a list of "recent" "local" stations
+	?IGATE - Transmit a Capabilites packet
+	?APRSP or ?APRS - Force a position packet (if Tracking enabled)
+
+25) If you are tracking a station and drag the screen, the tracked station's beacon points remain highlighted.
+
+26) Double-clicking the GPS heading window will return center to a tracked station.  Double-clicking it again will return tracking to your station.
+
+27) Telemetry is only defined once, instead of every time the client starts.  Telemetry version is tracked in the configuration file so that it will be re-defined as version upgrade what is being logged.
+
+28) Station Popup now shows lots more stuff:
+	Station Status seperate from Comment
+	Capabilities (if ever received)
+	-IS vs RF paths (or both) over which packet was received
+	Title reflects # of Hops or IGate
+
+29) Include station comment in Address lookup popup
+
+30) Pending messages now show retry information and allow starting the retries over or aborting a message
+
+31) Double-clicking on the +/- zoom bar will directly set the zoom
+
+32) Station Usage popup shows RF counts (local and direct) if any
+
+33) The scrolling station list shows a * for RF-received stations and a count after the * for duplicate packets received
+
+34) Double-clicking the map now shows OSM tile statistics.  These may not be available until the client has run for at least 5 minutes.
+
+35) The right edge of the satellites in use and in view bars now shows the count of satellites in that list.
+
+36) BitBlt errors are no longer displayed when a laptop lid is closed with the client running (for instance)
+
+37) Slightly improved logic to get the initial center position set on first client execution.
+
+Note: Any packets transmitted by APRSISCE/32 currently go out ALL enabled ports.  This includes beacons, messages, and acknowledgements.  Telemetry, however, is only sent via APRS-IS if that connection is good.
+
+APRS Packet Parser updates:
+
+1) Parse 3rd party sender out of APRS-IS packets
+
+2) Parse Capabilities (<) packets
+
+3) Parse Status (>) packets & Display on station popup
+
+4) Extend comment text from 80 to 128 characters
+
+5) Better duplicate packet detection using CRCs
+
+6) Support new Overlayed symbol names (not icons) per http://www.aprs.org/symbols/symbols-new.txt
+
+7) Better handle parsing direct (pathless) packets (important for RF-received packets)
+
+8) Hop count = 2 for 3rd party traffic (not sure which path would be valid!)
+
+9) Default symbol to red dot per spec
+
+10) Default weather data to Weather Station symbol per spec
+
+11) Default $ data symbol to red cross (no symbol) per spec
+
+12) Support ToCall symbol specifications if no explicit symbol in packet
+
+13) Use -SSID implied symbol if none specified anywhere else
+
+14) Reject packets with invalid N/S E/W for coordinates
+
+15) Don't parse compressed lat/lon unless it's really there!
+
+To Dos:  (Still Incomplete and getting LONGER instead of SHORTER!)
+
+Wade through pending APRSISCE e-mails and expand the ToDo List!
+
+Support checking revision of tiles when loading, via OpenStreetMap.org's /status URL.
+Find a way to mark tiles referenced on Windows Mobile without slowing down map loading (queue references to fetcher thread?).
+Use HTTP/1.1 in OSM Tile Fetcher to improve throughput (multiple tile fetches on a single connection).
+Implement a compass direction/distance screen for homing in on GeoCaches.
+NMEA serial (BlueTooth) GPS support for Windows Mobile.
+Update Bluetooth Port Enumerator to show all under Windows Mobile
+KISS TNC initialization files (adopt UI-View syntax)
+Remember and provide for re-display of received messages.
+If target station's platform is known, format message sending screen accordingly.
+Optionally transmit either 1 or 2 !DAO! digits.
+Parse and display Frequency object information
+Support the -180/180 latitude wrap with closest display tile
+Find a better icon scaling algorithm based on screen size & scale
+Allow non-initial (re)configuration of location for OSMTiles cache (w/o editing XML)
+Allow configuration of date/time display & GMT vs local (Dave N8PU)
+Allow configurable removal of some screen elements (Satellites, John N8JJ)
+Record/Recall last DNS/IP for OSM/APRS-IS (in config file, for connecting without DNS)
+Asynchronous TCP/IP connections & reading (solves hangs)
+Timeout on OSM Tile fetcher (solves stalls)
+Implement whatever results from the Zoom +/- Poll
+
+Make Local Hops, Recent Minutes, and Duplicate Seconds configuration options
+Make Message Retry parameters configuration options
+
+Split ?APRSD and ?APRSL lists into multiple messages
+Support more ?APRSx queries
+
+Add RF traffic and IGate rates to Telemetry
+
+Win32 client only for the following:
+Simultaneously track multiple targets in separate circles
+
+Detect and highlight source of delayed duplications
+Additional View/Filter options based on symbol types
+
+Feed-through APRS-IS with local filters (for multiple instances of Win32 version with a single full feed to APRS-IS).
+
+
