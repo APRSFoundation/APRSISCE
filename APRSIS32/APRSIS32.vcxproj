@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <ProjectGuid>{EAB0E59C-F0C5-4645-B2F3-D8DA6F66BFE6}</ProjectGuid>
+    <RootNamespace>APRSIS32</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>17.0.33516.290</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <EnableManagedIncrementalBuild>False</EnableManagedIncrementalBuild>
+    <PreBuildEventUseInBuild>false</PreBuildEventUseInBuild>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <EnableManagedIncrementalBuild>False</EnableManagedIncrementalBuild>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <PreBuildEvent>
+      <Message>Update timestamp</Message>
+      <Command>maketime &gt;timestamp.h</Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>c:\Compass\code;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRTDBG_MAP_ALLOC;_DEBUG;_CRT_SECURE_NO_WARNINGS;UNICODE;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/opt:ref %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>Ws2_32.lib;Msimg32.lib;Comctl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateMapFile>true</GenerateMapFile>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <PreBuildEvent>
+      <Message>Update Build Timestamp</Message>
+      <Command>maketime &gt;timestamp.h</Command>
+    </PreBuildEvent>
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>c:\cvstest\code;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;UNICODE;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>Ws2_32.lib;Msimg32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)APRSIS64.exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <PreBuildEvent>
+      <Message>Update timestamp</Message>
+      <Command>maketime &gt;timestamp.h</Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\jpeg\source\jcapimin.c" />
+    <ClCompile Include="..\..\..\jpeg\source\jcapistd.c" />
+    <ClCompile Include="..\..\..\jpeg\source\jccoefct.c" />
+    <ClCompile Include="..\..\..\jpeg\source\jccolor.c" />
+    <ClCompile Include="..\..\..\jpeg\source\jcdctmgr.c" />
+    <ClCompile Include="..\..\..\jpeg\source\jchuff.c" />
+    <ClCompile Include="..\..\..\jpeg\source\jcinit.c" />
+    <ClCompile Include="..\..\..\jpeg\source\jcmainct.c" />
+    <ClCompile Include="..\..\..\jpeg\source\jcmarker.c" />
+    <ClCompile Include="..\..\..\jpeg\source\jcmaster.c" />
+    <ClCompile Include="..\..\..\jpeg\source\jcomapi.c" />
+    <ClCompile Include="..\..\..\jpeg\source\jcparam.c" />
+    <ClCompile Include="..\..\..\jpeg\source\jcphuff.c" />
+    <ClCompile Include="..\..\..\jpeg\source\jcprepct.c" />
+    <ClCompile Include="..\..\..\jpeg\source\jcsample.c" />
+    <ClCompile Include="..\..\..\jpeg\source\jctrans.c" />
+    <ClCompile Include="..\..\..\jpeg\source\jdapimin.c" />
+    <ClCompile Include="..\..\..\jpeg\source\jdapistd.c" />
+    <ClCompile Include="..\..\..\jpeg\source\jdatadst.c" />
+    <ClCompile Include="..\..\..\jpeg\source\jdatasrc.c" />
+    <ClCompile Include="..\..\..\jpeg\source\jdcoefct.c" />
+    <ClCompile Include="..\..\..\jpeg\source\jdcolor.c" />
+    <ClCompile Include="..\..\..\jpeg\source\jddctmgr.c" />
+    <ClCompile Include="..\..\..\jpeg\source\jdhuff.c" />
+    <ClCompile Include="..\..\..\jpeg\source\jdinput.c" />
+    <ClCompile Include="..\..\..\jpeg\source\jdmainct.c" />
+    <ClCompile Include="..\..\..\jpeg\source\jdmarker.c" />
+    <ClCompile Include="..\..\..\jpeg\source\jdmaster.c" />
+    <ClCompile Include="..\..\..\jpeg\source\jdmerge.c" />
+    <ClCompile Include="..\..\..\jpeg\source\jdphuff.c" />
+    <ClCompile Include="..\..\..\jpeg\source\jdpostct.c" />
+    <ClCompile Include="..\..\..\jpeg\source\jdsample.c" />
+    <ClCompile Include="..\..\..\jpeg\source\jdtrans.c" />
+    <ClCompile Include="..\..\..\jpeg\source\jerror.c" />
+    <ClCompile Include="..\..\..\jpeg\source\jfdctflt.c" />
+    <ClCompile Include="..\..\..\jpeg\source\jfdctfst.c" />
+    <ClCompile Include="..\..\..\jpeg\source\jfdctint.c" />
+    <ClCompile Include="..\..\..\jpeg\source\jidctflt.c" />
+    <ClCompile Include="..\..\..\jpeg\source\jidctfst.c" />
+    <ClCompile Include="..\..\..\jpeg\source\jidctint.c" />
+    <ClCompile Include="..\..\..\jpeg\source\jidctred.c" />
+    <ClCompile Include="..\..\..\jpeg\source\jmemansi.c" />
+    <ClCompile Include="..\..\..\jpeg\source\jmemmgr.c" />
+    <ClCompile Include="..\..\..\jpeg\source\jquant1.c" />
+    <ClCompile Include="..\..\..\jpeg\source\jquant2.c" />
+    <ClCompile Include="..\..\..\jpeg\source\jutils.c" />
+    <ClCompile Include="..\..\..\lpng\source\png.c" />
+    <ClCompile Include="..\..\..\lpng\source\pngerror.c" />
+    <ClCompile Include="..\..\..\lpng\source\pnggccrd.c" />
+    <ClCompile Include="..\..\..\lpng\source\pngget.c" />
+    <ClCompile Include="..\..\..\lpng\source\pngmem.c" />
+    <ClCompile Include="..\..\..\lpng\source\pngpread.c" />
+    <ClCompile Include="..\..\..\lpng\source\pngread.c" />
+    <ClCompile Include="..\..\..\lpng\source\pngrio.c" />
+    <ClCompile Include="..\..\..\lpng\source\pngrtran.c" />
+    <ClCompile Include="..\..\..\lpng\source\pngrutil.c" />
+    <ClCompile Include="..\..\..\lpng\source\pngset.c" />
+    <ClCompile Include="..\..\..\lpng\source\pngtrans.c" />
+    <ClCompile Include="..\..\..\lpng\source\pngvcrd.c" />
+    <ClCompile Include="..\..\..\lpng\source\pngwio.c" />
+    <ClCompile Include="..\..\..\lpng\source\pngwrite.c" />
+    <ClCompile Include="..\..\..\lpng\source\pngwtran.c" />
+    <ClCompile Include="..\..\..\lpng\source\pngwutil.c" />
+    <ClCompile Include="..\..\..\lua\lua-5.1.5\src\lapi.c" />
+    <ClCompile Include="..\..\..\lua\lua-5.1.5\src\lauxlib.c" />
+    <ClCompile Include="..\..\..\lua\lua-5.1.5\src\lbaselib.c" />
+    <ClCompile Include="..\..\..\lua\lua-5.1.5\src\lcode.c" />
+    <ClCompile Include="..\..\..\lua\lua-5.1.5\src\ldblib.c" />
+    <ClCompile Include="..\..\..\lua\lua-5.1.5\src\ldebug.c" />
+    <ClCompile Include="..\..\..\lua\lua-5.1.5\src\ldo.c" />
+    <ClCompile Include="..\..\..\lua\lua-5.1.5\src\ldump.c" />
+    <ClCompile Include="..\..\..\lua\lua-5.1.5\src\lfunc.c" />
+    <ClCompile Include="..\..\..\lua\lua-5.1.5\src\lgc.c" />
+    <ClCompile Include="..\..\..\lua\lua-5.1.5\src\linit.c" />
+    <ClCompile Include="..\..\..\lua\lua-5.1.5\src\liolib.c" />
+    <ClCompile Include="..\..\..\lua\lua-5.1.5\src\llex.c" />
+    <ClCompile Include="..\..\..\lua\lua-5.1.5\src\lmathlib.c" />
+    <ClCompile Include="..\..\..\lua\lua-5.1.5\src\lmem.c" />
+    <ClCompile Include="..\..\..\lua\lua-5.1.5\src\loadlib.c" />
+    <ClCompile Include="..\..\..\lua\lua-5.1.5\src\lobject.c" />
+    <ClCompile Include="..\..\..\lua\lua-5.1.5\src\lopcodes.c" />
+    <ClCompile Include="..\..\..\lua\lua-5.1.5\src\loslib.c" />
+    <ClCompile Include="..\..\..\lua\lua-5.1.5\src\lparser.c" />
+    <ClCompile Include="..\..\..\lua\lua-5.1.5\src\lstate.c" />
+    <ClCompile Include="..\..\..\lua\lua-5.1.5\src\lstring.c" />
+    <ClCompile Include="..\..\..\lua\lua-5.1.5\src\lstrlib.c" />
+    <ClCompile Include="..\..\..\lua\lua-5.1.5\src\ltable.c" />
+    <ClCompile Include="..\..\..\lua\lua-5.1.5\src\ltablib.c" />
+    <ClCompile Include="..\..\..\lua\lua-5.1.5\src\ltm.c" />
+    <ClCompile Include="..\..\..\lua\lua-5.1.5\src\lundump.c" />
+    <ClCompile Include="..\..\..\lua\lua-5.1.5\src\lvm.c" />
+    <ClCompile Include="..\..\..\lua\lua-5.1.5\src\lzio.c" />
+    <ClCompile Include="..\..\..\lua\lua-5.1.5\src\print.c" />
+    <ClCompile Include="..\..\..\xp\source\hashtable.c" />
+    <ClCompile Include="..\..\..\xp\source\xmlparse.c" />
+    <ClCompile Include="..\..\..\xp\source\xmlrole.c" />
+    <ClCompile Include="..\..\..\xp\source\xmltok.c" />
+    <ClCompile Include="..\..\..\zl\source\ADLER32.C" />
+    <ClCompile Include="..\..\..\zl\source\COMPRESS.C" />
+    <ClCompile Include="..\..\..\zl\source\CRC32.C" />
+    <ClCompile Include="..\..\..\zl\source\DEFLATE.C" />
+    <ClCompile Include="..\..\..\zl\source\infback.c" />
+    <ClCompile Include="..\..\..\zl\source\inffast.c" />
+    <ClCompile Include="..\..\..\zl\source\inflate.c" />
+    <ClCompile Include="..\..\..\zl\source\inftrees.c" />
+    <ClCompile Include="..\..\..\zl\source\TREES.C" />
+    <ClCompile Include="..\..\..\zl\source\UNCOMPR.C" />
+    <ClCompile Include="..\..\..\zl\source\ZUTIL.C" />
+    <ClCompile Include="..\..\gpredict-1.3\src\orbit-tools.c" />
+    <ClCompile Include="..\..\gpredict-1.3\src\predict-tools.c" />
+    <ClCompile Include="..\..\gpredict-1.3\src\sgpsdp\sgp4sdp4.c" />
+    <ClCompile Include="..\..\gpredict-1.3\src\sgpsdp\sgp_in.c" />
+    <ClCompile Include="..\..\gpredict-1.3\src\sgpsdp\sgp_math.c" />
+    <ClCompile Include="..\..\gpredict-1.3\src\sgpsdp\sgp_obs.c" />
+    <ClCompile Include="..\..\gpredict-1.3\src\sgpsdp\sgp_time.c" />
+    <ClCompile Include="..\..\gpredict-1.3\src\sgpsdp\solar.c" />
+    <ClCompile Include="..\..\gpredict-1.3\src\time-tools.c" />
+    <ClCompile Include="..\..\shapelib-1.3.0b2\dbfopen.c" />
+    <ClCompile Include="..\..\shapelib-1.3.0b2\safileio.c" />
+    <ClCompile Include="..\..\shapelib-1.3.0b2\shpopen.c" />
+    <ClCompile Include="..\..\shapelib-1.3.0b2\shptree.c" />
+    <ClCompile Include="..\..\source\parse.c" />
+    <ClCompile Include="..\Address.cpp" />
+    <ClCompile Include="..\AGW.c" />
+    <ClCompile Include="..\aprsis.c" />
+    <ClCompile Include="..\APRSISCE.cpp" />
+    <ClCompile Include="..\aprs_udp.c" />
+    <ClCompile Include="..\Bluetooth.c" />
+    <ClCompile Include="..\Config.cpp" />
+    <ClCompile Include="..\cprtns.c" />
+    <ClCompile Include="..\echolink.cpp" />
+    <ClCompile Include="..\filter.cpp" />
+    <ClCompile Include="..\GeoCaches.cpp" />
+    <ClCompile Include="..\GPXFiles.cpp" />
+    <ClCompile Include="..\jpgUtil.cpp" />
+    <ClCompile Include="..\KISS.c" />
+    <ClCompile Include="..\LLUtil.cpp" />
+    <ClCompile Include="..\MsgBox.cpp" />
+    <ClCompile Include="..\OSMUtil.cpp" />
+    <ClCompile Include="..\pngUtil.cpp" />
+    <ClCompile Include="..\Port.c" />
+    <ClCompile Include="..\Satellite.c" />
+    <ClCompile Include="..\ShapFile.cpp" />
+    <ClCompile Include="..\sun.c" />
+    <ClCompile Include="..\tcputil.c" />
+    <ClCompile Include="..\text.c" />
+    <ClCompile Include="..\TraceLog.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\jpeg\source\jconfig.h" />
+    <ClInclude Include="..\..\..\jpeg\source\jerror.h" />
+    <ClInclude Include="..\..\..\jpeg\source\jinclude.h" />
+    <ClInclude Include="..\..\..\jpeg\source\jmorecfg.h" />
+    <ClInclude Include="..\..\..\jpeg\source\jpegint.h" />
+    <ClInclude Include="..\..\..\jpeg\source\jpeglib.h" />
+    <ClInclude Include="..\..\..\lpng\source\png.h" />
+    <ClInclude Include="..\..\..\lpng\source\pngconf.h" />
+    <ClInclude Include="..\..\..\lpng\source\pngusr.h" />
+    <ClInclude Include="..\..\..\lua\lua-5.1.5\src\lapi.h" />
+    <ClInclude Include="..\..\..\lua\lua-5.1.5\src\lauxlib.h" />
+    <ClInclude Include="..\..\..\lua\lua-5.1.5\src\lcode.h" />
+    <ClInclude Include="..\..\..\lua\lua-5.1.5\src\ldebug.h" />
+    <ClInclude Include="..\..\..\lua\lua-5.1.5\src\ldo.h" />
+    <ClInclude Include="..\..\..\lua\lua-5.1.5\src\lfunc.h" />
+    <ClInclude Include="..\..\..\lua\lua-5.1.5\src\lgc.h" />
+    <ClInclude Include="..\..\..\lua\lua-5.1.5\src\llex.h" />
+    <ClInclude Include="..\..\..\lua\lua-5.1.5\src\llimits.h" />
+    <ClInclude Include="..\..\..\lua\lua-5.1.5\src\lmem.h" />
+    <ClInclude Include="..\..\..\lua\lua-5.1.5\src\lobject.h" />
+    <ClInclude Include="..\..\..\lua\lua-5.1.5\src\lopcodes.h" />
+    <ClInclude Include="..\..\..\lua\lua-5.1.5\src\lparser.h" />
+    <ClInclude Include="..\..\..\lua\lua-5.1.5\src\lstate.h" />
+    <ClInclude Include="..\..\..\lua\lua-5.1.5\src\lstring.h" />
+    <ClInclude Include="..\..\..\lua\lua-5.1.5\src\ltable.h" />
+    <ClInclude Include="..\..\..\lua\lua-5.1.5\src\ltm.h" />
+    <ClInclude Include="..\..\..\lua\lua-5.1.5\src\lua.h" />
+    <ClInclude Include="..\..\..\lua\lua-5.1.5\src\luaconf.h" />
+    <ClInclude Include="..\..\..\lua\lua-5.1.5\src\lualib.h" />
+    <ClInclude Include="..\..\..\lua\lua-5.1.5\src\lundump.h" />
+    <ClInclude Include="..\..\..\lua\lua-5.1.5\src\lvm.h" />
+    <ClInclude Include="..\..\..\lua\lua-5.1.5\src\lzio.h" />
+    <ClInclude Include="..\..\..\xp\source\asciitab.h" />
+    <ClInclude Include="..\..\..\xp\source\hashtable.h" />
+    <ClInclude Include="..\..\..\xp\source\iasciitab.h" />
+    <ClInclude Include="..\..\..\xp\source\latin1tab.h" />
+    <ClInclude Include="..\..\..\xp\source\nametab.h" />
+    <ClInclude Include="..\..\..\xp\source\utf8tab.h" />
+    <ClInclude Include="..\..\..\xp\source\xmldef.h" />
+    <ClInclude Include="..\..\..\xp\source\xmlparse.h" />
+    <ClInclude Include="..\..\..\xp\source\xmlrole.h" />
+    <ClInclude Include="..\..\..\xp\source\xmltok.h" />
+    <ClInclude Include="..\..\..\xp\source\xmltok_impl.h" />
+    <ClInclude Include="..\..\..\zl\source\crc32.h" />
+    <ClInclude Include="..\..\..\zl\source\deflate.h" />
+    <ClInclude Include="..\..\..\zl\source\inffast.h" />
+    <ClInclude Include="..\..\..\zl\source\inffixed.h" />
+    <ClInclude Include="..\..\..\zl\source\inflate.h" />
+    <ClInclude Include="..\..\..\zl\source\inftrees.h" />
+    <ClInclude Include="..\..\..\zl\source\INFUTIL.H" />
+    <ClInclude Include="..\..\..\zl\source\trees.h" />
+    <ClInclude Include="..\..\..\zl\source\zconf.h" />
+    <ClInclude Include="..\..\..\zl\source\zconf.in.h" />
+    <ClInclude Include="..\..\..\zl\source\zlib.h" />
+    <ClInclude Include="..\..\..\zl\source\zutil.h" />
+    <ClInclude Include="..\..\gpredict-1.3\src\mypredict.h" />
+    <ClInclude Include="..\..\gpredict-1.3\src\orbit-tools.h" />
+    <ClInclude Include="..\..\gpredict-1.3\src\predict-tools.h" />
+    <ClInclude Include="..\..\gpredict-1.3\src\sat-vis.h" />
+    <ClInclude Include="..\..\gpredict-1.3\src\sgpsdp\sgp4sdp4.h" />
+    <ClInclude Include="..\..\gpredict-1.3\src\time-tools.h" />
+    <ClInclude Include="..\..\shapelib-1.3.0b2\shapefil.h" />
+    <ClInclude Include="..\..\source\parse.h" />
+    <ClInclude Include="..\..\source\parsedef.h" />
+    <ClInclude Include="..\Address.h" />
+    <ClInclude Include="..\AGW.h" />
+    <ClInclude Include="..\aprsis.h" />
+    <ClInclude Include="..\aprs_udp.h" />
+    <ClInclude Include="..\BlueTooth.h" />
+    <ClInclude Include="..\Config.h" />
+    <ClInclude Include="..\CPDEF.H" />
+    <ClInclude Include="..\CPRTNS.H" />
+    <ClInclude Include="..\echolink.h" />
+    <ClInclude Include="..\filter.h" />
+    <ClInclude Include="..\Geocaches.h" />
+    <ClInclude Include="..\GPXFiles.h" />
+    <ClInclude Include="..\jpgUtil.h" />
+    <ClInclude Include="..\KISS.h" />
+    <ClInclude Include="..\LLUtil.h" />
+    <ClInclude Include="..\MsgBox.h" />
+    <ClInclude Include="..\OSMUtil.h" />
+    <ClInclude Include="..\pngUtil.h" />
+    <ClInclude Include="..\Port.h" />
+    <ClInclude Include="..\resource.h" />
+    <ClInclude Include="..\Satellite.h" />
+    <ClInclude Include="..\ShapFile.h" />
+    <ClInclude Include="..\sun.h" />
+    <ClInclude Include="..\sysheads.h" />
+    <ClInclude Include="..\tcputil.h" />
+    <ClInclude Include="..\text.h" />
+    <ClInclude Include="..\timestamp.h" />
+    <ClInclude Include="..\TraceLog.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\APRSISCE.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\G4ILO.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
