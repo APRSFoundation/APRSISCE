@@ -297,13 +297,13 @@ TILE_SERVER_INFO_S *OSMRegisterTileServer(TILE_SERVER_INFO_S *sInfo, char *From)
 
 //			if (httpGet("tah.openstreetmap.org", 80, "/Tiles/tile/17/36168/54911.png", "test2.png"))
 //			if (httpGet("tile.openstreetmap.org", 80, "/Tiles/tile/17/36168/54911.png", "test2.png"))
-//			if (httpGet("192.168.10.254", 800, "http://tile.openstreetmap.org/17/36168/54911.png", "17/36168/54911.png"))
+//			if (httpGet("192.168.10.254", 800, "https://tile.openstreetmap.org/17/36168/54911.png", "17/36168/54911.png"))
 
 //		URL = (char *) malloc(strlen(FileName)+strlen(OSMURLPrefix)+80);
-//		sprintf(URL, "http://tile.openstreetmap.org/%s", FileName);
+//		sprintf(URL, "https://tile.openstreetmap.org/%s", FileName);
 //		if (!httpGet("192.168.10.254", 800, URL, FileName))
 //
-//	http://tile.openstreetmap.org/12/2047/1362.png/status
+//	https://tile.openstreetmap.org/12/2047/1362.png/status
 //	Tile is clean. Last rendered at Mon Apr 26 10:33:17 2010
 //
 //	http://andy.sandbox.cloudmade.com/tiles/cycle/12/2047/1362.png/status
@@ -4482,4 +4482,5 @@ TraceLogThread("OSM", FALSE, "httpGet:Header %ld Content %ld Total %ld Got %ld/%
 	if (!Success) *pResolved = FALSE;	/* Kill optimizations */
 	return Success;
 }
+
 
